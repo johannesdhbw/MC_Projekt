@@ -13,6 +13,10 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 #define red 10
 #define yellow 9
 #define green 8
+#define taster 7
+
+// values
+int tasterstatus = 0;
 
 // own functions
 void printOut(int);
@@ -34,6 +38,8 @@ void setup() {
   pinMode(green,OUTPUT);
   pinMode(yellow,OUTPUT);
   pinMode(red,OUTPUT);
+  
+  pinMode(taster, INPUT);
 
   Serial.begin(9600);
   
@@ -64,6 +70,17 @@ void loop() {
   ask(co2ppm);
   csvOutput(3,co2ppm);
   delay(1000);
+  
+  tasterstatus = digitalRead(taster);
+  if (tasterstatus == HIGH)
+  {
+    lcd.setCursor(0, 0);
+    lcd.print("Taster");
+    delay(1000);
+    lcd.setCursor(0, 0);
+    lcd.print("CO2-value:");
+  }
+  
 }
 
 // ******************************************************
