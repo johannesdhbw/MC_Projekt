@@ -10,9 +10,9 @@
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
  
 // define led pin
-#define red 10
-#define yellow 9
-#define green 8
+#define RED 10
+#define YELLOW 9
+#define GREEN 8
 
 // own functions
 void printOut(int);
@@ -31,9 +31,9 @@ void setup() {
   lcd.print("CO2-value:");
 
   // setup of led ouput
-  pinMode(green,OUTPUT);
-  pinMode(yellow,OUTPUT);
-  pinMode(red,OUTPUT);
+  pinMode(GREEN,OUTPUT);
+  pinMode(YELLOW,OUTPUT);
+  pinMode(RED,OUTPUT);
 
   Serial.begin(9600);
   
@@ -85,11 +85,11 @@ void writeLeds(int on, int firstOff, int secondOff){
 // compare co2-level with limits
 void ask(int value){
    if(value < 800){
-    writeLeds(green,yellow,red);
+    writeLeds(GREEN,YELLOW,RED);
   }else if(value > 799 && value < 1400){
-    writeLeds(yellow,green,red);
+    writeLeds(YELLOW,GREEN,RED);
   }else{
-    writeLeds(red,yellow,green);
+    writeLeds(RED,YELLOW,GREEN);
   }
 }
 
