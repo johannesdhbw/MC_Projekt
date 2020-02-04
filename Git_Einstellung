@@ -1,0 +1,8 @@
+Auf die Ebene gehnen in der das Repo liegen soll
+Dann in dieser Ebene bashen
+git clone http//... (den Link des entsprechenden Repos angeben)
+Fenster schließen 
+Den Ordner öffnen und dann auf dieser ebene wieder bashen 
+git remote add main http//... (wieder den link angeben)
+git pull main master
+jetzt ist der aktuelle Stand lokal im Verzeichnis vorhanden
