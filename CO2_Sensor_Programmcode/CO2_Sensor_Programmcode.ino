@@ -101,8 +101,8 @@ int measurement_Mode(){
   while(modus == 0){
     // loop because it should wait until one of the two buttons was pushed
     while(taster_1 == 0 || taster_2 == 0){
-      taster_1 = digitalRead(taster);
-      taster_2 = digitalRead(taster);
+      taster_1 = digitalRead(TASTER);
+      taster_2 = digitalRead(TASTER);
       if(taster_1 = HIGH){
         modus = 1;
       }
@@ -116,8 +116,8 @@ int measurement_Mode(){
     taster_2 = 0;
     
     while(taster_1 == 0 || taster_2 == 0){
-      taster_1 = digitalRead(taster);
-      taster_2 = digitalRead(taster);
+      taster_1 = digitalRead(TASTER);
+      taster_2 = digitalRead(TASTER);
       if(taster_1 = HIGH){
         modus = 2;
       }
@@ -127,8 +127,8 @@ int measurement_Mode(){
     }
     taster_2 = 0;
     while(taster_1 == 0 || taster_2 == 0){
-      taster_1 = digitalRead(taster);
-      taster_2 = digitalRead(taster);
+      taster_1 = digitalRead(TASTER);
+      taster_2 = digitalRead(TASTER);
       if(taster_1 = HIGH){
         modus = 3;
       }
