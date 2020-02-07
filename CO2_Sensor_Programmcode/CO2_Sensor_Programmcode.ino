@@ -20,8 +20,8 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 #define MODE_3    3
 
 // values
-int taster_1 = 0; 
-int taster_2 = 0;
+int taster_1 = 0;    // Bestätigungs Taster
+int taster_2 = 0;    // "Weiter" Taster
 int taster_3 = 0;
 
 // own functions
@@ -93,14 +93,49 @@ void loop() {
 
 // ******************************************************
 
-// choose measurement Mode
+// choose measurement Mode                                               lcd texts have yet to be added
 int measurement_Mode(){
-  int modus = 0;
+  // variable to save the modus
+  int modus = 0; 
   while(modus == 0){
-
-  
+    // loop because it should wait until one of the two buttons was pushed
+    while(taster_1 == 0 || taster_2 == 0){
+      taster_1 = digitalRead(taster);
+      taster_2 = digitalRead(taster);
+      if(taster_1 = HIGH){
+        modus = 1;
+      }
+    }
+    // if quesitioning for breaking out of the menu loop 
+    // otherwise the other loops would also be called
+    if(modus != 0){
+      break;
+    }
+    // reset taster_2 for the case the continue button was used
+    taster_2 = 0;
+    
+    while(taster_1 == 0 || taster_2 == 0){
+      taster_1 = digitalRead(taster);
+      taster_2 = digitalRead(taster);
+      if(taster_1 = HIGH){
+        modus = 2;
+      }
+    }
+      if(modus != 0){
+      break;
+    }
+    taster_2 = 0;
+    while(taster_1 == 0 || taster_2 == 0){
+      taster_1 = digitalRead(taster);
+      taster_2 = digitalRead(taster);
+      if(taster_1 = HIGH){
+        modus = 3;
+      }
+    }
   }
+  return modus;
 }
+  
 
 // ouput of co2 measurement
 void printOut(int value){
