@@ -11,9 +11,13 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
  
 // define led pin
 <<<<<<< HEAD
-#define RED 10
-#define YELLOW 9
-#define GREEN 8
+#define RED       10
+#define YELLOW    9
+#define GREEN     8
+// define sampling rates for measurements
+#define MODE_1    1
+#define MODE_2    2
+#define MODE_3    3
 
 // values
 int tasterstatus = 0;
@@ -23,6 +27,8 @@ void printOut(int);
 void writeLeds(int, int, int);
 void ask(int);
 void csvOutput(int, int);
+int measurement_Mode();
+
 
 // ******************************************************
 
@@ -84,6 +90,11 @@ void loop() {
 }
 
 // ******************************************************
+
+// choose measurement Mode
+int measurement_Mode(){
+  
+}
 
 // ouput of co2 measurement
 void printOut(int value){
