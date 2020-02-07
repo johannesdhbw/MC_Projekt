@@ -20,7 +20,9 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 #define MODE_3    3
 
 // values
-int tasterstatus = 0;
+int taster_1 = 0; 
+int taster_2 = 0;
+int taster_3 = 0;
 
 // own functions
 void printOut(int);
@@ -77,8 +79,8 @@ void loop() {
   csvOutput(3,co2ppm);
   delay(1000);
   
-  tasterstatus = digitalRead(taster);
-  if (tasterstatus == HIGH)
+  taster_1 = digitalRead(taster);
+  if (taster_1 == HIGH)
   {
     lcd.setCursor(0, 0);
     lcd.print("Taster");
@@ -93,7 +95,11 @@ void loop() {
 
 // choose measurement Mode
 int measurement_Mode(){
+  int modus = 0;
+  while(modus == 0){
+
   
+  }
 }
 
 // ouput of co2 measurement
