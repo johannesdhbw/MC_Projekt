@@ -1,13 +1,17 @@
 // libraries
-// sensor mg811/ccs811
-#include <CO2Sensor.h>
-// lcd
+#include <SPI.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include "Adafruit_CCS811.h"
 #include <LiquidCrystal.h>
+//#include <CO2Sensor.h>
 
 // ******************************************************
 
 // definition of lcd-pins
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+// definition of adafruit
+Adafruit_CCS811 CCS;
  
 // define led pin
 #define RED       10
@@ -20,10 +24,19 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 #define MODE_2    2
 #define MODE_3    3
 
+// define length of array
+#define LENGTH 100
+
 // values
 int taster_1 = 0;    // Bestätigungs Taster
 int taster_2 = 0;    // "Weiter" Taster
 int taster_3 = 0;
+
+// array for measurements
+int measurement[LENGTH];
+
+// counts runs
+int i = 0;
 
 // own functions
 void printOut(int);
@@ -47,19 +60,28 @@ void setup() {
   pinMode(GREEN,OUTPUT);
   pinMode(YELLOW,OUTPUT);
   pinMode(RED,OUTPUT);
-  
+
+  // setup of taster input
   pinMode(TASTER, INPUT);
 
+  // setup of serial output
   Serial.begin(9600);
   
+  // sensor controll
+  if(!CCS.begin()){
+    Serial.println("Failed to start sensor! Please check your wiring.");
+    while(1);
+  }
 
-  //co2Sensor.calibrate();
+  // wait for the sensor to be ready
+  while(!CCS.available());
 }
 
 // ******************************************************
 
 void loop() {
-  //int co2ppm = co2Sensor.read();
+
+// ******************************************************
   int co2ppm = 0;
 
   co2ppm = 350;
@@ -90,6 +112,44 @@ void loop() {
     lcd.print("CO2-value:");
   }
   
+  // ******************************************************
+
+  // clearing lcd display (better options?)
+  lcd.clear();
+  // labeling
+  lcd.setCursor(0, 0);
+  
+  // ccs.available returns true if data is available to be read
+  if(CCS.available()){
+    // ccs.readdata returns true if an error occurs during the read
+    if(!CCS.readData()){
+  
+      measurement[i] = CCS.geteCO2();
+
+      // if length of array then stop
+      if(i == LENGTH){
+        Serial.print("finished");
+        lcd.print("finished");
+        while(1);
+      }
+      
+      Serial.print("CO2: ");
+      Serial.print(measurement[i]);
+      Serial.print(";");
+      Serial.print(i);
+      lcd.print("CO2: ");
+      lcd.print(measurement[i]);
+
+      ++i;
+    }
+    else{
+      Serial.println("ERROR!");
+      lcd.print("ERROR!");
+      // program stop
+      while(1);
+    }
+  }
+  delay(500);
 }
 
 // ******************************************************
@@ -136,7 +196,6 @@ int measurement_Mode(){
   }
   return modus;
 }
-  
 
 // ouput of co2 measurement
 void printOut(int value){
