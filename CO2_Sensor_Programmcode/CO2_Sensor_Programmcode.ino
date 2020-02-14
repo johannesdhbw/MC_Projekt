@@ -17,7 +17,7 @@ Adafruit_CCS811 CCS;
 #define RED       10
 #define YELLOW    9
 #define GREEN     8
-#define TASTER 7
+#define TASTER    7
 
 // define sampling rates for measurements
 #define MODE_1    1
@@ -25,7 +25,9 @@ Adafruit_CCS811 CCS;
 #define MODE_3    3
 
 // define length of array
-#define LENGTH 100
+#define LENGTH_MODE_1 100
+#define LENGTH_MODE_2 100
+#define LENGTH_MODE_3 100
 
 // values
 int taster_1 = 0;    // Bestätigungs Taster
@@ -33,7 +35,7 @@ int taster_2 = 0;    // "Weiter" Taster
 int taster_3 = 0;
 
 // array for measurements
-int measurement[LENGTH];
+int measurement[LENGTH_MODE_1];
 
 // counts runs
 int i = 0;
@@ -127,7 +129,7 @@ void loop() {
       measurement[i] = CCS.geteCO2();
 
       // if length of array then stop
-      if(i == LENGTH){
+      if(i == LENGTH_MODE_1){
         Serial.print("finished");
         lcd.print("finished");
         while(1);
