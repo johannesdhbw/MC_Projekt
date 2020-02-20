@@ -4,6 +4,7 @@
 #include <Adafruit_GFX.h>
 #include "Adafruit_CCS811.h"
 #include <LiquidCrystal.h>
+#include <EEPROM.h>
 //#include <CO2Sensor.h>
 
 // ******************************************************
@@ -25,9 +26,13 @@ Adafruit_CCS811 CCS;
 #define MODE_3    3
 
 // define length of array
-#define LENGTH_MODE_1 100
+#define LENGTH_MODE_1 10
 #define LENGTH_MODE_2 100
 #define LENGTH_MODE_3 100
+
+// define EEPROM range
+#define EEPROM_MIN_ADDR  0
+#define EEPROM_MAX_ADDR  255
 
 // values
 int taster_1 = 0;    // Bestätigungs Taster
@@ -46,7 +51,8 @@ void writeLeds(int, int, int);
 void ask(int);
 void csvOutput(int, int);
 int measurement_Mode();
-
+boolean writeEEPROM(int startAddr, const int* array, int numBytes);
+boolean eepromAddrOk(int addr);
 
 // ******************************************************
 
@@ -54,9 +60,9 @@ void setup() {
   // 16 character in 2 rows
   lcd.begin(16, 2);
 
-  // labeling
-  lcd.setCursor(0, 0);
-  lcd.print("CO2-value:");
+  // labeling       Wird nicht gebraucht
+  //lcd.setCursor(0, 0);
+  //lcd.print("CO2-value:");
 
   // setup of led ouput
   pinMode(GREEN,OUTPUT);
@@ -85,7 +91,8 @@ void loop() {
 
 // ******************************************************
   int co2ppm = 0;
-
+  // Erster Test ob LCD-Display funktionniert
+  /*
   co2ppm = 350;
   printOut(co2ppm);
   ask(co2ppm);
@@ -102,9 +109,10 @@ void loop() {
   printOut(co2ppm);
   ask(co2ppm);
   csvOutput(3,co2ppm);
-  delay(1000);
-  
-  taster_1 = digitalRead(TASTER);
+  delay(1000);*/
+
+  // Test für Tasterabfrage
+  /*taster_1 = digitalRead(TASTER);
   if (taster_1 == HIGH)
   {
     lcd.setCursor(0, 0);
@@ -113,11 +121,11 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("CO2-value:");
   }
-  
+  */
   // ******************************************************
 
   // clearing lcd display (better options?)
-  lcd.clear();
+  //lcd.clear();
   // labeling
   lcd.setCursor(0, 0);
   
@@ -129,7 +137,11 @@ void loop() {
       measurement[i] = CCS.geteCO2();
 
       // if length of array then stop
-      if(i == LENGTH_MODE_1){
+      if(i == LENGTH_MODE_1){ 
+        lcd.clear();
+        const int* array = measurement;
+        int addr = 0;
+        write_EEPROM(addr, array ,i);
         Serial.print("finished");
         lcd.print("finished");
         while(1);
@@ -229,4 +241,30 @@ void csvOutput(int number, int value){
   Serial.print(";");
   Serial.print(value);
   Serial.print('\n');
+}
+// Check wether addr is ok
+boolean eepromAddrOk(int addr) {
+  return ((addr >= EEPROM_MIN_ADDR)) ; //&& ((addr <= EEPROM_MAX_ADDR));
+}
+
+// Write in EEPROM
+boolean write_EEPROM(int startAddr, const int* array, int numBytes) {
+  // counter
+   lcd.setCursor(0,0);
+  int i;
+  // both first byte and last byte addresses must fall within
+  // the allowed range  
+  if (!eepromAddrOk(startAddr) || !eepromAddrOk(startAddr + numBytes)) {
+    lcd.write("COULD N0T Write");
+    delay(500);
+    lcd.clear();
+    return false;
+  }
+  for (i = 0; i < numBytes; i++) {
+    EEPROM.write(startAddr + i, array[i]);
+  }
+  lcd.print("Write EEPROM");
+  delay(500);
+  lcd.clear();
+  return true;
 }
