@@ -53,6 +53,7 @@ void csvOutput(int, int);
 int measurement_Mode();
 boolean writeEEPROM(int startAddr, const int* array, int numBytes);
 boolean eepromAddrOk(int addr);
+boolean readEEPROM(int startAddr, int array[], int numBytes);
 
 // ******************************************************
 
@@ -123,6 +124,16 @@ void loop() {
   }
   */
   // ******************************************************
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// Test ob EEPROM Funktionen funktionieren
+int start = 5;
+int anzahl = 2;
+ readEEPROM(start, measurement,anzahl);
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
   // clearing lcd display (better options?)
   //lcd.clear();
@@ -266,5 +277,23 @@ boolean write_EEPROM(int startAddr, const int* array, int numBytes) {
   lcd.print("Write EEPROM");
   delay(500);
   lcd.clear();
+  return true;
+}
+
+// Read from EEPROM
+boolean readEEPROM(int startAddr, int array[], int numBytes) {
+  int i=0;
+  // both first byte and last byte addresses must fall within
+  // the allowed range  
+  if (!eepromAddrOk(startAddr) || !eepromAddrOk(startAddr + numBytes)) {
+    return false;
+  }
+  for (i = 0; i < numBytes; i++) {
+    //array[i] = EEPROM.read(startAddr + i);
+    int wert = EEPROM.read(startAddr + i);
+    lcd.clear();
+    lcd.write(wert);
+    delay(1000);
+  }
   return true;
 }
