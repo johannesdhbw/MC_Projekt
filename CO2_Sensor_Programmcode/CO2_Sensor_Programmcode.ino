@@ -10,7 +10,7 @@
 // ******************************************************
 
 // definition of lcd-pins
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 // definition of adafruit
 Adafruit_CCS811 CCS;
  
@@ -18,7 +18,12 @@ Adafruit_CCS811 CCS;
 #define RED       10
 #define YELLOW    9
 #define GREEN     8
-#define TASTER    7
+#define BLUE      1
+
+// define buttons
+#define UP_BUTTON      11
+#define DOWN_BUTTON    12
+#define ENTER_BUTTON   13
 
 // define sampling rates for measurements
 #define MODE_1    1
@@ -35,9 +40,9 @@ Adafruit_CCS811 CCS;
 #define EEPROM_MAX_ADDR  255
 
 // values
-int taster_1 = 0;    // Bestätigungs Taster
-int taster_2 = 0;    // "Weiter" Taster
-int taster_3 = 0;
+int v_up_button = 0;    // Bestätigungs Taster
+int v_down_button = 0;    // "Weiter" Taster
+int v_enter_button = 0;
 
 // array for measurements
 int measurement[LENGTH_MODE_1];
@@ -71,7 +76,7 @@ void setup() {
   pinMode(RED,OUTPUT);
 
   // setup of taster input
-  pinMode(TASTER, INPUT);
+  pinMode(UP_BUTTON, INPUT);
 
   // setup of serial output
   Serial.begin(9600);
@@ -113,8 +118,8 @@ void loop() {
   delay(1000);*/
 
   // Test für Tasterabfrage
-  /*taster_1 = digitalRead(TASTER);
-  if (taster_1 == HIGH)
+  /*v_up_button = digitalRead(UP_BUTTON);
+  if (v_up_button == HIGH)
   {
     lcd.setCursor(0, 0);
     lcd.print("Taster");
@@ -185,10 +190,10 @@ int measurement_Mode(){
   int modus = 0; 
   while(modus == 0){
     // loop because it should wait until one of the two buttons was pushed
-    while(taster_1 == 0 || taster_2 == 0){
-      taster_1 = digitalRead(TASTER);
-      taster_2 = digitalRead(TASTER);
-      if(taster_1 = HIGH){
+    while(v_up_button == 0 || v_down_button == 0){
+      v_up_button = digitalRead(UP_BUTTON);
+      v_down_button = digitalRead(UP_BUTTON);
+      if(v_up_button = HIGH){
         modus = 1;
       }
     }
@@ -197,24 +202,24 @@ int measurement_Mode(){
     if(modus != 0){
       break;
     }
-    // reset taster_2 for the case the continue button was used
-    taster_2 = 0;
+    // reset v_down_button for the case the continue button was used
+    v_down_button = 0;
     
-    while(taster_1 == 0 || taster_2 == 0){
-      taster_1 = digitalRead(TASTER);
-      taster_2 = digitalRead(TASTER);
-      if(taster_1 = HIGH){
+    while(v_up_button == 0 || v_down_button == 0){
+      v_up_button = digitalRead(UP_BUTTON);
+      v_down_button = digitalRead(UP_BUTTON);
+      if(v_up_button = HIGH){
         modus = 2;
       }
     }
       if(modus != 0){
       break;
     }
-    taster_2 = 0;
-    while(taster_1 == 0 || taster_2 == 0){
-      taster_1 = digitalRead(TASTER);
-      taster_2 = digitalRead(TASTER);
-      if(taster_1 = HIGH){
+    v_down_button = 0;
+    while(v_up_button == 0 || v_down_button == 0){
+      v_up_button = digitalRead(UP_BUTTON);
+      v_down_button = digitalRead(UP_BUTTON);
+      if(v_up_button = HIGH){
         modus = 3;
       }
     }
