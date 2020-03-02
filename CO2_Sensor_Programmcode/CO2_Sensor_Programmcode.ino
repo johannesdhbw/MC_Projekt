@@ -106,17 +106,16 @@ int anzahl = 2;
   lcd.clear();
   lcd.print("delay");
   delay(500);
-  /*
+  
   if(read_last_measurement == true){
   // read
-    
+  // ...
   }
   else{
     // new measurement
     int mode = measurement_mode();
     measure(mode);
   }
-  */
 }
 
 // ******************************************************
@@ -174,19 +173,21 @@ int measurement_mode(){
   // variable to save the modus
   int modus = 0; 
 
+  lcd.clear();
+
   while(modus == 0){
-    
-    // loop because it should wait until one of the two buttons was pushed
-    //while(v_up_button == 0 || v_enter_button == 0){
       v_up_button += digitalRead(UP_BUTTON);
-      v_enter_button = digitalRead(ENTER_BUTTON);
-      
+
+      delay(200);
+
+      lcd.clear();
+      lcd.setCursor(0,0);
       if(v_up_button == 0){
         lcd.print("Echtzeitmodus");
         }
       else if(v_up_button == 1){
         lcd.clear();
-        lcd.print("Sundenauslegung");
+        lcd.print("Stundenauslegung");
         }
       else if(v_up_button == 2){
         lcd.clear();
@@ -194,23 +195,28 @@ int measurement_mode(){
       }
       
       if (v_up_button == 3){
-        v_up_button == 0;
+        v_up_button = 0;
       }
       
-      if(v_up_button == 0 && v_enter_button == HIGH){
+      if(v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
         modus = 1;
-      }else if(v_up_button == 1 && v_enter_button == HIGH){
+      }else if(v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
         modus = 2;
-      }else if (v_up_button == 2 && v_enter_button == HIGH){
+      }else if (v_up_button == 2 && digitalRead(ENTER_BUTTON) == HIGH){
         modus = 3;
-      //}
       }
     }
+    
   lcd.clear();
   return modus;
 }
 
 void measure(int my_delay){
+
+  lcd.clear();
+  lcd.print("Mode: ");
+  lcd.print(my_delay);
+  
   // ccs.available returns true if data is available to be read
   if(CCS.available()){
     // ccs.readdata returns true if an error occurs during the read
@@ -220,11 +226,12 @@ void measure(int my_delay){
       measurement[i] = CCS.geteCO2();
 
       ask(measurement[i]);
-      
+
       Serial.print("CO2: ");
       Serial.print(measurement[i]);
       Serial.print(";");
       Serial.print(i);
+      lcd.setCursor(0,1);
       lcd.print("CO2: ");
       lcd.print(measurement[i]);
         
