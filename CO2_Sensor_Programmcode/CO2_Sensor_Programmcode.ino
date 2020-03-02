@@ -91,7 +91,7 @@ void setup() {
 
 // ******************************************************
 
-void loop() {
+void loop(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Test ob EEPROM Funktionen funktionieren
@@ -135,7 +135,7 @@ int anzahl = 2;
 
 // ******************************************************
 
-// choose measurement Mode                                               lcd texts have yet to be added
+// choose measurement Mode
 int measurement_Mode(){
   // variable to save the modus
   int modus = 0; 
@@ -156,8 +156,10 @@ int measurement_Mode(){
         modus = 2;
       }else if (v_up_button == 2 && v_enter_button == HIGH){
         modus = 3;
+
+      //}
       }
-    //}
+    }
   
   return modus;
 }
@@ -193,16 +195,18 @@ void csvOutput(int number, int value){
   Serial.print(value);
   Serial.print('\n');
 }
+
 // Check wether addr is ok
 boolean eepromAddrOk(int addr) {
-  return ((addr >= EEPROM_MIN_ADDR)) ; //&& ((addr <= EEPROM_MAX_ADDR));
+  return ((addr >= EEPROM_MIN_ADDR)); //&& ((addr <= EEPROM_MAX_ADDR));
 }
 
 // Write in EEPROM
 boolean write_EEPROM(int startAddr, const int* array, int numBytes) {
   // counter
-   lcd.setCursor(0,0);
+  lcd.setCursor(0,0);
   int i;
+  
   // both first byte and last byte addresses must fall within
   // the allowed range  
   if (!eepromAddrOk(startAddr) || !eepromAddrOk(startAddr + numBytes)) {
@@ -211,6 +215,7 @@ boolean write_EEPROM(int startAddr, const int* array, int numBytes) {
     lcd.clear();
     return false;
   }
+  
   for (i = 0; i < numBytes; i++) {
     EEPROM.write(startAddr + i, array[i]);
   }
@@ -223,11 +228,13 @@ boolean write_EEPROM(int startAddr, const int* array, int numBytes) {
 // Read from EEPROM
 boolean readEEPROM(int startAddr, int array[], int numBytes) {
   int i=0;
+  
   // both first byte and last byte addresses must fall within
   // the allowed range  
   if (!eepromAddrOk(startAddr) || !eepromAddrOk(startAddr + numBytes)) {
     return false;
   }
+  
   for (i = 0; i < numBytes; i++) {
     //array[i] = EEPROM.read(startAddr + i);
     int wert = EEPROM.read(startAddr + i);
