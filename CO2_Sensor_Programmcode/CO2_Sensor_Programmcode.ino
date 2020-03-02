@@ -73,6 +73,7 @@ void setup() {
 
   // setup of taster input
   pinMode(UP_BUTTON, INPUT);
+  pinMode(ENTER_BUTTON, INPUT);
 
   // setup of serial output
   Serial.begin(9600);
@@ -102,7 +103,8 @@ int anzahl = 2;
   lcd.setCursor(0, 0);
  
   boolean read_last_measurement = read_or_write();
-  lcd.print("ldj");
+  lcd.clear();
+  lcd.print("delay");
   delay(500);
   /*
   if(read_last_measurement == true){
@@ -121,33 +123,40 @@ int anzahl = 2;
 
 boolean read_or_write(){
 
+  lcd.clear();
+  lcd.print("Menue: 1 read");
+  lcd.setCursor(1,13);
+  lcd.print("2 measure");
+
   while(v_up_button == 0 || v_enter_button == 0){
     
     v_up_button += digitalRead(UP_BUTTON);
+    delay(200);
     //v_enter_button == digitalRead(ENTER_BUTTON);
 
     if (v_up_button == 2){
       v_up_button == 0;
     }
 
-    if(v_up_button == 0){
-      lcd.print("Lesen");
-      }
-    else if(v_up_button == 1){
-      lcd.clear();
-      lcd.print("Messen");
-      }
+    lcd.setCursor(1, 12);
+    lcd.print(v_up_button);
     
     // read
     if (v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
       v_up_button = 0;
       v_enter_button = 0;
+      lcd.clear();
+      lcd.print("read");
+      delay(500);
       return true;
     }else
     // measure
     if (v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
       v_up_button = 0;
       v_enter_button = 0;
+      lcd.clear();
+      lcd.print("measure");
+      delay(500);
       return false;
     }
   }
