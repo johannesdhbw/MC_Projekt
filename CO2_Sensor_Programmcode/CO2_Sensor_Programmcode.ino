@@ -30,7 +30,7 @@ Adafruit_CCS811 CCS;
 #define MODE_3    1440  //seconds
 
 // define length of array
-#define LENGTH_ARRAY 10
+#define LENGTH_ARRAY 100
 
 // define EEPROM range
 #define EEPROM_MIN_ADDR  0
@@ -41,7 +41,7 @@ int v_up_button = 0;
 int v_enter_button = 0;
 
 // array for measurements
-int measurement[LENGTH_ARRAY];
+int measurement[LENGTH_ARRAY] = { 0 };
 
 // counts runs
 int i = 0;
@@ -114,6 +114,17 @@ int anzahl = 2;
   else{
     // new measurement
     int mode = measurement_mode();
+    /*
+    lcd.clear();
+    int i = 0;
+    while(i < LENGTH_ARRAY){
+    lcd.print(measurement[i]);
+    delay(500); 
+    ++i;
+    }
+    lcd.clear();
+    lcd.print("finished");
+    delay(1000);*/
     measure(mode);
   }
 }
@@ -221,11 +232,15 @@ void measure(int my_delay){
   if(CCS.available()){
     // ccs.readdata returns true if an error occurs during the read
     if(!CCS.readData()){
+      lcd.print(measurement[i]);
+      
       while(measurement[LENGTH_ARRAY - 1] == 0){
       // get co2 data from sensor
-      measurement[i] = CCS.geteCO2();
+      //measurement[i] = CCS.geteCO2();
+      int tmp = CCS.geteCO2();
+      measurement[i] = tmp;
 
-      ask(measurement[i]);
+      //ask(measurement[i]);
 
       Serial.print("CO2: ");
       Serial.print(measurement[i]);
@@ -236,6 +251,8 @@ void measure(int my_delay){
       lcd.print(measurement[i]);
         
       delay(my_delay);
+      
+      ++i;
       }
     }
     // error warning
@@ -246,9 +263,12 @@ void measure(int my_delay){
       while(1);
     }
   }
+
+  delay(500);
   
   Serial.print("finished");
   lcd.print("finished");
+  delay(500);
 }
 
 // analog writing of leds
