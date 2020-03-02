@@ -22,8 +22,7 @@ Adafruit_CCS811 CCS;
 
 // define buttons
 #define UP_BUTTON      11
-#define DOWN_BUTTON    12
-#define ENTER_BUTTON   13
+#define ENTER_BUTTON   12
 
 // define sampling rates for measurements
 #define MODE_1    1
@@ -40,8 +39,7 @@ Adafruit_CCS811 CCS;
 #define EEPROM_MAX_ADDR  255
 
 // values
-int v_up_button = 0;    // Bestätigungs Taster
-int v_down_button = 0;    // "Weiter" Taster
+int v_up_button = 0;
 int v_enter_button = 0;
 
 // array for measurements
@@ -95,53 +93,13 @@ void setup() {
 
 void loop() {
 
-// ******************************************************
-  int co2ppm = 0;
-  // Erster Test ob LCD-Display funktionniert
-  /*
-  co2ppm = 350;
-  printOut(co2ppm);
-  ask(co2ppm);
-  csvOutput(1,co2ppm);
-  delay(1000);
-
-  co2ppm = 803;
-  printOut(co2ppm);
-  ask(co2ppm);
-  csvOutput(2,co2ppm);
-  delay(1000);
-
-  co2ppm = 1400;
-  printOut(co2ppm);
-  ask(co2ppm);
-  csvOutput(3,co2ppm);
-  delay(1000);*/
-
-  // Test für Tasterabfrage
-  /*v_up_button = digitalRead(UP_BUTTON);
-  if (v_up_button == HIGH)
-  {
-    lcd.setCursor(0, 0);
-    lcd.print("Taster");
-    delay(1000);
-    lcd.setCursor(0, 0);
-    lcd.print("CO2-value:");
-  }
-  */
-  // ******************************************************
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Test ob EEPROM Funktionen funktionieren
-int start = 5;
+/*int start = 5;
 int anzahl = 2;
- readEEPROM(start, measurement,anzahl);
+ readEEPROM(start, measurement,anzahl);*/
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
-  // clearing lcd display (better options?)
-  //lcd.clear();
   // labeling
   lcd.setCursor(0, 0);
   
@@ -149,19 +107,12 @@ int anzahl = 2;
   if(CCS.available()){
     // ccs.readdata returns true if an error occurs during the read
     if(!CCS.readData()){
-  
+
+      // get co2 data from sensor
       measurement[i] = CCS.geteCO2();
 
-      // if length of array then stop
-      if(i == LENGTH_MODE_1){ 
-        lcd.clear();
-        const int* array = measurement;
-        int addr = 0;
-        write_EEPROM(addr, array ,i);
-        Serial.print("finished");
-        lcd.print("finished");
-        while(1);
-      }
+      // modus
+      // ...
       
       Serial.print("CO2: ");
       Serial.print(measurement[i]);
@@ -188,42 +139,26 @@ int anzahl = 2;
 int measurement_Mode(){
   // variable to save the modus
   int modus = 0; 
+
   while(modus == 0){
-    // loop because it should wait until one of the two buttons was pushed
-    while(v_up_button == 0 || v_down_button == 0){
-      v_up_button = digitalRead(UP_BUTTON);
-      v_down_button = digitalRead(UP_BUTTON);
-      if(v_up_button = HIGH){
-        modus = 1;
-      }
-    }
-    // if quesitioning for breaking out of the menu loop 
-    // otherwise the other loops would also be called
-    if(modus != 0){
-      break;
-    }
-    // reset v_down_button for the case the continue button was used
-    v_down_button = 0;
     
-    while(v_up_button == 0 || v_down_button == 0){
-      v_up_button = digitalRead(UP_BUTTON);
-      v_down_button = digitalRead(UP_BUTTON);
-      if(v_up_button = HIGH){
-        modus = 2;
+    // loop because it should wait until one of the two buttons was pushed
+    //while(v_up_button == 0 || v_enter_button == 0){
+      v_up_button += digitalRead(UP_BUTTON);
+      if (v_up_button == 3){
+        v_up_button == 0;
       }
-    }
-      if(modus != 0){
-      break;
-    }
-    v_down_button = 0;
-    while(v_up_button == 0 || v_down_button == 0){
-      v_up_button = digitalRead(UP_BUTTON);
-      v_down_button = digitalRead(UP_BUTTON);
-      if(v_up_button = HIGH){
+      v_enter_button = digitalRead(ENTER_BUTTON);
+            
+      if(v_up_button == 0 && v_enter_button == HIGH){
+        modus = 1;
+      }else if(v_up_button == 1 && v_enter_button == HIGH){
+        modus = 2;
+      }else if (v_up_button == 2 && v_enter_button == HIGH){
         modus = 3;
       }
-    }
-  }
+    //}
+  
   return modus;
 }
 
