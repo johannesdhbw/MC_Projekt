@@ -15,14 +15,14 @@ LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 Adafruit_CCS811 CCS;
  
 // define analog pin
-#define RED       3
-#define YELLOW    2
-#define GREEN     1
-#define BLUE      0
+#define RED       A3
+#define YELLOW    A2
+#define GREEN     A1
+#define BLUE      A0
 
 // define buttons
-#define UP_BUTTON      11
-#define ENTER_BUTTON   12
+#define UP_BUTTON      12
+#define ENTER_BUTTON   13
 
 // define sampling rates for measurements
 #define MODE_1    0 //seconds
@@ -100,9 +100,11 @@ int anzahl = 2;
 
   // labeling
   lcd.setCursor(0, 0);
-
+ 
   boolean read_last_measurement = read_or_write();
-
+  lcd.print("ldj");
+  delay(500);
+  /*
   if(read_last_measurement == true){
   // read
     
@@ -112,7 +114,7 @@ int anzahl = 2;
     int mode = measurement_mode();
     measure(mode);
   }
-  
+  */
 }
 
 // ******************************************************
@@ -122,18 +124,30 @@ boolean read_or_write(){
   while(v_up_button == 0 || v_enter_button == 0){
     
     v_up_button += digitalRead(UP_BUTTON);
-    v_enter_button == digitalRead(ENTER_BUTTON);
+    //v_enter_button == digitalRead(ENTER_BUTTON);
 
     if (v_up_button == 2){
       v_up_button == 0;
     }
+
+    if(v_up_button == 0){
+      lcd.print("Lesen");
+      }
+    else if(v_up_button == 1){
+      lcd.clear();
+      lcd.print("Messen");
+      }
     
     // read
-    if (v_up_button == 0 && v_enter_button == HIGH){
+    if (v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
+      v_up_button = 0;
+      v_enter_button = 0;
       return true;
     }else
-    // write
-    if (v_up_button == 1 && v_enter_button == HIGH){
+    // measure
+    if (v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
+      v_up_button = 0;
+      v_enter_button = 0;
       return false;
     }
   }
@@ -152,6 +166,18 @@ int measurement_mode(){
       v_up_button += digitalRead(UP_BUTTON);
       v_enter_button = digitalRead(ENTER_BUTTON);
       
+      if(v_up_button == 0){
+        lcd.print("Echtzeitmodus");
+        }
+      else if(v_up_button == 1){
+        lcd.clear();
+        lcd.print("Sundenauslegung");
+        }
+      else if(v_up_button == 2){
+        lcd.clear();
+        lcd.print("Tagesauslegung");
+      }
+      
       if (v_up_button == 3){
         v_up_button == 0;
       }
@@ -162,11 +188,10 @@ int measurement_mode(){
         modus = 2;
       }else if (v_up_button == 2 && v_enter_button == HIGH){
         modus = 3;
-
       //}
       }
     }
-  
+  lcd.clear();
   return modus;
 }
 
@@ -206,7 +231,7 @@ void measure(int my_delay){
 
 // analog writing of leds
 void writeLeds(int on, int firstOff, int secondOff){
-    analogWrite(on, 255);
+    analogWrite(on, 150);
     analogWrite(firstOff, 0);
     analogWrite(secondOff, 0);
 }
@@ -220,7 +245,7 @@ void ask(int value){
     writeLeds(YELLOW,GREEN,RED);
   }else{
     writeLeds(RED,YELLOW,GREEN);
-    analogWrite(BLUE, 255);
+    analogWrite(BLUE, 150);
   }
 }
 
