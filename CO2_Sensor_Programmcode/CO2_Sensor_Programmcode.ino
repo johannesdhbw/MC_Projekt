@@ -123,39 +123,45 @@ int anzahl = 2;
 
 boolean read_or_write(){
 
+  // show menue
   lcd.clear();
-  lcd.print("Menue: 1 read");
-  lcd.setCursor(1,13);
-  lcd.print("2 measure");
 
   while(v_up_button == 0 || v_enter_button == 0){
     
     v_up_button += digitalRead(UP_BUTTON);
     delay(200);
-    //v_enter_button == digitalRead(ENTER_BUTTON);
 
-    if (v_up_button == 2){
-      v_up_button == 0;
+    if(v_up_button == 0){
+      lcd.setCursor(0,0);
+      lcd.print("Read last");
+      lcd.setCursor(0,1);
+      lcd.print("Measure");
+    }else{
+      lcd.setCursor(0,0);
+      lcd.print("Start new");
+      lcd.setCursor(0,1);
+      lcd.print("Measure");
     }
-
-    lcd.setCursor(1, 12);
-    lcd.print(v_up_button);
     
-    // read
+    if (v_up_button == 2){
+      v_up_button = 0;
+    }
+    
+    // read last measurement
     if (v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
       v_up_button = 0;
       v_enter_button = 0;
       lcd.clear();
-      lcd.print("read");
+      lcd.print("Read...");
       delay(500);
       return true;
     }else
-    // measure
+    // new measure
     if (v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
       v_up_button = 0;
       v_enter_button = 0;
       lcd.clear();
-      lcd.print("measure");
+      lcd.print("Measure...");
       delay(500);
       return false;
     }
