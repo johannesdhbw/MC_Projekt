@@ -14,25 +14,23 @@ LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 // definition of adafruit
 Adafruit_CCS811 CCS;
  
-// define led pin
-#define RED       10
-#define YELLOW    9
-#define GREEN     8
-#define BLUE      1
+// define analog pin
+#define RED       3
+#define YELLOW    2
+#define GREEN     1
+#define BLUE      0
 
 // define buttons
 #define UP_BUTTON      11
 #define ENTER_BUTTON   12
 
 // define sampling rates for measurements
-#define MODE_1    1
-#define MODE_2    2
-#define MODE_3    3
+#define MODE_1    0 //seconds
+#define MODE_2    60  // seconds
+#define MODE_3    1440  //seconds
 
 // define length of array
-#define LENGTH_MODE_1 10
-#define LENGTH_MODE_2 100
-#define LENGTH_MODE_3 100
+#define LENGTH_ARRAY 10
 
 // define EEPROM range
 #define EEPROM_MIN_ADDR  0
@@ -43,20 +41,20 @@ int v_up_button = 0;
 int v_enter_button = 0;
 
 // array for measurements
-int measurement[LENGTH_MODE_1];
+int measurement[LENGTH_ARRAY];
 
 // counts runs
 int i = 0;
 
 // own functions
-void printOut(int);
 void writeLeds(int, int, int);
 void ask(int);
-void csvOutput(int, int);
 int measurement_Mode();
+void measure(int);
 boolean writeEEPROM(int startAddr, const int* array, int numBytes);
 boolean eepromAddrOk(int addr);
 boolean readEEPROM(int startAddr, int array[], int numBytes);
+boolean read_or_write();
 
 // ******************************************************
 
@@ -102,41 +100,48 @@ int anzahl = 2;
 
   // labeling
   lcd.setCursor(0, 0);
-  
-  // ccs.available returns true if data is available to be read
-  if(CCS.available()){
-    // ccs.readdata returns true if an error occurs during the read
-    if(!CCS.readData()){
 
-      // get co2 data from sensor
-      measurement[i] = CCS.geteCO2();
+  boolean read_last_measurement = read_or_write();
 
-      // modus
-      // ...
-      
-      Serial.print("CO2: ");
-      Serial.print(measurement[i]);
-      Serial.print(";");
-      Serial.print(i);
-      lcd.print("CO2: ");
-      lcd.print(measurement[i]);
-
-      ++i;
-    }
-    else{
-      Serial.println("ERROR!");
-      lcd.print("ERROR!");
-      // program stop
-      while(1);
-    }
+  if(read_last_measurement == true){
+  // read
+    
   }
-  delay(500);
+  else{
+    // new measurement
+    int mode = measurement_mode();
+    measure(mode);
+  }
+  
 }
 
 // ******************************************************
 
+boolean read_or_write(){
+
+  while(v_up_button == 0 || v_enter_button == 0){
+    
+    v_up_button += digitalRead(UP_BUTTON);
+    v_enter_button == digitalRead(ENTER_BUTTON);
+
+    if (v_up_button == 2){
+      v_up_button == 0;
+    }
+    
+    // read
+    if (v_up_button == 0 && v_enter_button == HIGH){
+      return true;
+    }else
+    // write
+    if (v_up_button == 1 && v_enter_button == HIGH){
+      return false;
+    }
+  }
+}
+
+
 // choose measurement Mode
-int measurement_Mode(){
+int measurement_mode(){
   // variable to save the modus
   int modus = 0; 
 
@@ -145,11 +150,12 @@ int measurement_Mode(){
     // loop because it should wait until one of the two buttons was pushed
     //while(v_up_button == 0 || v_enter_button == 0){
       v_up_button += digitalRead(UP_BUTTON);
+      v_enter_button = digitalRead(ENTER_BUTTON);
+      
       if (v_up_button == 3){
         v_up_button == 0;
       }
-      v_enter_button = digitalRead(ENTER_BUTTON);
-            
+      
       if(v_up_button == 0 && v_enter_button == HIGH){
         modus = 1;
       }else if(v_up_button == 1 && v_enter_button == HIGH){
@@ -164,38 +170,62 @@ int measurement_Mode(){
   return modus;
 }
 
-// ouput of co2 measurement
-void printOut(int value){
-  lcd.setCursor(0, 1);
-  lcd.print(value);
-  lcd.print(" ppm ");
+void measure(int my_delay){
+  // ccs.available returns true if data is available to be read
+  if(CCS.available()){
+    // ccs.readdata returns true if an error occurs during the read
+    if(!CCS.readData()){
+      while(measurement[LENGTH_ARRAY - 1] == 0){
+      // get co2 data from sensor
+      measurement[i] = CCS.geteCO2();
+
+      ask(measurement[i]);
+      
+      Serial.print("CO2: ");
+      Serial.print(measurement[i]);
+      Serial.print(";");
+      Serial.print(i);
+      lcd.print("CO2: ");
+      lcd.print(measurement[i]);
+        
+      delay(my_delay);
+      }
+    }
+    // error warning
+    else{
+      Serial.println("ERROR!");
+      lcd.print("ERROR!");
+      // program stop
+      while(1);
+    }
+  }
+  
+  Serial.print("finished");
+  lcd.print("finished");
 }
 
-// digital writing of leds
+// analog writing of leds
 void writeLeds(int on, int firstOff, int secondOff){
-    digitalWrite(on,HIGH);
-    digitalWrite(firstOff,LOW);
-    digitalWrite(secondOff,LOW);
+    analogWrite(on, 255);
+    analogWrite(firstOff, 0);
+    analogWrite(secondOff, 0);
 }
 
 // compare co2-level with limits
 void ask(int value){
    if(value < 800){
     writeLeds(GREEN,YELLOW,RED);
+    analogWrite(BLUE, 0);
   }else if(value > 799 && value < 1400){
     writeLeds(YELLOW,GREEN,RED);
   }else{
     writeLeds(RED,YELLOW,GREEN);
+    analogWrite(BLUE, 255);
   }
 }
 
-void csvOutput(int number, int value){
-  Serial.print(number);
-  Serial.print(";");
-  Serial.print(value);
-  Serial.print('\n');
-}
 
+/*
 // Check wether addr is ok
 boolean eepromAddrOk(int addr) {
   return ((addr >= EEPROM_MIN_ADDR)); //&& ((addr <= EEPROM_MAX_ADDR));
@@ -244,3 +274,5 @@ boolean readEEPROM(int startAddr, int array[], int numBytes) {
   }
   return true;
 }
+
+*/
