@@ -25,7 +25,7 @@ Adafruit_CCS811 CCS;
 #define ENTER_BUTTON   13
 
 // define sampling rates for measurements
-#define MODE_1    0 //seconds
+#define MODE_1    10 //milliseconds
 #define MODE_2    60  // seconds
 #define MODE_3    1440  //seconds
 
@@ -102,10 +102,11 @@ int anzahl = 2;
   // labeling
   lcd.setCursor(0, 0);
  
-  boolean read_last_measurement = read_or_write();
+  boolean read_last_measurement = false;//read_or_write();
+  /*
   lcd.clear();
   lcd.print("delay");
-  delay(500);
+  delay(500);*/
   
   if(read_last_measurement == true){
   // read
@@ -127,6 +128,7 @@ int anzahl = 2;
     delay(1000);*/
     measure(mode);
   }
+  
 }
 
 // ******************************************************
@@ -210,11 +212,11 @@ int measurement_mode(){
       }
       
       if(v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
-        modus = 1;
+        modus = MODE_1;
       }else if(v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
-        modus = 2;
+        modus = MODE_2;
       }else if (v_up_button == 2 && digitalRead(ENTER_BUTTON) == HIGH){
-        modus = 3;
+        modus = MODE_3;
       }
     }
     
@@ -223,7 +225,8 @@ int measurement_mode(){
 }
 
 void measure(int my_delay){
-
+  i = 0;
+  
   lcd.clear();
   lcd.print("Mode: ");
   lcd.print(my_delay);
@@ -232,13 +235,13 @@ void measure(int my_delay){
   if(CCS.available()){
     // ccs.readdata returns true if an error occurs during the read
     if(!CCS.readData()){
-      lcd.print(measurement[i]);
+      //lcd.print(measurement[i]);
       
       while(measurement[LENGTH_ARRAY - 1] == 0){
       // get co2 data from sensor
       //measurement[i] = CCS.geteCO2();
-      int tmp = CCS.geteCO2();
-      measurement[i] = tmp;
+      //int tmp = CCS.geteCO2();
+      measurement[i] = CCS.geteCO2();
 
       //ask(measurement[i]);
 
@@ -246,6 +249,8 @@ void measure(int my_delay){
       Serial.print(measurement[i]);
       Serial.print(";");
       Serial.print(i);
+      ///////////////////////////////////////////////////////////
+      lcd.clear();
       lcd.setCursor(0,1);
       lcd.print("CO2: ");
       lcd.print(measurement[i]);
