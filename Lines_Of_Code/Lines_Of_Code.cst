@@ -1,12 +1,12 @@
 998 Type:           SystemStar estimate
-0   Written:        13.01.20 16:11:30
+0   Written:        03.03.20 17:39:03
 900 File Version:   9003
 901 SW Version:     Demo
 902 Build:          3.0.3.1003
-904 Sequence Number:00210124760506841522218021057
+904 Sequence Number:00233121760506881421218031365
 905 Version:        SystemStar 3.0 Demo
 906 Serial Number:  83 - 01126                              
-estcreate "Estimate1"
+estcreate "Estimate2"
 dbselect "COCOMO_II.2000_Waterfall"
 calcmodel intermediate
 prec 3
@@ -18,52 +18,59 @@ wsname *
 amcf *
 wsstartpoint 2
 rename "Project"
+RELY  nominal
 TIME  nominal
 goto "Project"
-subcomp "Messen"
-wsslocdist y  0 1         140
-RQCOST      0
-PDCOST      0
-DDCOST      0
-CTCOST      0
-ITCOST      0
-MNCOST      0
+subcomp "Measure"
+wsslocdist y  0 1          60
 increment 1
 goto "Project"
-subcomp "Auswerten"
+subcomp "Measurement_Mode"
 wsslocdist y  0 1          50
 increment 1
 goto "Project"
-subcomp "Speichern"
-wsslocdist y  0 1          50
+subcomp "Loop"
+wsslocdist y  0 1          20
 increment 1
 goto "Project"
-subcomp "Ausgabe"
-wsslocdist y  0 1          50
+subcomp "Read_or_Write"
+wsslocdist y  0 1          30
 increment 1
 goto "Project"
-subcomp "Bedienungselemente"
-wsslocdist y  0 1          90
+subcomp "Write_SD"
+wsslocdist y  0 1          70
+increment 1
+goto "Project"
+subcomp "Something"
+wsslocdist y  0 1          30
+increment 1
+goto "Project"
+subcomp "Settings"
+wsslocdist y  0 1          40
+increment 1
+goto "Project"
+subcomp "Setup"
+wsslocdist y  0 1          30
 increment 1
 set auto on
-910 Lines:                       54
-911 Characters:                 925
-912 File Size:                 1243
-913 Checksum 1:                  47
-914 Checksum 2:                 169
-915 Checksum 3: 0462233747758290940
-1000 "Estimate1"
+910 Lines:                       61
+911 Characters:                1073
+912 File Size:                 1405
+913 Checksum 1:                  35
+914 Checksum 2:                 223
+915 Checksum 3: 0462283747763543073
+1000 "Estimate2"
 1001 "    "
 1002 152
 1003  100
 1004   1.0000
-1006       1.0145
-1007       1.0145
+1006       0.8687
+1007       0.8687
 1008   1.0000
-1009       3.6868
-1010       3.6868
-1011          380
-1012          380
+1009       3.5093
+1010       3.5093
+1011          330
+1012          330
 1013    1.0997
 1014    0.3179
 1015 2
