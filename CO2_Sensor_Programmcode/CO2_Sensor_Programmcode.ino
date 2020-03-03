@@ -115,6 +115,7 @@ int anzahl = 2;
   lcd.setCursor(0, 0);
  
   boolean read_last_measurement = read_or_write();
+  
   lcd.clear();
   lcd.print("delay");
   delay(500);
@@ -227,7 +228,7 @@ int measurement_mode(){
 }
 
 void measure(int my_delay){
-
+  
   lcd.clear();
   lcd.print("Mode: ");
   lcd.print(my_delay);
@@ -247,13 +248,16 @@ void measure(int my_delay){
     // starts for t=0 and counts
     time_diff = time_diff + time2 - time1;
     
-    time1 = millis();
-    
     if(CCS.available()){
+      
       if(!CCS.readData()){
+
+        // start time measure
+        time1 = millis();
 
         // measure co2 value
         measurement[i] = CCS.geteCO2();
+        
         // ask led
         ask(measurement[i]);
 
@@ -269,6 +273,11 @@ void measure(int my_delay){
         Serial.print(",");
         Serial.print(measurement[i]);
         Serial.print(";");
+        
+        delay(my_delay);
+
+        // end time measure
+        time2 = millis();
       }
       else{
         Serial.println("ERROR!");
@@ -277,20 +286,15 @@ void measure(int my_delay){
         while(1);
       }
 
-      delay(my_delay);
-
       // counter++
       i += 1;
     }
-
-    time2 = millis();
-  }
-
-  do{
-    Serial.println("finished");
-  }while(0);
+   }
+   do{
+     Serial.println("finished");
+   }while(0);
   
-  delay(500);
+   delay(500);
 }
 
 // analog writing of leds
