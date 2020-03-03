@@ -1,8 +1,15 @@
+#include <Adafruit_CCS811.h>
+
+#include <Adafruit_GFX.h>
+#include <Adafruit_SPITFT.h>
+#include <Adafruit_SPITFT_Macros.h>
+#include <gfxfont.h>
+
 // libraries
 #include <SPI.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include "Adafruit_CCS811.h"
+//#include <Adafruit_GFX.h>
+//#include "Adafruit_CCS811.h"
 #include <LiquidCrystal.h>
 #include <EEPROM.h>
 //#include <CO2Sensor.h>
@@ -25,12 +32,12 @@ Adafruit_CCS811 CCS;
 #define ENTER_BUTTON   13
 
 // define sampling rates for measurements
-#define MODE_1    0 //seconds
+#define MODE_1    1 //seconds
 #define MODE_2    60  // seconds
 #define MODE_3    1440  //seconds
 
 // define length of array
-#define LENGTH_ARRAY 100
+#define LENGTH_ARRAY 10
 
 // define EEPROM range
 #define EEPROM_MIN_ADDR  0
@@ -44,7 +51,12 @@ int v_enter_button = 0;
 int measurement[LENGTH_ARRAY] = { 0 };
 
 // counts runs
-int i = 0;
+//int i = 0;  // better if i is just local
+
+// time measurement
+unsigned long time1 = 0;
+unsigned long time2 = 0;
+unsigned long time_diff = 0;
 
 // own functions
 void writeLeds(int, int, int);
@@ -114,19 +126,11 @@ int anzahl = 2;
   else{
     // new measurement
     int mode = measurement_mode();
-    /*
-    lcd.clear();
-    int i = 0;
-    while(i < LENGTH_ARRAY){
-    lcd.print(measurement[i]);
-    delay(500); 
-    ++i;
-    }
-    lcd.clear();
-    lcd.print("finished");
-    delay(1000);*/
+    
     measure(mode);
   }
+
+  delay(500);
 }
 
 // ******************************************************
@@ -210,11 +214,11 @@ int measurement_mode(){
       }
       
       if(v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
-        modus = 1;
+        modus = MODE_1;
       }else if(v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
-        modus = 2;
+        modus = MODE_2;
       }else if (v_up_button == 2 && digitalRead(ENTER_BUTTON) == HIGH){
-        modus = 3;
+        modus = MODE_3;
       }
     }
     
@@ -227,47 +231,65 @@ void measure(int my_delay){
   lcd.clear();
   lcd.print("Mode: ");
   lcd.print(my_delay);
-  
-  // ccs.available returns true if data is available to be read
-  if(CCS.available()){
-    // ccs.readdata returns true if an error occurs during the read
-    if(!CCS.readData()){
-      lcd.print(measurement[i]);
-      
-      while(measurement[LENGTH_ARRAY - 1] == 0){
-      // get co2 data from sensor
-      //measurement[i] = CCS.geteCO2();
-      int tmp = CCS.geteCO2();
-      measurement[i] = tmp;
 
-      //ask(measurement[i]);
+  int i = 0;
 
-      Serial.print("CO2: ");
-      Serial.print(measurement[i]);
-      Serial.print(";");
-      Serial.print(i);
-      lcd.setCursor(0,1);
-      lcd.print("CO2: ");
-      lcd.print(measurement[i]);
-        
-      delay(my_delay);
-      
-      ++i;
-      }
-    }
-    // error warning
-    else{
-      Serial.println("ERROR!");
-      lcd.print("ERROR!");
-      // program stop
-      while(1);
-    }
+  while(measurement[LENGTH_ARRAY - 1] != 0){
+    measurement[i] = { 0 };
+    i += 1;
   }
 
-  delay(500);
+  i = 0;
+  time_diff = time1 = time2 = 0;
   
-  Serial.print("finished");
-  lcd.print("finished");
+  while(measurement[LENGTH_ARRAY - 1] == 0){
+
+    // starts for t=0 and counts
+    time_diff = time_diff + time2 - time1;
+    
+    time1 = millis();
+    
+    if(CCS.available()){
+      if(!CCS.readData()){
+
+        // measure co2 value
+        measurement[i] = CCS.geteCO2();
+        // ask led
+        ask(measurement[i]);
+
+        // output
+        lcd.setCursor(0,1);
+        lcd.print("CO2: ");
+        lcd.print(measurement[i]);
+        //Serial.print("CO2: ");
+        //Serial.println(measurement[i]);
+        //Serial.print("Time: ");
+        //Serial.println(time_diff);
+        Serial.print(time_diff);
+        Serial.print(",");
+        Serial.print(measurement[i]);
+        Serial.print(";");
+      }
+      else{
+        Serial.println("ERROR!");
+        lcd.clear();
+        lcd.print("ERROR!");
+        while(1);
+      }
+
+      delay(my_delay);
+
+      // counter++
+      i += 1;
+    }
+
+    time2 = millis();
+  }
+
+  do{
+    Serial.println("finished");
+  }while(0);
+  
   delay(500);
 }
 
