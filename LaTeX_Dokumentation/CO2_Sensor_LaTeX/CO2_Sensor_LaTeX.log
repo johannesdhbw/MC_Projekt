@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  3 MAR 2020 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  4 MAR 2020 13:09
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1431,11 +1431,7 @@ File: tikzlibraryshadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 flibraryshadings.code.tex"
 File: pgflibraryshadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )) (CO2_Sensor_LaTeX.aux (pages/titelseite.aux)
-(pages/erklaerung.aux)
-
-LaTeX Warning: Label `Projektbeschreibung' multiply defined.
-
-)
+(pages/erklaerung.aux))
 \openout1 = `CO2_Sensor_LaTeX.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
@@ -1453,12 +1449,14 @@ LaTeX Font Info:    ... okay on input line 182.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 182.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 182.
 
- ("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+
+("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 182.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
 LaTeX Font Info:    ... okay on input line 182.
+
 ("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -1633,7 +1631,22 @@ LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <12> not available
 ] [2
 
 
-]) (Standard/Kurzfassung.tex) [3
+]) (Standard/Kurzfassung.tex
+Package acronym Info: Label `acro:DHBW' newly defined as it shall be overridden
+
+although it is yet undefined on input line 5.
+)
+Overfull \hbox (5.47684pt too wide) in paragraph at lines 5--195
+\T1/cmr/m/n/12 Der Be-richt wur-de von drei Stu-die-ren-den an der [][][]Duale 
+Hoch-schu-le Baden-Würtemberg ([])[]-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--195
+
+ []
+
+[3
 
 
 
@@ -1688,7 +1701,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 20--20
+Underfull \hbox (badness 2495) in paragraph at lines 21--21
 []|\T1/cmr/m/n/12 Ausgabe der Luft-gü-te mit-hil-fe von LCD-
  []
 
@@ -1702,13 +1715,14 @@ chapter 3.
 
 ]
 chapter 4.
-(chapter/Entwurf.tex
-<Images/Layout_Steckplatine.jpg, id=117, 750.53734pt x 512.84933pt>
+(chapter/Entwurf.tex) (chapter/Schaltungslayout.tex
+<Images/Layout_Steckplatine.jpg, id=124, 750.53734pt x 512.84933pt>
 File: Images/Layout_Steckplatine.jpg Graphic file (type jpg)
 <use Images/Layout_Steckplatine.jpg>
 Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 7.
 (pdftex.def)             Requested size: 435.32426pt x 297.46063pt.
-) [7 <./Images/Layout_Steckplatine.jpg>] [8
+) (chapter/GehÃ¤use.tex)
+[7 <./Images/Layout_Steckplatine.jpg>] [8
 
 
 ]
@@ -1730,6 +1744,11 @@ Overfull \hbox (0.79999pt too wide) in paragraph at lines 7--26
 
 
 Overfull \hbox (0.79999pt too wide) in paragraph at lines 58--77
+ [][] 
+ []
+
+
+Overfull \hbox (115.43748pt too wide) in paragraph at lines 87--97
  [][] 
  []
 
@@ -1791,27 +1810,24 @@ chapter A.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (CO2_Sensor_LaTeX.aux (pages/titelseite.aux) (pages/erklaerung.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `CO2_Sensor_LaTeX.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 49606 strings out of 492895
- 1126911 string characters out of 3123735
- 1405451 words of memory out of 3000000
- 52729 multiletter control sequences out of 15000+200000
+ 49627 strings out of 492895
+ 1127426 string characters out of 3123735
+ 1405588 words of memory out of 3000000
+ 52739 multiletter control sequences out of 15000+200000
  548631 words of font info for 57 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
  79i,11n,136p,9170b,950s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1828,9 +1844,9 @@ pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecss1728.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
 /ec/dpi600\ecsx1728.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecsx2074.pk>
-Output written on CO2_Sensor_LaTeX.pdf (37 pages, 895322 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (37 pages, 905756 bytes).
 PDF statistics:
- 669 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 700 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
