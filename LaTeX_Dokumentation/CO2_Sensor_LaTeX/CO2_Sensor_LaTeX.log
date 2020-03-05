@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  4 MAR 2020 13:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  5 MAR 2020 23:46
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1701,7 +1701,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 21--21
+Underfull \hbox (badness 2495) in paragraph at lines 20--20
 []|\T1/cmr/m/n/12 Ausgabe der Luft-gü-te mit-hil-fe von LCD-
  []
 
@@ -1844,9 +1844,9 @@ pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecss1728.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
 /ec/dpi600\ecsx1728.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecsx2074.pk>
-Output written on CO2_Sensor_LaTeX.pdf (37 pages, 905756 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (37 pages, 908951 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
+ 705 PDF objects out of 1000 (max. 8388607)
  66 named destinations out of 1000 (max. 500000)
  175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
