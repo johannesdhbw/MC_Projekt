@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  6 MAR 2020 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  7 MAR 2020 17:37
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1744,30 +1744,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<Images/ccs811Blockdiagramm.jpg, id=155, 707.64375pt x 387.69844pt>
+<Images/CO2SensorCCS811.jpg, id=156, 170.6375pt x 172.645pt>
+File: Images/CO2SensorCCS811.jpg Graphic file (type jpg)
+<use Images/CO2SensorCCS811.jpg>
+Package pdftex.def Info: Images/CO2SensorCCS811.jpg  used on input line 7.
+(pdftex.def)             Requested size: 145.11055pt x 146.82796pt.
+<Images/ccs811Blockdiagramm.jpg, id=159, 707.64375pt x 387.69844pt>
 File: Images/ccs811Blockdiagramm.jpg Graphic file (type jpg)
 <use Images/ccs811Blockdiagramm.jpg>
 Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 16.
 
 (pdftex.def)             Requested size: 435.32426pt x 238.50706pt.
-[10 <./Images/ccs811Blockdiagramm.jpg>]
+
 Overfull \hbox (27.70195pt too wide) in paragraph at lines 67--68
 []\T1/cmr/m/n/12 In der Soft-wa-re-im-ple-men-tie-rung wird der Co$[]$-Sensor m
 it-hil-fe der Bi-blio-thek <Ar-dafruit_CCS811.h>
  []
 
-<Images/ccs811Setup.jpg, id=172, 389.95688pt x 89.58469pt>
+[10 <./Images/CO2SensorCCS811.jpg>]
+<Images/ccs811Setup.jpg, id=176, 389.95688pt x 89.58469pt>
 File: Images/ccs811Setup.jpg Graphic file (type jpg)
 <use Images/ccs811Setup.jpg>
 Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 71.
 (pdftex.def)             Requested size: 435.32426pt x 100.01155pt.
-<Images/ccs811Loop.jpg, id=173, 230.36063pt x 120.45pt>
+<Images/ccs811Loop.jpg, id=177, 230.36063pt x 120.45pt>
 File: Images/ccs811Loop.jpg Graphic file (type jpg)
 <use Images/ccs811Loop.jpg>
 Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 80.
 (pdftex.def)             Requested size: 241.84845pt x 126.456pt.
-) (chapter/mikroSD.tex) [11 <./Images/ccs811Setup.jpg>] [12 <./Images/ccs811Loo
-p.jpg>]
+) (chapter/mikroSD.tex)
+Underfull \vbox (badness 6141) has occurred while \output is active []
+
+ [11 <./Images/ccs811Blockdiagramm.jpg>] [12 <./Images/ccs811Setup.jpg> <./Imag
+es/ccs811Loop.jpg>]
 chapter 6.
 (chapter/Hardware.tex) [13
 
@@ -1788,16 +1797,16 @@ Overfull \hbox (0.79999pt too wide) in paragraph at lines 58--77
  []
 
 
-Overfull \hbox (115.43748pt too wide) in paragraph at lines 87--97
+Overfull \hbox (0.79999pt too wide) in paragraph at lines 87--98
  [][] 
  []
 
-) [15] [16
-
-
-]
+) [15] [16]
 chapter 8.
-(chapter/Handbuch.tex) [17] [18
+(chapter/Handbuch.tex) [17
+
+
+] [18
 
 
 ]
@@ -1863,10 +1872,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
- 49749 strings out of 492895
- 1130263 string characters out of 3123735
- 1406105 words of memory out of 3000000
- 52832 multiletter control sequences out of 15000+200000
+ 49756 strings out of 492895
+ 1130439 string characters out of 3123735
+ 1406182 words of memory out of 3000000
+ 52837 multiletter control sequences out of 15000+200000
  551155 words of font info for 61 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
  79i,11n,136p,9170b,950s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1892,9 +1901,9 @@ sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074
 ts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (39 pages, 1090027 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (39 pages, 1130396 bytes).
 PDF statistics:
- 921 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 929 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

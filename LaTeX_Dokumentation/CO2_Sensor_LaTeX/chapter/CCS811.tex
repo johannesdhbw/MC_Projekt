@@ -1,20 +1,20 @@
 \label{CCS811}
 
-Wir haben den in Abbildung ...  zu sehenden CCS811-Sensor verwendet da er einige Vorteile mit sich bringt. Er ist ein digitaler \ac{MOX}-Gassensor mit einem extrem geringen Stromverbrauch. Wie in Abbildung \ref{fig:ccs811Blockdiagramm} zu sehen ist, besitzt er einen \ac{AD}-Wander und eine I$^2$C-Schnittstelle, was dem Entwickler eine leichte Soft- und Hardware Integration bietet. Zudem soll er eine Lebenszeit von über 5 Jahren nachweisen. \cite[vgl. S. 1]{amsAG.2016} \\
+Wir haben den in Abbildung \ref{fig:CCS811-Bild}  zu sehenden CCS811-Sensor verwendet da er einige Vorteile mit sich bringt. Er ist ein digitaler \ac{MOX}-Gassensor mit einem extrem geringen Stromverbrauch. Wie in Abbildung \ref{fig:ccs811Blockdiagramm} zu sehen ist, besitzt er einen \ac{AD}-Wander und eine I$^2$C-Schnittstelle, was dem Entwickler eine leichte Soft- und Hardware Integration bietet. Zudem soll er eine Lebenszeit von über 5 Jahren nachweisen. \cite[vgl. S. 1]{amsAG.2016} \\
 
-%\begin{figure}[!hbt]
-%	\centering
-%	\includegraphics[width=0.9\linewidth]{Images/CCS811Gassensor}
-%	\caption{CCS811-\ac{MOX}-Gassensor}
-%	\label{fig:CCS811-Bild}
-%\end{figure}
+\begin{figure}[!hbt]
+	\centering
+	\includegraphics[width=0.3\linewidth]{Images/CO2SensorCCS811}
+	\caption{Verwendeter CCS811-\ac{MOX}-Gassensor}
+	\label{fig:CCS811-Bild}
+\end{figure}
 
 Der CO2-Sensor ist über den Pins SDA und SCL mit dem Arduino verbunden. Pin 7 ist dabei auf Masse kurzgeschlossen. Die restlichen Pins werden in unserem Projekt nicht benötigt.
 
 \begin{figure}[!hbt]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Images/ccs811Blockdiagramm}
-	\footnotesize{Quelle: \cite[S. 3]{amsAG.2016}}
+	\footnotesize{\\ Quelle: \cite[S. 3]{amsAG.2016}}
 	\caption{CCS811 Blockdiagramm}
 	\label{fig:ccs811Blockdiagramm}
 \end{figure}
@@ -69,7 +69,7 @@ In der Softwareimplementierung wird der Co\textsubscript{2}-Sensor mithilfe der 
 \begin{figure}[!hbt]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Images/ccs811Setup}
-	\caption{Codeauschnitt im Setup aus dem Softwareprogramm}
+	\caption{Codeauschnitt für das Setup aus dem Softwareprogramm}
 	\label{fig:Setup}
 \end{figure}
 
