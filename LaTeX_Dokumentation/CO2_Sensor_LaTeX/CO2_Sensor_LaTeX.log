@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  7 MAR 2020 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  9 MAR 2020 12:42
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1695,24 +1695,26 @@ l.211 \chapter
 ]
 chapter 2.
 (chapter/Anforderungen.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
 Underfull \hbox (badness 2495) in paragraph at lines 20--20
 []|\T1/cmr/m/n/12 Ausgabe der Luft-gü-te mit-hil-fe von LCD-
  []
 
-) [3] [4
-
-
-]
+[3]) [4]
 chapter 3.
-(chapter/KostenundArbeitsplan.tex) [5] [6
+(chapter/KostenundArbeitsplan.tex
+("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\uni-32.def"
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+<Images/Ablaufplan.jpg, id=124, 930.3558pt x 289.08pt>
+File: Images/Ablaufplan.jpg Graphic file (type jpg)
+<use Images/Ablaufplan.jpg>
+Package pdftex.def Info: Images/Ablaufplan.jpg  used on input line 39.
+(pdftex.def)             Requested size: 483.69691pt x 150.29158pt.
+)
+[5
 
 
-]
+ <./Images/Ablaufplan.jpg>] [6]
 chapter 4.
 (chapter/Entwurf.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 3--220
@@ -1724,12 +1726,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-<Images/Layout_Steckplatine.jpg, id=131, 750.53734pt x 512.84933pt>
+<Images/Layout_Steckplatine.jpg, id=139, 743.84567pt x 504.284pt>
 File: Images/Layout_Steckplatine.jpg Graphic file (type jpg)
 <use Images/Layout_Steckplatine.jpg>
 Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 9.
-(pdftex.def)             Requested size: 435.32426pt x 297.46063pt.
-) (chapter/GehÃ¤use.tex) [7] [8 <./Images/Layout_Steckplatine.jpg>]
+(pdftex.def)             Requested size: 435.32426pt x 295.12422pt.
+) (chapter/GehÃ¤use.tex) [7
+
+
+] [8 <./Images/Layout_Steckplatine.jpg>]
 chapter 5.
 (chapter/Softwareimplementation.tex) [9
 
@@ -1744,12 +1749,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<Images/CO2SensorCCS811.jpg, id=156, 170.6375pt x 172.645pt>
+<Images/CO2SensorCCS811.jpg, id=164, 170.6375pt x 172.645pt>
 File: Images/CO2SensorCCS811.jpg Graphic file (type jpg)
 <use Images/CO2SensorCCS811.jpg>
 Package pdftex.def Info: Images/CO2SensorCCS811.jpg  used on input line 7.
 (pdftex.def)             Requested size: 145.11055pt x 146.82796pt.
-<Images/ccs811Blockdiagramm.jpg, id=159, 707.64375pt x 387.69844pt>
+<Images/ccs811Blockdiagramm.jpg, id=167, 707.64375pt x 387.69844pt>
 File: Images/ccs811Blockdiagramm.jpg Graphic file (type jpg)
 <use Images/ccs811Blockdiagramm.jpg>
 Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 16.
@@ -1762,12 +1767,12 @@ it-hil-fe der Bi-blio-thek <Ar-dafruit_CCS811.h>
  []
 
 [10 <./Images/CO2SensorCCS811.jpg>]
-<Images/ccs811Setup.jpg, id=176, 389.95688pt x 89.58469pt>
+<Images/ccs811Setup.jpg, id=184, 389.95688pt x 89.58469pt>
 File: Images/ccs811Setup.jpg Graphic file (type jpg)
 <use Images/ccs811Setup.jpg>
 Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 71.
 (pdftex.def)             Requested size: 435.32426pt x 100.01155pt.
-<Images/ccs811Loop.jpg, id=177, 230.36063pt x 120.45pt>
+<Images/ccs811Loop.jpg, id=185, 230.36063pt x 120.45pt>
 File: Images/ccs811Loop.jpg Graphic file (type jpg)
 <use Images/ccs811Loop.jpg>
 Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 80.
@@ -1829,7 +1834,55 @@ chapter without number
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 15.
 ("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-))
+)
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+[]\T1/cmr/m/sc/12 Helga Mey-er\T1/cmr/m/n/12 , Heinz-Josef R.:  \T1/cmr/m/it/12
+ Pro-jekt-ma-na-ge-ment: Von der De-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmr/m/it/12 ni-ti-on über die Pro-jekt-pla-nung zum er-folg-rei-chen Ab-sch
+luss\T1/cmr/m/n/12 .  Bre-men
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmr/m/n/12 : Sprin-ger Gabler []$\T1/cmtt/m/n/12 https : / / books . google
+ . de / books ? id = 1ho3CwAAQBAJ &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmtt/m/n/12 printsec = frontcover & dq = projektmanagement + von + der + de
+finition +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmtt/m/n/12 %C3 % BCber + die + projektplanung + zum + erfolgreichen + absc
+hluss & hl = de &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmtt/m/n/12 sa = X & ved = 0ahUKEwi66ufKpY3oAhUF06YKHSFvB7wQ6AEIMjAB # v = 
+onepage & q =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmtt/m/n/12 projektmanagement % 20von % 20der % 20definition % 20 % C3 % BC
+ber % 20die %
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
+\T1/cmtt/m/n/12 20projektplanung % 20zum % 20erfolgreichen % 20abschluss & f = 
+false$[]\T1/cmr/m/n/12 . --  ISBN
+ []
+
+)
 No file CO2_Sensor_LaTeX.ind.
 (Standard/Abkuerzungen.tex) [25] [26
 
@@ -1872,38 +1925,39 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
- 49756 strings out of 492895
- 1130439 string characters out of 3123735
- 1406182 words of memory out of 3000000
- 52837 multiletter control sequences out of 15000+200000
- 551155 words of font info for 61 fonts, out of 3000000 for 9000
+ 50018 strings out of 492895
+ 1133542 string characters out of 3123735
+ 1406365 words of memory out of 3000000
+ 53091 multiletter control sequences out of 15000+200000
+ 551492 words of font info for 62 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 79i,11n,136p,9170b,950s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 79i,11n,136p,9170b,1005s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 ectt1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecti1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts
 /pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\49157\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\49157\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\49157\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Us
-ers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\49157\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\49157\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Us
+ers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.
 pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\eccc1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecsi1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecsx2488.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\font
-s/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\49157\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\49157\AppData\L
-ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1728.pk> <C:\Users\49157
-\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\U
-sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074
-.pk><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (39 pages, 1130396 bytes).
+\ecrm1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
+/ec/dpi600\eccc1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecsi1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\font
+s/pk/ljfour/jknappen/ec/dpi600\ecsx2488.pk> <C:\Users\49157\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\49157\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\49157
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1728.pk> <C:\U
+sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728
+.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecsx2074.pk><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on CO2_Sensor_LaTeX.pdf (39 pages, 1299580 bytes).
 PDF statistics:
- 929 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1002 PDF objects out of 1200 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
