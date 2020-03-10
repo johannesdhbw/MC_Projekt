@@ -15,6 +15,14 @@
   \url{https://cdn.sparkfun.com/assets/learn_tutorials/1/4/3/CCS811_Datasheet-DS000459.pdf}.
 \newblock \,Version:\,2016
 
+\bibitem[Dep]{DepartmentofResearch&DevelopmentDepartmentofInformationTechnologiesandSystems.}
+\textsc{{Department of Research {\&} Development, Department of Information
+  Technologies and Systems}} (Hrsg.):
+\newblock \emph{A Data Quality Measurement Information Model Based On
+  ISO/IEC15939}.
+\newblock
+  \url{https://s3.amazonaws.com/academia.edu.documents/36881777/ICIQ2007-ADataQualityMeasurementInfromationModelBasedOnISOIEC15939.pdf?response-content-disposition=inline%3B%20filename%3DA_Data_Quality_Measurement_Information_M.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200310%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T081440Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=68ac8145994178d50baf90ab0a7557af4a341fa239938ed408aba2cd8a3c8e95}
+
 \bibitem[{Hel}]{HelgaMeyer.}
 \textsc{{Helga Meyer}}, Heinz-Josef~R.:
 \newblock \emph{Projektmanagement: Von der Definition {\"u}ber die
@@ -23,5 +31,26 @@
   \url{https://books.google.de/books?id=1ho3CwAAQBAJ&printsec=frontcover&dq=projektmanagement+von+der+definition+%C3%BCber+die+projektplanung+zum+erfolgreichen+abschluss&hl=de&sa=X&ved=0ahUKEwi66ufKpY3oAhUF06YKHSFvB7wQ6AEIMjAB#v=onepage&q=projektmanagement%20von%20der%20definition%20%C3%BCber%20die%20projektplanung%20zum%20erfolgreichen%20abschluss&f=false}.
   --
 \newblock ISBN 978--3--658--07569--9
+
+\bibitem[{Jay}]{JayAbrahamPaulJonesRaoulJetley.}
+\textsc{{Jay Abraham, Paul Jones, Raoul Jetley}}:
+\newblock \emph{Formale Verifikationsmethoden f{\"u}r die Entwicklung von
+  High-Integrity-Software f{\"u}r Medizinische Ger{\"a}te}
+
+\bibitem[{Pet}09]{PeterLiggesmeyer.2009}
+\textsc{{Peter Liggesmeyer}}:
+\newblock \emph{Software-Qualit{\"a}t: Testen, Analysieren und Verifizieren von
+  Software: Prof. Dr.-Ing.}
+\newblock 2.
+\newblock Heidelberg : {Spektrum Akademischer Verlag}, 2009
+  \url{https://link.springer.com/content/pdf/10.1007%2F978-3-8274-2203-3.pdf}.
+  --
+\newblock ISBN 978--3--8274--2056--5
+
+\bibitem[Wik20]{Wikipedia.01.03.2020}
+\textsc{Wikipedia} (Hrsg.):
+\newblock \emph{Softwaretest}.
+\newblock \url{https://de.wikipedia.org/wiki/Softwaretest#Literatur}.
+\newblock \,Version:\,01.03.2020
 
 \end{thebibliography}
