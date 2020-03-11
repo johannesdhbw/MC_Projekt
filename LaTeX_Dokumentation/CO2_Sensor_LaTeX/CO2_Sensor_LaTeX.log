@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  10 MAR 2020 09:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  10 MAR 2020 15:22
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1695,8 +1695,11 @@ l.211 \chapter
 ]
 chapter 2.
 (chapter/Anforderungen.tex
-Underfull \hbox (badness 2495) in paragraph at lines 20--20
-[]|\T1/cmr/m/n/12 Ausgabe der Luft-gü-te mit-hil-fe von LCD-
+Package acronym Info: Label `acro:LCD' newly defined as it shall be overridden
+although it is yet undefined on input line 20.
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/cmr/m/n/12 Ausgabe der Luft-gü-te mit-hil-fe von
  []
 
 [3]) [4]
@@ -1705,16 +1708,16 @@ chapter 3.
 ("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<Images/Ablaufplan.jpg, id=133, 930.3558pt x 289.08pt>
+<Images/Ablaufplan.jpg, id=137, 930.3558pt x 289.08pt>
 File: Images/Ablaufplan.jpg Graphic file (type jpg)
 <use Images/Ablaufplan.jpg>
-Package pdftex.def Info: Images/Ablaufplan.jpg  used on input line 39.
+Package pdftex.def Info: Images/Ablaufplan.jpg  used on input line 40.
 (pdftex.def)             Requested size: 483.69691pt x 150.29158pt.
 )
 [5
 
 
- <./Images/Ablaufplan.jpg>] [6]
+] [6 <./Images/Ablaufplan.jpg>]
 chapter 4.
 (chapter/Entwurf.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 3--220
@@ -1722,19 +1725,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--220
  []
 
 (chapter/Schaltungslayout.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-<Images/Layout_Steckplatine.jpg, id=148, 743.84567pt x 504.284pt>
+[7
+
+
+]
+<Images/Layout_Steckplatine.jpg, id=164, 743.84567pt x 504.284pt>
 File: Images/Layout_Steckplatine.jpg Graphic file (type jpg)
 <use Images/Layout_Steckplatine.jpg>
-Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 9.
+Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 12.
+
 (pdftex.def)             Requested size: 435.32426pt x 295.12422pt.
-) (chapter/GehÃ¤use.tex) [7
-
-
-] [8 <./Images/Layout_Steckplatine.jpg>]
+) (chapter/GehÃ¤use.tex) [8 <./Images/Layout_Steckplatine.jpg>]
 chapter 5.
 (chapter/Softwareimplementation.tex) [9
 
@@ -1749,12 +1754,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<Images/CO2SensorCCS811.jpg, id=173, 170.6375pt x 172.645pt>
+<Images/CO2SensorCCS811.jpg, id=182, 170.6375pt x 172.645pt>
 File: Images/CO2SensorCCS811.jpg Graphic file (type jpg)
 <use Images/CO2SensorCCS811.jpg>
 Package pdftex.def Info: Images/CO2SensorCCS811.jpg  used on input line 7.
 (pdftex.def)             Requested size: 145.11055pt x 146.82796pt.
-<Images/ccs811Blockdiagramm.jpg, id=176, 707.64375pt x 387.69844pt>
+<Images/ccs811Blockdiagramm.jpg, id=185, 707.64375pt x 387.69844pt>
 File: Images/ccs811Blockdiagramm.jpg Graphic file (type jpg)
 <use Images/ccs811Blockdiagramm.jpg>
 Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 16.
@@ -1767,12 +1772,12 @@ it-hil-fe der Bi-blio-thek <Ar-dafruit_CCS811.h>
  []
 
 [10 <./Images/CO2SensorCCS811.jpg>]
-<Images/ccs811Setup.jpg, id=193, 389.95688pt x 89.58469pt>
+<Images/ccs811Setup.jpg, id=202, 389.95688pt x 89.58469pt>
 File: Images/ccs811Setup.jpg Graphic file (type jpg)
 <use Images/ccs811Setup.jpg>
 Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 71.
 (pdftex.def)             Requested size: 435.32426pt x 100.01155pt.
-<Images/ccs811Loop.jpg, id=194, 230.36063pt x 120.45pt>
+<Images/ccs811Loop.jpg, id=203, 230.36063pt x 120.45pt>
 File: Images/ccs811Loop.jpg Graphic file (type jpg)
 <use Images/ccs811Loop.jpg>
 Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 80.
@@ -1816,12 +1821,12 @@ chapter 8.
 
 ]
 chapter 9.
-(chapter/Installationsanleitung.tex) [19] [20
-
-
-]
+(chapter/Installationsanleitung.tex) [19] [20]
 chapter 10.
-(Standard/Fazit.tex) [21] [22
+(Standard/Fazit.tex) [21
+
+
+] [22
 
 
 ]
@@ -1980,27 +1985,27 @@ chapter A.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
  (CO2_Sensor_LaTeX.aux (pages/titelseite.aux) (pages/erklaerung.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
 Package rerunfilecheck Info: File `CO2_Sensor_LaTeX.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
  ) 
 Here is how much of TeX's memory you used:
- 50026 strings out of 492895
- 1133870 string characters out of 3123735
- 1406617 words of memory out of 3000000
- 53095 multiletter control sequences out of 15000+200000
- 551492 words of font info for 62 fonts, out of 3000000 for 9000
+ 50040 strings out of 492895
+ 1134008 string characters out of 3123735
+ 1407780 words of memory out of 3000000
+ 53105 multiletter control sequences out of 15000+200000
+ 553719 words of font info for 67 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 79i,11n,136p,9170b,1050s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 79i,13n,136p,9170b,1050s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 ectt1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecti1200.pk> <C:\Users\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
@@ -2024,9 +2029,9 @@ sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728
 lic/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (39 pages, 1323524 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (39 pages, 1330498 bytes).
 PDF statistics:
- 1064 PDF objects out of 1200 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
+ 1079 PDF objects out of 1200 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

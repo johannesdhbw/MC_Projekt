@@ -1,6 +1,15 @@
 \label{Installationsanleitung}
 
+Die folgenden Bibliotheken müssen heruntergeladen sein:
 
+\begin{itemize}
+	\item Adafruit\_CCS811.h (Arduino driver für den CCS811 Gas-Sensor)
+	\item SPI.h (Ermöglicht die Kommunikation mit dem Serial Peripheral Interface)
+	\item Wire.h (Ermöglicht die Kommunikation über $I^2C$)
+	\item LiquidCrystal.h (Zur Integration des \ac{LCD}-Displays)
+\end{itemize}
+
+In der folgenden Tabelle sind alle Verbindungen zwischen den einzelnen Komponenten mit dem Arduino aufgelistet. In \ref{fig:Layout} ist das enprechende Layout als Zeichnung zu finden.
 
 \begin{table}[!hbt]
 	
@@ -11,7 +20,7 @@
 		\hline
 		Nummer & Bauteil & Spezifikation & Anschlusspin Arduino \\
 		\hline
-		1 & LCD-Display & RS & D7 \\
+		1 & \ac{LCD}-Display & RS & D7 \\
 		 & & RW & GND \\
 		 & & E & D6 \\
 		 & & D4 & D5 \\

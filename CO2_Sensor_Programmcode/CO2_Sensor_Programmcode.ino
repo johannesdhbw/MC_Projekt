@@ -11,7 +11,7 @@
 //#include <Adafruit_GFX.h>
 //#include "Adafruit_CCS811.h"
 #include <LiquidCrystal.h>
-#include <EEPROM.h>
+#include <EEPROM.h> //unnötig
 //#include <CO2Sensor.h>
 
 // ******************************************************
