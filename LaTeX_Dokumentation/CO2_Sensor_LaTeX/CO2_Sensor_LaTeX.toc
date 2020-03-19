@@ -6,17 +6,19 @@
 \contentsline {section}{\numberline {4.1}Schaltungslayout}{7}{section.4.1}% 
 \contentsline {section}{\numberline {4.2}Geh\IeC {\"a}use}{8}{section.4.2}% 
 \contentsline {chapter}{\numberline {5}Softwareimplementation}{9}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}CCS811}{10}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Mikro-SD}{12}{section.5.2}% 
-\contentsline {chapter}{\numberline {6}Hardware}{13}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Testing}{15}{chapter.7}% 
-\contentsline {chapter}{\numberline {8}Handbuch}{17}{chapter.8}% 
-\contentsline {chapter}{\numberline {9}Installationsanleitung}{19}{chapter.9}% 
-\contentsline {chapter}{\numberline {10}Fazit}{21}{chapter.10}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{23}{chapter*.22}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{25}{chapter*.23}% 
-\contentsline {chapter}{Sachwortverzeichnis}{26}{chapter*.23}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{27}{chapter*.24}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{29}{chapter*.25}% 
-\contentsline {chapter}{\numberline {A}Anhang}{31}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{31}{section.A.1}% 
+\contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{10}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Arduino}{10}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}CCS811}{11}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Mikro-SD}{12}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Hardware}{15}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Testing}{17}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Handbuch}{19}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}Installationsanleitung}{21}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Fazit}{23}{chapter.10}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{25}{chapter*.23}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}{chapter*.24}% 
+\contentsline {chapter}{Sachwortverzeichnis}{28}{chapter*.24}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{29}{chapter*.25}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{31}{chapter*.26}% 
+\contentsline {chapter}{\numberline {A}Anhang}{33}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{33}{section.A.1}% 

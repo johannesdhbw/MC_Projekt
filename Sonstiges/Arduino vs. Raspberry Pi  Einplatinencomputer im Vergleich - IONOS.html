@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html class="js cssremunit" lang="de"><head itemscope="" itemtype="http://schema.org/WebSite">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta itemprop="name" content="IONOS Digital Guide">
+  <style type="text/css">#bio_ep_bg {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.3; z-index: 10001;}#bio_ep {display: none; position: fixed; width: 500px; height: 500px; font-family: 'Titillium Web', sans-serif; font-size: 16px; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); background-color: #fff; box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.5); z-index: 10002;}#bio_ep_close {position: absolute; left: 100%; margin: -8px 0 0 -12px; width: 20px; height: 20px; color: #fff; font-size: 12px; font-weight: bold; text-align: center; border-radius: 50%; background-color: #5c5c5c; cursor: pointer;}</style><link rel="stylesheet" crossorigin="anonymous" href="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/main.css"><script type="text/javascript" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/s_code.js"></script><script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/satelliteLib-f68a2914f4e4738802a1a21a096f14b2a173b441.js"></script>
+
+<meta charset="utf-8">
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2019 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+<!-- base href="https://www.ionos.de/digitalguide/" -->
+
+
+<meta name="generator" content="TYPO3 CMS">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="meta-category" content="Digitalguide">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="robots" content="index,follow">
+
+
+<link rel="stylesheet" type="text/css" href="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/font-awesome.css" media="all">
+<link rel="stylesheet" type="text/css" href="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/merged-9cf45c784f4c5461c8db7cddd3729b21-acfebda57bfa98f29b57.css" media="all">
+
+
+<script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/merged-2309b1a88353daedcf867a0db8826da4-9e2139f68006ab836ee.gzip" type="text/javascript"></script>
+<script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/merged-169ee79783d439253482f0927602d03b-3f5b3b2b147624ae545.gzip" type="text/javascript"></script>
+
+
+<link rel="stylesheet" type="text/css" media="all" href="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/cookie-styling-dark-bottom.css">
+      <link rel="shortcut icon" href="https://www.ionos.de/favicon.ico"><link rel="canonical" href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="de" href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="de-DE" href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="en-GB" href="https://www.ionos.co.uk/digitalguide/server/know-how/arduino-vs-raspberry-pi-affordable-diy-hardware/"><link rel="alternate" hreflang="es" href="https://www.ionos.es/digitalguide/servidores/know-how/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="es-ES" href="https://www.ionos.es/digitalguide/servidores/know-how/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="en" href="https://www.ionos.com/digitalguide/server/know-how/arduino-vs-raspberry-pi-affordable-diy-hardware/"><link rel="alternate" hreflang="en-US" href="https://www.ionos.com/digitalguide/server/know-how/arduino-vs-raspberry-pi-affordable-diy-hardware/"><link rel="alternate" hreflang="en-CA" href="https://www.ionos.ca/digitalguide/server/know-how/arduino-vs-raspberry-pi-affordable-diy-hardware/"><link rel="alternate" hreflang="fr" href="https://www.ionos.fr/digitalguide/serveur/know-how/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="fr-FR" href="https://www.ionos.fr/digitalguide/serveur/know-how/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="es-MX" href="https://www.ionos.mx/digitalguide/servidores/know-how/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="it-IT" href="https://www.ionos.it/digitalguide/server/know-how/arduino-vs-raspberry-pi/"><link rel="alternate" hreflang="de-AT" href="https://www.ionos.at/digitalguide/server/knowhow/arduino-vs-raspberry-pi/">
+	<title>Arduino vs. Raspberry Pi: Einplatinencomputer im Vergleich - IONOS</title>
+	<meta name="description" content="Auch wenn der Unterschied zwischen Raspberry Pi und Arduino grundlegend ist, lohnt sich ein Vergleich der beiden in der DIY-Szene sehr beliebten Hardware-Komponenten.">
+	
+<meta property="og:title" content="Arduino vs. Raspberry Pi">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Teaser/platine-t.jpg">
+<meta property="og:url" content="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/">
+<meta property="og:site_name" content="IONOS Digitalguide">
+<meta property="og:description" content="Auch wenn der Unterschied zwischen Raspberry Pi und Arduino grundlegend ist, lohnt sich ein Vergleich der beiden in der DIY-Szene sehr beliebten Hardware-Komponenten.">
+<meta property="og:locale" content="de_DE">
+<script type="text/javascript">
+        var cookieContent = '';
+        var params = document.location.search;
+
+        if (params.indexOf('ac') != -1) {
+          var regExp = new RegExp(/ac=([a-z0-9.]*)/i);
+          var matches = params.match(regExp);
+
+          if (matches != null && matches.length > 0) {
+              cookieContent = matches[1];
+          }
+        }
+        else {
+            var referrer = document.referrer;
+            var cookieValueSearchEngine = 'OM.PU.PUo50K361684T7073a';
+            var cookieValueOther = 'OM.PU.PUd12K41336T7073a';
+
+            if (referrer != '') {
+                var re = new RegExp(/^http[s]?:\/\/(www\.)?(google|bing|yahoo|duckduckgo|ecosia|ask.com|t-online|myway|qwant|such.web.de|gmx.net|startpage.com|msn.com|yandex)/i);
+                var matches = referrer.match(re);
+
+                cookieContent = (matches != null && matches.length > 0) ? cookieValueSearchEngine : cookieValueOther;
+            }
+        }
+        var cookieName = 'ac-euepostclick-de';
+        if(document.cookie.indexOf(cookieName) == -1 && cookieContent != '') {
+            var thirtyDaysFromNow = Date.now() + (86400000 * 90);
+            var expiresDate = new Date(thirtyDaysFromNow).toUTCString(); 
+            var cookieSettings = '; expires=' + expiresDate + '; path=/';
+            document.cookie = cookieName + '=' + cookieContent + cookieSettings;
+        }
+        </script>
+<style type="text/css">.js-acc-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important; width: 100% !important;}</style><style type="text/css">.js-slide-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}</style><style>pre code.rainbow .line { position: relative; padding-right: 10px; }pre code.rainbow .line:before{ content: attr(data-line); display: inline-block; text-align: right; white-space: nowrap; }pre code.rainbow .line:after{ content:''; position: absolute; left: 0; bottom: 0; }</style><script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/satellite-5bcd8ec264746d3348001473.js"></script><script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/satellite-5e32b69864746d262f000d75.js"></script></head>
+<body class="see-drop page-1798"><div class="cc_banner-wrapper "><div class="cc_banner cc_container cc_container--open"><a href="" data-cc-event="click:dismiss" rel="nofollow" class="cc_btn cc_btn_accept_all">OK</a><p class="cc_message">Wir
+ verwenden Cookies, um Ihnen ein optimales Nutzererlebnis zu bieten, auf
+ Sie zugeschnittene Werbung zu generieren und Social Media einzubinden. 
+Nutzen Sie unsere Website oder Dienste weiter, stimmen Sie der 
+Verwendung zu. <a data-cc-if="options.link" class="cc_more_info" href="https://www.ionos.de/cookies">Mehr Informationen.</a></p></div></div>
+
+
+<div id="wrapper">
+
+	
+	<header id="header" style=""><div class="header-holder"><div class="container"><div class="logo"><a href="https://www.ionos.de/digitalguide/"><span class="text">Digital Guide</span><div class="img-logo rb"><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/ionos_logo.svg" alt="IONOS"></div></a></div><nav id="nav"><a href="#" class="nav-opener"><span></span></a><div class="nav-drop"><div class="nav-wrap"><ul id="navigation" class="navigation"><li class="has-drop-down"><a href="https://www.ionos.de/digitalguide/websites/" class="has-drop-down-a">Websites</a><div class="inner-drop hidden-drop"><div class="container"><ul><li><a href="https://www.ionos.de/digitalguide/websites/webseiten-erstellen/" title="Webseiten erstellen">Webseiten erstellen</a></li><li><a href="https://www.ionos.de/digitalguide/websites/webdesign/" title="Webdesign">Webdesign</a></li><li><a href="https://www.ionos.de/digitalguide/websites/web-entwicklung/" title="Web-Entwicklung">Web-Entwicklung</a></li><li><a href="https://www.ionos.de/digitalguide/websites/online-recht/" title="Online-Recht">Online-Recht</a></li></ul></div></div></li><li class="has-drop-down"><a href="https://www.ionos.de/digitalguide/hosting/" class="has-drop-down-a">Hosting</a><div class="inner-drop hidden-drop"><div class="container"><ul><li><a href="https://www.ionos.de/digitalguide/hosting/cms/" title="CMS">CMS</a></li><li><a href="https://www.ionos.de/digitalguide/hosting/blogs/" title="Blogs">Blogs</a></li><li><a href="https://www.ionos.de/digitalguide/hosting/hosting-technik/" title="Hosting-Technik">Hosting-Technik</a></li></ul></div></div></li><li class="inner-drop-active has-drop-down"><a href="https://www.ionos.de/digitalguide/server/" class="has-drop-down-a">Server</a><div class="inner-drop"><div class="container"><ul><li><a href="https://www.ionos.de/digitalguide/server/knowhow/" title="KnowHow">KnowHow</a></li><li><a href="https://www.ionos.de/digitalguide/server/konfiguration/" title="Konfiguration">Konfiguration</a></li><li><a href="https://www.ionos.de/digitalguide/server/sicherheit/" title="Sicherheit">Sicherheit</a></li><li><a href="https://www.ionos.de/digitalguide/server/tools/" title="Tools">Tools</a></li></ul></div></div></li><li class="has-drop-down"><a href="https://www.ionos.de/digitalguide/domains/" class="has-drop-down-a">Domains</a><div class="inner-drop hidden-drop"><div class="container"><ul><li><a href="https://www.ionos.de/digitalguide/domains/domainendungen/" title="Domainendungen">Domainendungen</a></li><li><a href="https://www.ionos.de/digitalguide/domains/domainverwaltung/" title="Domainverwaltung">Domainverwaltung</a></li><li><a href="https://www.ionos.de/digitalguide/domains/domain-news/" title="Domain-News">Domain-News</a></li><li><a href="https://www.ionos.de/digitalguide/domains/domaintipps/" title="Domaintipps">Domaintipps</a></li></ul></div></div></li><li class="has-drop-down"><a href="https://www.ionos.de/digitalguide/online-marketing/" class="has-drop-down-a">Online Marketing</a><div class="inner-drop hidden-drop"><div class="container"><ul><li><a href="https://www.ionos.de/digitalguide/online-marketing/verkaufen-im-internet/" title="Verkaufen im Internet">Verkaufen im Internet</a></li><li><a href="https://www.ionos.de/digitalguide/online-marketing/suchmaschinenmarketing/" title="Suchmaschinenmarketing">Suchmaschinenmarketing</a></li><li><a href="https://www.ionos.de/digitalguide/online-marketing/social-media/" title="Social Media">Social Media</a></li><li><a href="https://www.ionos.de/digitalguide/online-marketing/web-analyse/" title="Web-Analyse">Web-Analyse</a></li></ul></div></div></li><li class="has-drop-down"><a href="https://www.ionos.de/digitalguide/e-mail/" class="has-drop-down-a">E-Mail</a><div class="inner-drop hidden-drop"><div class="container"><ul><li><a href="https://www.ionos.de/digitalguide/e-mail/e-mail-marketing/" title="E-Mail Marketing">E-Mail Marketing</a></li><li><a href="https://www.ionos.de/digitalguide/e-mail/e-mail-sicherheit/" title="E-Mail Sicherheit">E-Mail Sicherheit</a></li><li><a href="https://www.ionos.de/digitalguide/e-mail/e-mail-technik/" title="E-Mail Technik">E-Mail Technik</a></li></ul></div></div></li><li class="has-drop-down"><a href="https://www.ionos.de/" class="has-drop-down-a">IONOS Produkte</a><div class="inner-drop hidden-drop"><div class="container"><ul id="second-navigation" class="second-navigation"><li class="has-drop-down level2 second-has-drop-down"><a title="domain" class="has-drop-down-a has-drop-down-b">Domain</a><div class="level3"><div class="container"><ul><li class="second-has-drop-down"><a href="https://www.ionos.de/domains/domain-registrieren?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Freie Domains registrieren</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/domains/domain-check?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Domain Check</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/tools/whois-domainabfrage?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Whois Domain Abfrage</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/domains/domain-umzug?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Domain umziehen</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/domains/kostenlose-domain?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Kostenlose Domain</a></li></ul></div></div></li><li class="has-drop-down level2 second-has-drop-down"><a title="mail" class="has-drop-down-a has-drop-down-b">Mail</a><div class="level3"><div class="container"><ul><li class="second-has-drop-down"><a href="https://www.ionos.de/office-loesungen/eigene-email-adresse?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Eigene E-Mail Adresse erstellen</a></li></ul></div></div></li><li class="has-drop-down level2 second-has-drop-down"><a title="server" class="has-drop-down-a has-drop-down-b">Server</a><div class="level3"><div class="container"><ul><li class="second-has-drop-down"><a href="https://www.ionos.de/cloud/cloud-server?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Cloud Server</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/server/vps?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Virtual Server Cloud</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/server/dedicated-server?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Dedicated Server</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/enterprise-cloud?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Enterprise Cloud</a></li></ul></div></div></li><li class="has-drop-down level2 second-has-drop-down"><a title="sicherheit" class="has-drop-down-a has-drop-down-b">Sicherheit</a><div class="level3"><div class="container"><ul><li class="second-has-drop-down"><a href="https://www.ionos.de/sicherheit/ssl-zertifikat?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">SSL Zertifikate</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/tools/ssl-check?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">SSL Check</a></li></ul></div></div></li><li class="has-drop-down level2 second-has-drop-down"><a title="homepagewebhosting" class="has-drop-down-a has-drop-down-b">Homepage &amp; Webhosting</a><div class="level3"><div class="container"><ul><li class="second-has-drop-down"><a href="https://www.ionos.de/websites/homepage-erstellen?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Homepage erstellen</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/eshop-loesungen/onlineshop-erstellen?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Online Shop erstellen</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/websites/homepage-baukasten?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Homepage Baukasten</a></li><li class="second-has-drop-down"><a href="https://www.ionos.de/hosting/webhosting?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Webhosting</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/hosting/linux-hosting?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Linux Hosting</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/hosting/windows-hosting?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Windows Hosting</a></li><li class="second-has-drop-down"><a href="https://www.ionos.de/hosting/wordpress-hosting?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">WordPress Hosting </a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/hosting/webspace?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Webspace</a></li></ul></div></div></li><li class="has-drop-down level2 second-has-drop-down"><a title="tools" class="has-drop-down-a has-drop-down-b">Tools</a><div class="level3"><div class="container"><ul><li class="second-has-drop-down"><a href="https://www.ionos.de/tools/website-check?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Website Check</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/tools/seo-check?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">SEO Check</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/tools/ip-adresse?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">IP-Check</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/tools/favicon-generator?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Favicon Generator</a></li><li class="level second-has-drop-down"><a href="https://www.ionos.de/tools/logo-erstellen?ac=OM.PU.PUo50K360567T7073a" class="has-drop-down-c has-drop-down-b">Logo-Generator</a></li><li class="level second-has-drop-down"><a href="https://phishing-contact.ionos.de/de/" class="has-drop-down-c has-drop-down-b">Validierungs-Service</a></li></ul></div></div></li></ul></div></div></li></ul></div></div></nav><div class="header-info"><ul class="list-inline list-links"><li><div class="dropdown search-box"><a href="#" class="search-opener dropdown-toggle" data-toggle="dropdown"><span class="icon-search"></span></a><div class="search-drop dropdown-menu"><form class="search-form" action="suche/" method="post"><fieldset><div class="form-group"><input class="form-control" type="search" placeholder="Ihr Suchbegriff" name="search"><button type="submit"><span class="icon-search"></span></button></div></fieldset></form></div></div></li><li class="sub-drop-opener dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									IONOS Produkte</a><div class="sub-drop-wrap dropdown-menu"><div class="container"><div class="row"><div class="col-sm-3"><strong class="sub-head"><a href="">
+            Domain
+
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/domains/domain-registrieren?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Freie Domains registrieren</strong><p> Wunsch-Domains registrieren</p></a></li><li><a href="https://www.ionos.de/domains/domain-check?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Domain Check</strong><p>Kostenloser Verfügbarkeitscheck</p></a></li><li><a href="https://www.ionos.de/tools/whois-domainabfrage?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Whois Domain Abfrage</strong><p>Whois Informationen für Domains (.com, .net, .org)</p></a></li><li><a href="https://www.ionos.de/domains/domain-umzug?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Domain umziehen</strong><p>Einfacher Umzug in 3 Schritten</p></a></li><li><a href="https://www.ionos.de/domains/kostenlose-domain?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Kostenlose Domain</strong></a></li></ul><strong class="sub-head"><a href="">
+            Office
+
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/office-loesungen/microsoft-office?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Microsoft Office 365</strong><p> Das komplette Office für Ihr Büro</p></a></li></ul></div><div class="col-sm-3"><strong class="sub-head"><a href="https://www.ionos.de/server/server?ac=OM.PU.PUo50K360567T7073a">
+
+            Server
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/cloud/cloud-server?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Cloud Server</strong><p> Top-Performance, Flexibilität &amp; Kostenkontrolle</p></a></li><li><a href="https://www.ionos.de/server/vps?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Virtual Server Cloud</strong><p>Leistungsstarker VPS durch Cloud Technologie</p></a></li><li><a href="https://www.ionos.de/server/dedicated-server?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Dedicated Server</strong><p>Dedizierte Hardware mit vollem Root-Zugriff
+                </p></a></li><li><a href="https://www.ionos.de/enterprise-cloud?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Enterprise Cloud</strong><p>Individuell konfigurierbare, hoch skalierende IaaS Cloud</p></a></li></ul><strong class="sub-head"><a href="">
+            Sicherheit
+
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/sicherheit/ssl-zertifikat?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">SSL Zertifikate</strong><p> Schutz durch https Verschlüsselung</p></a></li><li><a href="https://www.ionos.de/tools/ssl-check?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">SSL Check</strong><p>Kostenlose Überprüfung Ihres SSL Zertifikats</p></a></li></ul></div><div class="col-sm-3"><strong class="sub-head"><a href="">
+            Homepage &amp; Webhosting
+
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/websites/homepage-erstellen?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Homepage erstellen</strong><p> Gestalten Sie Ihre eigene Website</p></a></li><li><a href="https://www.ionos.de/eshop-loesungen/onlineshop-erstellen?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Online Shop erstellen</strong><p>Eigenen Webshop erstellen und online verkaufen</p></a></li><li><a href="https://www.ionos.de/websites/homepage-baukasten?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Homepage Baukasten</strong><p>Websites aufbauen mit System</p></a></li><li><a href="https://www.ionos.de/hosting/webhosting?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Webhosting</strong><p> Perfekte Entwicklungsumgebung für Profis</p></a></li><li><a href="https://www.ionos.de/hosting/linux-hosting?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Linux Hosting</strong><p> Ideale Wahl für Apache, PHP und MySQL</p></a></li><li><a href="https://www.ionos.de/hosting/windows-hosting?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Windows Hosting</strong><p> Professionelles Windows-Hosting</p></a></li><li><a href="https://www.ionos.de/hosting/wordpress-hosting?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">WordPress Hosting</strong><p> Professionelles WordPress-Hosting</p></a></li><li><a href="https://www.ionos.de/hosting/webspace?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Webspace</strong><p> Speicherplatz für Ihre Webprojekte</p></a></li></ul><strong class="sub-head"><a href="">
+            Mail
+
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/office-loesungen/eigene-email-adresse?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Eigene E-Mail Adresse erstellen</strong><p> E-Mail-Adressen mit eigener .de Domain</p></a></li></ul></div><div class="col-sm-3"><strong class="sub-head"><a href="">
+            Tools
+
+        </a></strong><ul class="sub-menu-list list-unstyled"><li><a href="https://www.ionos.de/tools/website-check?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Website Check</strong><p> Kostenlose Online Analyse Ihrer Homepage</p></a></li><li><a href="https://www.ionos.de/tools/seo-check?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">SEO Check</strong><p>Ist Ihre Website suchmaschinentauglich?</p></a></li><li><a href="https://www.ionos.de/tools/ip-adresse?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">IP-Check</strong><p>Eigene IP im Check ermitteln</p></a></li><li><a href="https://www.ionos.de/tools/favicon-generator?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Favicon Generator</strong><p> Erstellen Sie Ihr Favicon kostenlos online</p></a></li><li><a href="https://www.ionos.de/tools/logo-erstellen?ac=OM.PU.PUo50K360567T7073a"><strong class="sub-title">Logo Generator</strong><p> Erstellen Sie online ein Logo für Ihre Firma </p></a></li><li><a href="https://phishing-contact.ionos.de/de/"><strong class="sub-title">Validierungs-Service</strong><p> Echtheit einer IONOS E-Mail prüfen </p></a></li></ul></div></div></div></div></li></ul></div></div></div></header>
+	<main id="main">
+		<script type="application/ld+json">{ "@context": "http://schema.org","@type": "BreadcrumbList", "itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.ionos.de","name":"IONOS"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.ionos.de\/digitalguide","name":"Digitalguide"}},{"@type":"ListItem","position":3,"item":{"@id":"server\/","name":"Server"}},{"@type":"ListItem","position":4,"item":{"@id":"server\/knowhow\/","name":"KnowHow"}},{"@type":"ListItem","position":5,"item":{"@id":"server\/knowhow\/arduino-vs-raspberry-pi\/","name":"Arduino vs. Raspberry Pi"}}]}</script><nav class="breadcrumbs"><div class="container"><ol class="list-inline"><li><a href="https://www.ionos.de/" title="IONOS" itemprop="item">IONOS</a></li><li><a href="" title="Digitalguide" itemprop="item"><span itemprop="name">Digitalguide</span></a></li><li><a href="https://www.ionos.de/digitalguide/server/" title="Server" itemprop="item"><span itemprop="name">Server</span></a></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/" title="KnowHow" itemprop="item"><span itemprop="name">KnowHow</span></a></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" title="Arduino vs. Raspberry Pi" itemprop="item"><span itemprop="name">Arduino vs. Raspberry Pi</span></a></li></ol></div></nav>
+		<div class="main-container">
+			<div class="container meta-holder"><div class="row"><div class="col-sm-8"><div class="article-meta"><ul class="list-inline meta"><li><time datetime=" 2018-03-06"><span class="icon-clock-o"></span>  06.03.18</time></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/">KnowHow</a></li></ul><ul class="list-inline list-info"><li><div class="star-rating"><div class="star-rating__text"><span class="text-info" data-role="ratingsWording" data-default="Wie gefällt Ihnen der Artikel?" data-thanks="Vielen Dank für Ihre Bewertung!">
+            Wie gefällt Ihnen der Artikel?
+        </span><span class="star-rating__average" title="Durchschnittliche Bewertung" data-role="ratingsAverage" style="">4.9</span></div><div class="star-rating__wrap"><input class="star-rating__input" id="star-rating-5" type="radio" name="ratingtop" value="5" data-role="ratingStarInput5" checked="checked"><label class="star-rating__ico" for="star-rating-5" data-role="star" data-amount="5"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-4" type="radio" name="ratingtop" value="4" data-role="ratingStarInput4"><label class="star-rating__ico" for="star-rating-4" data-role="star" data-amount="4"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-3" type="radio" name="ratingtop" value="3" data-role="ratingStarInput3"><label class="star-rating__ico" for="star-rating-3" data-role="star" data-amount="3"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-2" type="radio" name="ratingtop" value="2" data-role="ratingStarInput2"><label class="star-rating__ico" for="star-rating-2" data-role="star" data-amount="2"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-1" type="radio" name="ratingtop" value="1" data-role="ratingStarInput1"><label class="star-rating__ico" for="star-rating-1" data-role="star" data-amount="1"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label></div><div class="star-rating__amount" data-role="ratingTotalAmount" title="Anzahl der Bewertungen">13</div><div class="clearfix"></div></div><script type="application/ld+json">
+                {
+    "@context": "http://schema.org/",
+    "@type": "Article",
+    "headline": "Arduino vs. Raspberry Pi",
+    "description": "Auch wenn der Unterschied zwischen Raspberry Pi und Arduino grundlegend ist, lohnt sich ein Vergleich der beiden in der DIY-Szene sehr beliebten Hardware-Komponenten.",
+    "datePublished": "2018-01-25",
+    "dateModified": "2020-03-17",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "url": "https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Teaser/platine-t.jpg",
+        "width": 1200,
+        "height": 630
+    },
+    "author": {
+        "@type": "Organization",
+        "name": "1&1 IONOS SE",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Logos/logo.jpg"
+        }
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "1&1 IONOS SE",
+        "url": "https://www.ionos.de/digitalguide/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Logos/logo.jpg"
+        }
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "worstRating": 1,
+        "bestRating": 5,
+        "ratingCount": 13,
+        "ratingValue": 4.9
+    }
+}
+                </script></li><li><ul class="list-inline social-networks"><li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" class="facebook"><span class="icon-facebook"></span></a></li><li><a target="_blank" href="https://twitter.com/intent/tweet?source=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/&amp;text=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/%20%23DigitalGuide" class="twitter"><span class="icon-twitter"></span></a></li><li><a target="_blank" href="https://www.xing.com/spi/shares/new?url=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" class="xing"><span class="icon-xing"></span></a></li><li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" class="linkedin"><span class="icon-linkedin"></span></a></li></ul></li></ul></div></div></div></div>
+			
+
+
+
+
+			<div class="container two-columns 	">
+			<div class="row">
+				<!--TYPO3SEARCH_begin-->
+				
+						<div class="col-sm-8" id="content"><div class="content-block"><div class="aligncenter visual-img hidden-xs"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="fileadmin/_processed_/0/8/csm_platine-t_4e37cf4d7d.jpg" media="(max-width: 767px)"><source srcset="fileadmin/_processed_/0/8/csm_platine-t_9c2a355b27.jpg" media="(max-width: 1023px)"><source srcset="fileadmin/DigitalGuide/Teaser/platine-t.jpg"><!--[if IE 9]></video><![endif]--><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/platine-t.jpg" alt="Arduino vs. Raspberry Pi" title="Arduino vs. Raspberry Pi"></picture></div><div id="c115289" class="frame frame-default frame-type-header frame-layout-0"><header><h1 class="blue">Arduino vs. Raspberry Pi: Mikrocontroller und Einplatinencomputer im Vergleich</h1></header></div><div id="c115290"><div class="text-row ce-textpic ce-right ce-intext"><div class="ce-bodytext"><p><strong>Do-it-Yourself-Projekte</strong> (<strong>DIY</strong>)
+ mit Hard- und Software erfreuen sich immer größerer Beliebtheit. 
+Hobbybastler aus der ganzen Welt versuchen sich an nützlichen 
+Alltagshelfern wie Fernsteuerungen für das Garagentor oder 
+Temperaturmessgeräten sowie spielerischen Projekten wie Drohnen, 
+Robotern oder eigenen Spielekonsolen. Im Mittelpunkt der kreativen Werke
+ stehen spezielle Hardware-Komponenten verschiedenster Anbieter, die zu 
+ebendiesen Zwecken entworfen wurden. Zusätzlich zu ihrer <strong>kompakten Bauweise</strong> zeichnen sich diese in der Regel durch ihren besonders <strong>erschwinglichen Preis</strong> aus, der meist im niedrigen ein- bis zweistelligen Euro-Bereich liegt.
+</p><p>Zu den bekanntesten unter den technischen Mini-Bauteilen zählen ohne Zweifel der britische <strong>Einplatinencomputer</strong><strong>Raspberry Pi </strong>und der aus Italien stammende <strong>Mikrocontroller Arduino</strong>. Beide werden häufig als Konkurrenzlösungen angesehen, obwohl sie im Prinzip vollkommen unterschiedliche Baustellen bedienen.</p></div></div></div><div id="c115400" class="frame frame-default frame-type-list frame-layout-0"><div class="tx-toc"><div id="toc" class="toc content-table smoothscroll 
+         numbers 
+          
+          
+         
+         togglestyle"><div id="toctitle" class="opener"><strong class="h3">Inhaltsverzeichnis</strong><span class="toctoggle"><a href="#" id="togglelinkStyle"></a></span></div><ol class="ordered-list list-content toclist hierarchy"><li class="toclevel-2"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115291"><span class="toctext" data-slug="raspberry-pi-vs-arduino-diy-bausteine-mit-unterschiedlichen-ansatzen">Raspberry Pi vs. Arduino: DIY-Bausteine mit unterschiedlichen Ansätzen</span></a></li><li class="toclevel-2"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115352"><span class="toctext" data-slug="arduino-und-raspberry-pi-im-vergleich">Arduino und Raspberry Pi im Vergleich</span></a><ol class="ordered-list" style="display: none;"><li class="toclevel-3"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115352"><span class="toctext" data-slug="die-vor-und-nachteile-von-arduino">Die Vor- und Nachteile von Arduino</span></a></li><li class="toclevel-3"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115356"><span class="toctext" data-slug="starken-und-schwachen-des-raspberry-pi">Stärken und Schwächen des Raspberry Pi</span></a></li><li class="toclevel-3"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115391"><span class="toctext" data-slug="community-check-arduino-vs-raspberry-pi">Community-Check: Arduino vs. Raspberry Pi</span></a></li><li class="toclevel-3"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115394"><span class="toctext" data-slug="einsatzszenarios-fur-arduino-und-raspberry-pi-im-vergleich">Einsatzszenarios für Arduino und Raspberry Pi im Vergleich</span></a></li></ol></li><li class="toclevel-2"><a href="https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/#c115397"><span class="toctext" data-slug="es-muss-nicht-zwangslaufig-raspberry-pi-vs-arduino-heiszen">Es muss nicht zwangsläufig Raspberry Pi vs. Arduino heißen</span></a></li></ol></div></div></div><div id="c115291"><h2 class="blue">Raspberry Pi vs. Arduino: DIY-Bausteine mit unterschiedlichen Ansätzen</h2><div class="text-row ce-textpic ce-right ce-intext"><div class="ce-bodytext"><p>Als
+ die erste Version des Raspberry Pi Anfang 2012 auf den Markt kam, lag 
+die Veröffentlichung des ersten Arduino-Boards bereits sieben Jahre 
+zurück. Nicht von ungefähr gilt die <strong>italienische Physical-Computing-Plattform</strong>,
+ die ihren Namen von einer Bar in Piemont hat (die einigen der 
+Projektgründer als regelmäßiger Treffpunkt diente), in der 
+Hobbybastler-Szene als Klassiker. Das typische Arduino-Setup setzt sich 
+dabei aus einem Mix <strong>quelloffener Software- und Hardware-Komponenten </strong>zusammen,
+ der dem Nutzer die Bedienung eigenständiger, interaktiver Objekte sowie
+ die einfache Interaktion mit Computeranwendungen ermöglicht. So zählt 
+ein <strong>E/A-Board</strong> (Eingabe/Ausgabe) mit <strong>Atmel-Mikrocontroller</strong> (meist aus der Atmel-AVR-Reihe wie z.&nbsp;B. ATmega328) ebenso zur typischen Ausstattung wie eine <strong>integrierte Entwicklungsumgebung</strong>.
+ Diese ist in Java geschrieben und bringt u.&nbsp;a. einen eigenen 
+Code-Editor sowie verschiedene Bibliotheken zur Vereinfachung der 
+Programmierung in C und C++ mit.</p></div></div></div><div id="c115292"><div class="text-row"><div class="table-wrap"><table class="table info-table"><tbody><tr><th>
+							
+					
+			
+	
+
+		&nbsp;
+	
+
+
+		
+				
+						
+								</th><td><span>
+				Arduino
+			</span></td><td><span>
+				Raspberry Pi
+			</span></td></tr><tr><th><span>
+				Veröffentlichung
+			</span></th><td data-label="Arduino"><span>
+				2005
+			</span></td><td data-label="Raspberry Pi"><span>
+				2012
+			</span></td></tr><tr><th><span>
+				Homepage
+			</span></th><td data-label="Arduino"><span>
+				arduino.cc
+			</span></td><td data-label="Raspberry Pi"><span>
+				raspberrypi.org
+			</span></td></tr><tr><th><span>
+				Typ
+			</span></th><td data-label="Arduino"><span>
+				Mikrocontroller
+			</span></td><td data-label="Raspberry Pi"><span>
+				Einplatinencomputer
+			</span></td></tr><tr><th><span>
+				Architektur
+			</span></th><td data-label="Arduino"><span>
+				AVR, ARM
+			</span></td><td data-label="Raspberry Pi"><span>
+				ARM
+			</span></td></tr><tr><th><span>
+				Stromversorgung
+			</span></th><td data-label="Arduino"><span>
+				USB, externe Spannungsquelle
+			</span></td><td data-label="Raspberry Pi"><span>
+				USB, externe Spannungsquelle
+			</span></td></tr><tr><th><span>
+				USB-Anschluss
+			</span></th><td data-label="Arduino"><span>
+				ja
+			</span></td><td data-label="Raspberry Pi"><span>
+				ja
+			</span></td></tr><tr><th><span>
+				HDMI-Anschluss
+			</span></th><td data-label="Arduino"><span>
+				nein
+			</span></td><td data-label="Raspberry Pi"><span>
+				ja
+			</span></td></tr><tr><th><span>
+				Software
+			</span></th><td data-label="Arduino"><span>
+				integrierte Entwicklungsumgebung auf Java-Basis
+			</span></td><td data-label="Raspberry Pi"><span>
+				optional (spezielle Betriebssysteme wie Raspbian)
+			</span></td></tr></tbody></table></div></div></div><div id="c115293"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Der
+ Raspberry Pi hat seinen Namen zwar nicht einer Bar zu verdanken – 
+allerdings spricht man diesen wie den englischen Ausdruck für 
+Himbeerkuchen („raspberry pie“) aus, weshalb kulinarische Vorlieben auch
+ hier eine Rolle gespielt haben könnten. Mit der <strong>Himbeere</strong>,
+ die auch das offizielle Logo ziert, knüpfte man an ältere Traditionen 
+der Namensgebung von Computer-Herstellern wie Tangerine Computer 
+Systems, Apricot Computers oder Apple an, denen es Fruchtsorten 
+sichtlich angetan hatten. Das Pi, das für „Python interpreter“ steht, 
+resultiert aus dem ursprünglichen Plan, den Raspberry mit einem 
+eingebauten Interpreter für die Programmiersprache Python auszuliefern.
+</p><p>Im Unterschied zu Arduino verfügen die Raspberry-Pi-Modelle nicht nur über <strong>eine wesentlich höhere Prozessorleistung</strong>, sondern auch über <strong>eigenen Arbeitsspeicher </strong>und <strong>Möglichkeiten zur Videoausgabe</strong>. Der Minicomputer aus Großbritannien kann daher eigenständig betrieben werden und Anwendungen ausführen, wofür lediglich ein <a href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-betriebssysteme-im-kurzportraet/">Raspberry-Pi-Betriebssystem</a> installiert sein muss.</p></div></div></div><div id="c115352"><h2 class="blue">Arduino und Raspberry Pi im Vergleich</h2><div class="text-row ce-textpic ce-right ce-intext"><div class="ce-bodytext"><p>Der
+ größte Unterschied zwischen Arduino und Raspberry Pi: Während es sich 
+bei ersterem um einen Mikrocontroller handelt, der lediglich 
+kompilierten C-Code ausführen kann, funktioniert letzterer wahlweise 
+auch als eigenständiges System. Dennoch ist der Raspberry Pi dadurch 
+nicht einfach die bessere Wahl für jegliche Art von DIY-Projekten, was 
+sich an den Vor- und Nachteilen, den Einsatzmöglichkeiten und der 
+jeweiligen Community zeigt.
+</p><h3>Die Vor- und Nachteile von Arduino</h3><p>Arduino-Boards zeichnen sich insbesondere durch zwei Eigenschaften aus: Einerseits liefern sie <strong>fertig eingebaute Prozessorleistung inklusive Peripherie</strong>
+ (Ein-/Ausgänge sowie Schnittstellen), was sie für alle Nutzer 
+interessant macht, die nur über geringe Elektronikkenntnisse verfügen. 
+Andererseits – und damit sammeln die Mini-Plattformen aus Italien auch 
+wertvolle Pluspunkte im „Arduino vs. Raspberry Pi“-Vergleich – liefert 
+die auf die Hardware abgestimmte Entwicklungsumgebung eine 
+Programmieroberfläche mit diversen fertigen Bibliotheken, die das 
+Programmieren erheblich erleichtert. Ferner ist die IDE (da in Java 
+geschrieben) <strong>plattformunabhängig</strong> und daher mit gleichem
+ Erscheinungsbild sowohl in Windows als auch Linux und macOS verfügbar. 
+Deshalb verwundert es wenig, dass <strong>Arduino-Bauteile als Übungskomponenten</strong> in Schulen, Universitäten und anderen Lehreinrichtungen sehr beliebt ist.</p></div></div></div><div class="info-box orange"><div id="c115353"><div class="headline h2 blue title"><i class="fa fa-exclamation"></i> Hinweis</div><div class=" ce-textpic ce-right ce-intext"><div class="ce-bodytext"><p>
+ Parallel zum vereinfachten C-Code können Arduino-Nutzer auch jederzeit 
+klassischen Code schreiben oder eine alternative Entwicklungsumgebung 
+einsetzen – so bieten die Boards auch für Profis eine <strong>kostengünstige und zeitsparende</strong> Alternative. </p></div></div></div></div><div id="c115354"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Die
+ Simplizität der Arduino-Boards ist nicht ausschließlich mit Vorteilen 
+verbunden: So ist die integrierte Entwicklungsumgebung zwar eine große 
+Stütze bei der <strong>Ansteuerung der Hardware</strong>, allerdings 
+lernen Programmierneulinge auf diesem Weg kaum etwas über das klassische
+ Code-Schreiben. Allgemein droht die Gefahr, aufgrund der 
+einsatzfertigen Bibliotheken gänzlich <strong>auf eigene Programmierungen</strong><strong>zu verzichten</strong> und den möglichen<strong> Aktionsradius</strong> dadurch unnötigerweise einzuschränken.
+</p><p>Ein weiterer Nachteil von Arduino kommt zum Tragen, wenn die Standardausführung der Mikrocontroller-Boards durch <strong>zusätzliche Schnittstellen und Eingabe-/Ausgabe-Funktionen</strong> erweitert werden soll. Zwar erlaubt die standardisierte Hardware die unkomplizierte Aufrüstung über sogenannte <a href="http://playground.arduino.cc/Main/SimilarBoards#goShie" title="Arduino Playground: Überblick über verfügbare Shields" target="_blank">Shields</a> – der Erwerb dieser Zusatzmodule für Ethernet, LED und Co. lässt die Projektkosten jedoch schnell in die Höhe schießen.</p></div></div></div><div id="c115355"><div class="text-row"><div class="table-wrap"><table class="table info-table"><thead><tr><th><span>
+				Vorteile
+			</span></th><th><span>
+				Nachteile
+			</span></th></tr></thead><tbody><tr><td data-label="Vorteile"><span>
+				sofort einsatzbereites Hardware-/Software-Setup
+			</span></td><td data-label="Nachteile"><span>
+				geringer Lernfaktor in Sachen Elektronik und Programmierung (bei Nutzung der IDE)
+			</span></td></tr><tr><td data-label="Vorteile"><span>
+				eigene Entwicklungsumgebung mit diversen Bibliotheken (plattformübergreifend)
+			</span></td><td data-label="Nachteile"><span>
+				Aufrüstung mit Shields kann kostspielig werden
+			</span></td></tr></tbody></table></div></div></div><div id="c115356"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><h3>Stärken und Schwächen des Raspberry Pi</h3><p>
+ Auch der Raspberry Pi zeichnet sich vor allem dadurch aus, dass er ein 
+einsatzbereites Hardware-Setup liefert, das dem Nutzer die aufwendige 
+Zusammenstellung der <strong>technischen Basis für DIY-Projekte</strong>
+ abnimmt. Im Vergleich zu den Boards von Arduino hat der Raspberry Pi 
+alle Komponenten an Bord, um einen eigenständigen Betrieb des 
+Minicomputers möglich zu machen. Darüber hinaus sind die <strong>meisten Modelle standardmäßig netzwerkfähig</strong>
+ (Ethernet, WLAN oder beides) – lediglich den Modellen A und A++ des Pi 1
+ sowie dem minimalistischen Pi Zero fehlen entsprechende Ports. Dank 
+dieser Eigenschaften kann der Raspberry Pi nicht nur direkt als <strong>Programmierungsplattform</strong> dienen, sondern auch für den <strong>Betrieb von Anwendungen</strong> wie <a href="https://www.ionos.de/digitalguide/server/konfiguration/eine-owncloud-auf-dem-raspberry-pi-einrichten/">privaten Clouds</a>, <a href="https://www.ionos.de/digitalguide/server/konfiguration/einen-raspberry-pi-webserver-mit-lamp-einrichten/">Webservern</a> oder <a href="https://www.ionos.de/digitalguide/server/konfiguration/vpn-server-einrichten-via-raspberry-pi-und-openvpn/">VPN-Servern</a> genutzt werden. </p></div></div></div><div id="c115386" class="frame frame-default frame-type-html frame-layout-0"><div class="yt-agreement" data-flag="iframe" data-replace="&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nlJ8WGZbPMk&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;" style="background-image: url('//i.ytimg.com/vi/nlJ8WGZbPMk/hqdefault.jpg'); background-position: center;background-size: 100%;padding-bottom:unset;width:100%;height:315px;margin-bottom: 20px !important;"><div class="yt-agreement-inner" style="transform: translate(-50%,-25%);"><div class="yt-agreement-icon"><svg class="yt-agreement-icon-inner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></div><div class="yt-agreement-text"></div><p style="padding:5px; background:white;text-align: center;background-color: rgba(255, 255, 255, 0.9);border: 1px solid black;">
+                            
+                                    
+                                            Mit dem weiteren Klick laden
+ Sie das Video von YouTube. In diesem Fall kann YouTube Cookies setzen, 
+auf welche wir keinen Einfluss haben.
+                                        
+                                
+                        </p></div></div></div><div id="c115387"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>
+ Das Hauptziel der Raspberry Pi Foundation, die hinter der Entwicklung 
+des Minicomputers steckt, war von Beginn an, Nutzern mit geringem 
+Know-how den Zugang zu Hardware und Programmierung zu erleichtern. Und 
+obwohl sich dieser Wunsch in dem Projekt zum Großteil widerspiegelt, 
+kann insbesondere die Einrichtung zur wahren <strong>Geduldsprobe</strong>
+ werden. Man muss das Betriebssystem nicht nur auswählen und 
+herunterladen, sondern auch auf eine passende SD-Speicherkarte 
+verfrachten. Auch die anschließende <strong>Installation und</strong><strong>Konfiguration der Systemsoftware</strong> ist nicht für jeden Neuling so selbstverständlich, wie man im Raspberry-Lager vielleicht vermutet. </p></div></div></div><div class="info-box orange"><div id="c115388"><div class="headline h2 blue title"><i class="fa fa-exclamation"></i> Hinweis</div><div class=" ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>
+ Verschiedenste Anbieter offerieren SD-Karten (kostenpflichtig), auf 
+denen ein lauffähiges Raspberry-Pi-Betriebssystem (für gewöhnlich 
+Raspbian) bereits installiert ist. </p></div></div></div></div><div id="c115389"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Ein
+ weiterer Nachteil: Der Basispreis liegt zwar je nach Modell und 
+Anbieter nur zwischen 5 und 40 Euro – für den Betrieb des Raspberrys 
+wird jedoch allerhand kostenpflichtiges <strong>Zusatzzubehör wie Strom- und HDMI-Kabel</strong> etc. benötigt.</p></div></div></div><div id="c115390"><div class="text-row"><div class="table-wrap"><table class="table info-table"><thead><tr><th><span>
+				Vorteile
+			</span></th><th><span>
+				Nachteile
+			</span></th></tr></thead><tbody><tr><td data-label="Vorteile"><span>
+				standardmäßig HDMI- und netzwerkfähig (mit Ausnahme einiger Modelle)
+			</span></td><td data-label="Nachteile"><span>
+				Software gehört nicht zum Paket und muss daher vom Nutzer selbst heruntergeladen und eingerichtet werden
+			</span></td></tr><tr><td data-label="Vorteile"><span>
+				für einfache wie komplexe Aufgaben geeignet
+			</span></td><td data-label="Nachteile"><span>
+				für den eigenständigen Betrieb wird eine Menge kostenpflichtiger Zusatzteile benötigt
+			</span></td></tr></tbody></table></div></div></div><div id="c115391"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><h3>Community-Check: Arduino vs. Raspberry Pi</h3><p>Wer
+ Projekte mit Hardware-Teilen wie Raspberry Pi und Arduino plant und 
+entwickelt, teilt sein Ergebnis gerne mit anderen Hobby-Bastlern. 
+Videoportale wie YouTube oder Vimeo sowie DIY-Websites wie <a href="https://www.hackster.io/" title="Vielfältige Open-Source-Projekte – hackster.io" target="_blank">hackster.io</a> präsentieren <strong>Tausende Tutorials und Anleitungen</strong>
+ – von Nutzern für andere Nutzer. Sowohl Arduino als auch Raspberry Pi 
+sind dabei mehr als gut vertreten. Beide DIY-Komponenten, der 
+Mikrocontroller auf der einen und der Minicomputer auf der anderen 
+Seite, vereinen <strong>riesige Communitys</strong> hinter sich. Im Ergebnis findet man jederzeit nicht nur Informationen über bereits realisierte Werke, sondern auch <strong>Hilfestellung bei Fragen zu eigenen Projekten</strong>.</p></div></div></div><div class="info-box orange"><div id="c115392"><div class="headline h2 blue title"><i class="fa fa-exclamation"></i> Hinweis</div><div class=" ce-textpic ce-center ce-above"><div class="ce-bodytext"><p> Die bereits erwähnten <strong>Arduino-Shields</strong>
+ zur Erweiterung der technischen Basis der Elektronikboards sind 
+größtenteils von Mitgliedern der Arduino-Community entwickelt worden. </p></div></div></div></div><div id="c115393"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Zu den wichtigsten Seiten rund um Arduino-Projekte zählen:</p><ul><li><a href="https://www.reddit.com/r/arduino/" target="_blank"><strong>Reddit</strong></a>:
+ Auf Reddit existiert ein umfangreicher Arduino-Kanal, auf dem Nutzer 
+ihre Projektideen teilen, Bilder oder Videos von Resultaten posten oder 
+ihre Fragen bezüglich der Mikrocontroller-Boards stellen.</li></ul><ul><li><a href="http://forum.arduino.cc/" target="_blank"><strong>Offizielles Arduino-Forum</strong></a>: Rund <strong>500.000 registrierte Mitglieder</strong>
+ diskutieren in beinahe ebenso vielen erstellten Threads über die 
+verschiedenen Arduino-Modelle, Einsatzmöglichkeiten, technische Fragen 
+u.&nbsp;v.&nbsp;m.</li></ul><ul><li><a href="https://playground.arduino.cc/" target="_blank"><strong>Arduino Playground</strong></a>:
+ Arduino Playground ist ein umfangreiches Wiki, in dem jeder 
+interessierte Nutzer eigene Code-Snippets, Tutorials, Tipps und Tricks 
+veröffentlichen, Projekte präsentieren oder lediglich stöbern kann.</li></ul><p>Wer sich mit anderen <strong>Raspberry-Pi-Fans</strong> austauschen möchte, dem bieten insbesondere diese Seiten die perfekte Basis:</p><ul><li><a href="https://www.raspberrypi.org/" target="_blank"><strong>Raspberrypi.org</strong></a>:
+ Die offizielle Homepage des Raspberry-Pi-Projekts ist nicht nur die 
+erste Anlaufstelle für jeden, der eine Ausgabe des Minicomputers 
+ergattern möchte. Unter der Rubrik „<strong>HELP</strong>“ finden Besucher diverse Guides (u.&nbsp;a. zu Soft- und Hardware) sowie eine ausführliche Online-Dokumentation. Im <strong>Forum der Website</strong> sind darüber hinaus <strong>über 200.000 Mitglieder registriert</strong>, die über die verschiedensten Themen rund um den Raspberry diskutieren.</li></ul><ul><li><a href="https://elinux.org/RPi_Hub" target="_blank"><strong>RPi Hub</strong></a>: Der RPi Hub auf eLinux.org liefert eine <strong>riesige Zahl an Informationen</strong> für Einsteiger und Fortgeschrittene – ob <strong>Guides</strong>
+ für den Kauf, das Setup und den Start oder Tipps und Tricks zu Soft- 
+und Hardware. Lektüre-Empfehlungen und Links zu wichtigen 
+Community-Seiten runden das Paket ab.</li></ul><ul><li><a href="https://www.element14.com/community/community/raspberry-pi" target="_blank"><strong>element14</strong></a>:
+ element14 zählt zu den erfolgreichsten Community-Websites für 
+Elektronik-Projekte aller Art. In der Raspberry-Pi-Ecke diskutieren 
+Mitglieder <strong>aktuelle Themen</strong> und geben <strong>Reviews zu Zusatzhardware und -software</strong>
+ ab. Auflistungen beliebter und empfohlener Beiträge zeigen neuen 
+Mitgliedern beim ersten Besuch, welche Themen einen Blick wert sind. Im 
+internen <strong>Blog</strong> werden zudem regelmäßig Themen rund um den Raspberry veröffentlicht. </li></ul></div></div></div><div id="c115394"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><h3>Einsatzszenarios für Arduino und Raspberry Pi im Vergleich</h3><p> Die große Gemeinsamkeit von Arduino und Raspberry Pi besteht darin, dass sie <strong>sofort einsatzbereit </strong>sind,
+ ohne dass elektronischer Schaltungen aufgebaut und ausgemessen oder 
+Platinen bestückt oder gelötet werden müssen. Damit ist im Grunde 
+genommen auch der Hauptgrund dafür genannt, warum sowohl Raspberry als 
+auch Arduino für <strong>DIY-Projekte an Schulen und Universitäten</strong> sowie <strong>im Privatsektor</strong>
+ so beliebt sind: Sie bieten unerfahrenen Neulingen die Möglichkeit, 
+schnell erste Ergebnisse zu erzielen, und Fortgeschrittenen ein fertiges
+ Hardware-Gerüst. </p></div></div></div><div id="c115395" class="frame frame-default frame-type-html frame-layout-0"><div class="yt-agreement" data-flag="iframe" data-replace="&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4Pbzd_wRUT8&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;" style="background-image: url('//i.ytimg.com/vi/4Pbzd_wRUT8/hqdefault.jpg'); background-position: center;background-size: 100%;padding-bottom:unset;width:100%;height:315px;margin-bottom: 20px !important;"><div class="yt-agreement-inner" style="transform: translate(-50%,-25%);"><div class="yt-agreement-icon"><svg class="yt-agreement-icon-inner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></div><div class="yt-agreement-text"></div><p style="padding:5px; background:white;text-align: center;background-color: rgba(255, 255, 255, 0.9);border: 1px solid black;">
+                            
+                                    
+                                            Mit dem weiteren Klick laden
+ Sie das Video von YouTube. In diesem Fall kann YouTube Cookies setzen, 
+auf welche wir keinen Einfluss haben.
+                                        
+                                
+                        </p></div></div></div><div id="c115396"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Dass
+ beide Bauteile dabei in unterschiedlicher Weise zum Einsatz kommen, ist
+ auf die wesentlichen Unterschiede zwischen Raspberry Pi und Arduino 
+zurückzuführen: Arduino-Boards sind in ihrer Funktion als <strong>Mikrocontroller</strong>
+ in der Lage, eine aufgespielte Anwendung wie zuvor definiert ohne 
+großartige Verzögerung auszuführen. Sie werden mit einer eigenen 
+Entwicklungsumgebung ausgeliefert, die über diverse einsatzfertige 
+Bibliotheken verfügt und so eine Menge Programmierungsarbeit erspart. 
+Der Raspberry Pi kann als <strong>Minicomputer mit eigenem Betriebssystem</strong>
+ wesentlich komplexere Aufgaben erledigen und beispielsweise mehrere 
+Anwendungen parallel oder nacheinander ausführen. Zudem verfügt er 
+standardmäßig über eine Vielzahl von Schnittstellen und Ports (HDMI, 
+WiFi, LAN), die man Arduino-Boards erst mit Shields hinzufügen muss.
+</p><p>Vereinfacht lässt sich daher sagen, dass der <strong>Arduino</strong> sich insbesondere für Projekte eignet, in denen <strong>eine einfache Aufgabe wiederholt ausgeführt</strong>
+ werden soll. Geht es beispielsweise darum, die Außentemperatur zu 
+messen und auf einem beliebigen Display anzuzeigen, bietet der 
+Mikrocontroller die perfekte Grundlage. Will man hingegen nicht nur die 
+Außentemperatur messen, sondern auch den Wetterbericht checken und <strong>anhand zuvor definierter Kriterien</strong> (z.&nbsp;B. hohe Temperatur und niedrige Regenwahrscheinlichkeit) die Garten-Bewässerungsanlage starten, ist ein <strong>Raspberry Pi</strong> die bessere Wahl.</p></div></div></div><div id="c115397"><h2 class="blue">Es muss nicht zwangsläufig Raspberry Pi vs. Arduino heißen</h2><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Sowohl Arduino-Boards als auch die Raspberry-Pi-Rechner haben also ihre Stärken und Schwächen. Bei <strong>kleineren Projekten</strong>
+ ist es daher sinnvoll, zunächst zu überlegen, welche Komponenten man 
+für die Umsetzung benötigt, und sich anschließend für eines der beiden 
+Basisteile zu entscheiden. Wenn es das Budget zulässt und es sich bei 
+dem geplanten Projekt um mehr als eine einfache Fernschaltung handelt, 
+ist es aber keineswegs abwegig, auf einen Verbund aus Arduino- und 
+Raspberry-Modellen zu setzen.
+</p><p>So ist es beispielsweise denkbar, dass der Arduino erst zur <strong>Ausführung einer Anwendung</strong>
+ eingesetzt wird, nachdem ein Raspberry Pi Berechnungen angestellt hat. 
+Andersherum ist es natürlich ebenso möglich, dass die Aufgabe des 
+Arduino-Mikrocontrollers darin liegt, die <strong>Verarbeitung</strong><strong>eines komplexen Prozesses</strong>
+ auf einem Raspberry Pi zu starten. Ein mustergültiges Beispiel hierfür 
+ist das Projekt Piano Stairs (dt. „Klavier-Treppe“), mit dem Bonnie 
+Eisenman, Erica Portnoy und Vincent Castaneda den zweiten Platz beim 
+HackPrincton 2013 (Kategorie „Hardware“) gewinnen konnten: Die 
+interaktiven Treppenstufen spielen beim Betreten Klaviertöne ab, wobei 
+ein Arduino für die Weitergabe der erfassten Werte an einen Raspberry Pi
+ eingesetzt wird. Dieser wiederum sorgt für die Verarbeitung der Werte 
+und die Ausgabe der entsprechenden Sounds.</p></div></div></div><div id="c115398" class="frame frame-default frame-type-html frame-layout-0"><div class="yt-agreement" data-flag="iframe" data-replace="&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/2mHj853z_PU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;" style="background-image: url('//i.ytimg.com/vi/2mHj853z_PU/hqdefault.jpg'); background-position: center;background-size: 100%;padding-bottom:unset;width:100%;height:315px;margin-bottom: 20px !important;"><div class="yt-agreement-inner" style="transform: translate(-50%,-25%);"><div class="yt-agreement-icon"><svg class="yt-agreement-icon-inner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></div><div class="yt-agreement-text"></div><p style="padding:5px; background:white;text-align: center;background-color: rgba(255, 255, 255, 0.9);border: 1px solid black;">
+                            
+                                    
+                                            Mit dem weiteren Klick laden
+ Sie das Video von YouTube. In diesem Fall kann YouTube Cookies setzen, 
+auf welche wir keinen Einfluss haben.
+                                        
+                                
+                        </p></div></div></div><div id="c115399"><div class="text-row ce-textpic ce-center ce-above"><div class="ce-bodytext"><p>Eine ausführliche Anleitung zu dem Projekt gibt es auf der DIY-Entwickler-Website <a href="http://www.instructables.com/id/Piano-Stairs-with-Arduino-and-Raspberry-Pi/" title="DIY-Website instructables.com" target="_blank">instructables.com</a>.</p></div></div></div><div class="article-meta"><ul class="list-inline meta"><li><time datetime=" 2018-03-06"><span class="icon-clock-o"></span>  06.03.18</time></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/">KnowHow</a></li></ul><ul class="list-inline list-info"><li><div class="star-rating"><div class="star-rating__text"><span class="text-info" data-role="ratingsWording" data-default="Wie gefällt Ihnen der Artikel?" data-thanks="Vielen Dank für Ihre Bewertung!">
+            Wie gefällt Ihnen der Artikel?
+        </span><span class="star-rating__average" title="Durchschnittliche Bewertung" data-role="ratingsAverage" style="">4.9</span></div><div class="star-rating__wrap"><input class="star-rating__input" id="star-rating-5" type="radio" name="ratingbottom" value="5" data-role="ratingStarInput5" checked="checked"><label class="star-rating__ico" for="star-rating-5" data-role="star" data-amount="5"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-4" type="radio" name="ratingbottom" value="4" data-role="ratingStarInput4"><label class="star-rating__ico" for="star-rating-4" data-role="star" data-amount="4"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-3" type="radio" name="ratingbottom" value="3" data-role="ratingStarInput3"><label class="star-rating__ico" for="star-rating-3" data-role="star" data-amount="3"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-2" type="radio" name="ratingbottom" value="2" data-role="ratingStarInput2"><label class="star-rating__ico" for="star-rating-2" data-role="star" data-amount="2"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label><input class="star-rating__input" id="star-rating-1" type="radio" name="ratingbottom" value="1" data-role="ratingStarInput1"><label class="star-rating__ico" for="star-rating-1" data-role="star" data-amount="1"><span class="fa fa-stack fa-lg"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span></label></div><div class="star-rating__amount" data-role="ratingTotalAmount" title="Anzahl der Bewertungen">13</div><div class="clearfix"></div></div></li><li><ul class="list-inline social-networks"><li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" class="facebook"><span class="icon-facebook"></span></a></li><li><a target="_blank" href="https://twitter.com/intent/tweet?source=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/&amp;text=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/%20%23DigitalGuide" class="twitter"><span class="icon-twitter"></span></a></li><li><a target="_blank" href="https://www.xing.com/spi/shares/new?url=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" class="xing"><span class="icon-xing"></span></a></li><li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/" class="linkedin"><span class="icon-linkedin"></span></a></li></ul></li></ul></div><ul class="metatags-list list-inline list-unstyled"><li><a title="Tools" href="https://www.ionos.de/digitalguide/tags/tools/">Tools</a></li><li><a title="Lexikon" href="https://www.ionos.de/digitalguide/tags/lexikon/">Lexikon</a></li></ul></div><div class="gcsOptin gcsOptin__container" data-gcs-optin-opts="{&quot;text&quot;:{&quot;headline&quot;:&quot;Newsletter&quot;,&quot;subheadline&quot;:&quot;Jetzt Newsletter abonnieren und kostenloses Whitepaper „Online-Marketing für lokale Anbieter“ sichern!  &quot;},&quot;id&quot;:&quot;447c180c9d9d6e25d3e68059482a18400e739114335e033b625cf38a3e0c9fc3&quot;,&quot;host&quot;:&quot;digitalguide.ionos.de&quot;,&quot;https&quot;:true,&quot;skipKnownUser&quot;:true,&quot;callback&quot;:&quot;&quot;}" style=""><div style="width: 100%; display: none;"><div style=" margin: 0 auto; width: 100px; height: 100px; background: 100% url('data:image/gif;base64,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');"></div></div><div style="display: none;"></div><div style=""></div><div style=""><form class="email-form" action="#">
+            <fieldset>
+                <div class="form-hold">
+                    <input type="hidden" name="_token" value="vclmuqS6RLgFfdQguCj92nAHZYylMg7nzLvZby9t">
+                    <div class="hide form-group">
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_8_5e73413ca0aa9" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_8_5e73413ca0aa9" class="checkbox-input" name="topic[8]">
+        <span class="label-text">Websites</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_9_5e73413ca0f25" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_9_5e73413ca0f25" class="checkbox-input" name="topic[9]">
+        <span class="label-text">Hosting</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_10_5e73413ca130f" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_10_5e73413ca130f" class="checkbox-input" name="topic[10]" checked="checked">
+        <span class="label-text">Server</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_11_5e73413ca16f6" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_11_5e73413ca16f6" class="checkbox-input" name="topic[11]">
+        <span class="label-text">Domains</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_12_5e73413ca1b16" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_12_5e73413ca1b16" class="checkbox-input" name="topic[12]">
+        <span class="label-text">Online Marketing</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_13_5e73413ca1ef8" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_13_5e73413ca1ef8" class="checkbox-input" name="topic[13]">
+        <span class="label-text">E-Mail</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_14_5e73413ca2345" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_14_5e73413ca2345" class="checkbox-input" name="topic[14]">
+        <span class="label-text">KMU</span>
+    </label>
+    </div>
+
+                                            </div>
+
+                    <strong class="text-title">
+                        <span class="icon-paper-plane-o ico"></span>
+                        <span data-js-trans="headline">Newsletter</span>
+                        <span class="text-info" data-js-trans="subheadline">Jetzt Newsletter abonnieren und kostenloses Whitepaper „Online-Marketing für lokale Anbieter“ sichern!  </span>
+                    </strong>
+                    <div class="row">
+                                                                                <div class=" col-sm-6 ">
+                                <div class="form-group " "="">
+    <input type="text" name="field[5]" class="form-control" placeholder="E-Mail-Adresse">
+    </div>                            </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type="submit" role="button">
+    gleich anmelden <span class="icon-triangle-right"></span>
+</button>                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-alt-box  form-group  ">
+    <label for="gcsNewsletterWidget_text_5e73413ca2ed7" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_text_5e73413ca2ed7" class="checkbox-input" name="optin[text]">
+        <span class="label-text">Ich möchte per E-Mail über Neuigkeiten im Digital Guide informiert werden.</span>
+    </label>
+    </div>
+
+
+                </div>
+            </fieldset>
+        </form>
+    </div></div><section class="container related-articles"><strong class="h3 text-center">Ähnliche Artikel</strong><div class="row post-holder"><div class="col-sm-4"><article class="info-post"><div class="img-holder"><a title="Raspberry-Pi-Projekte" href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="fileadmin/_processed_/0/8/csm_platine-t_4e37cf4d7d.jpg" media="(max-width: 767px)"><source srcset="fileadmin/_processed_/0/8/csm_platine-t_9c2a355b27.jpg" media="(max-width: 1023px)"><source srcset="fileadmin/DigitalGuide/Teaser/platine-t.jpg"><!--[if IE 9]></video><![endif]--><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/platine-t.jpg" alt="Raspberry-Pi-Projekte" title="Raspberry-Pi-Projekte"></picture></a></div><h2 class="blue"><a title="20 Raspberry-Pi-Projekte, die zeigen, was mit dem Mini-Rechner möglich ist" href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/">20 Raspberry-Pi-Projekte, die zeigen, was mit dem Mini-Rechner möglich ist</a></h2><ul class="list-inline meta"><li><time datetime="2020-01-10"><span class="icon-clock-o"></span> 10.01.2020</time></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/">KnowHow</a></li></ul><p>
+        Der Raspberry Pi ist ein preiswerter Computer im Kleinformat, 
+der sich in vielerlei Hinsicht wie ein handelsüblicher Rechner verhält: 
+Sie können auf ihm ein Betriebssystem einrichten und ins Internet gehen,
+ ihn als Server oder Mediacenter nutzen und viele weitere Projekte damit
+ umsetzen. Wir stellen den Miniatur-PC sowie 20 nützliche 
+Raspberry-Pi-Anwendungen vor. 
+    </p><div class="social-block"><ul class="list-inline social-networks"><li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/" class="facebook"><span class="icon-facebook"></span></a></li><li><a target="_blank" href="https://twitter.com/intent/tweet?source=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/&amp;text=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/%20%23DigitalGuide" class="twitter"><span class="icon-twitter"></span></a></li><li><a target="_blank" href="https://www.xing.com/spi/shares/new?url=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/" class="xing"><span class="icon-xing"></span></a></li><li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-projekte/" class="linkedin"><span class="icon-linkedin"></span></a></li></ul></div></article></div><div class="col-sm-4"><article class="info-post"><div class="img-holder"><a title="Raspberry-Pi-Alternativen: Einplatinenrechner im Check" href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="fileadmin/_processed_/6/a/csm_platinenrechner-t_8037e30295.jpg" media="(max-width: 767px)"><source srcset="fileadmin/_processed_/6/a/csm_platinenrechner-t_cb68d9f045.jpg" media="(max-width: 1023px)"><source srcset="fileadmin/DigitalGuide/Teaser/platinenrechner-t.jpg"><!--[if IE 9]></video><![endif]--><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/platinenrechner-t.jpg" alt="Raspberry-Pi-Alternativen: Einplatinenrechner im Check" title="Raspberry-Pi-Alternativen: Einplatinenrechner im Check"></picture></a></div><h2 class="blue"><a title="Vier aktuelle Raspberry-Pi-Alternativen – Einplatinenrechner im Vergleich" href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/">Vier aktuelle Raspberry-Pi-Alternativen – Einplatinenrechner im Vergleich</a></h2><ul class="list-inline meta"><li><time datetime="2019-02-20"><span class="icon-clock-o"></span> 20.02.2019</time></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/">KnowHow</a></li></ul><p>
+        Der Raspberry Pi ist für Bastler rund um den Globus die erste 
+Wahl, wenn es um Einplatinenrechner geht: Er ist klein, günstig und 
+genügt den meisten Server- und Mediacenter-Ansprüchen. Doch immer mehr 
+Hersteller drängen mit ihren eigenen Mini-Computern auf den Markt: Die 
+Raspberry-Pi-Alternativen wollen mit noch günstigeren Preisen, 
+leistungsstärkerer Hardware oder ausgefallenen Features punkten....
+    </p><div class="social-block"><ul class="list-inline social-networks"><li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/" class="facebook"><span class="icon-facebook"></span></a></li><li><a target="_blank" href="https://twitter.com/intent/tweet?source=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/&amp;text=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/%20%23DigitalGuide" class="twitter"><span class="icon-twitter"></span></a></li><li><a target="_blank" href="https://www.xing.com/spi/shares/new?url=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/" class="xing"><span class="icon-xing"></span></a></li><li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-alternativen-einplatinenrechner-im-check/" class="linkedin"><span class="icon-linkedin"></span></a></li></ul></div></article></div><div class="col-sm-4"><article class="info-post"><div class="img-holder"><a title="Raspberry Pi Zero: spannende Projekte im Überblick" href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="fileadmin/_processed_/0/8/csm_platine-t_4e37cf4d7d.jpg" media="(max-width: 767px)"><source srcset="fileadmin/_processed_/0/8/csm_platine-t_9c2a355b27.jpg" media="(max-width: 1023px)"><source srcset="fileadmin/DigitalGuide/Teaser/platine-t.jpg"><!--[if IE 9]></video><![endif]--><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/platine-t.jpg" alt="Raspberry Pi Zero: spannende Projekte im Überblick" title="Raspberry Pi Zero: spannende Projekte im Überblick"></picture></a></div><h2 class="blue"><a title="10 eindrucksvolle Raspberry-Pi-Zero-Projekte" href="https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/">10 eindrucksvolle Raspberry-Pi-Zero-Projekte</a></h2><ul class="list-inline meta"><li><time datetime="2018-03-06"><span class="icon-clock-o"></span> 06.03.2018</time></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/">KnowHow</a></li></ul><p>
+        Dank seiner minimalistischen Maße ist der Raspberry Pi Zero die 
+ideale Komponente für alle Bastelprojekte, bei denen es auf jedes 
+bisschen Platz ankommt. Seit 2015 auf dem Markt ist der Winzling bereits
+ in zahlreichen Konstruktionen unterschiedlichster Art eingesetzt 
+worden. Eine kurze Vorstellung des Minicomputers sowie zehn der 
+interessantesten und besten Raspberry-Pi-Zero-Anwendungen und -Ideen...
+    </p><div class="social-block"><ul class="list-inline social-networks"><li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/" class="facebook"><span class="icon-facebook"></span></a></li><li><a target="_blank" href="https://twitter.com/intent/tweet?source=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/&amp;text=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/%20%23DigitalGuide" class="twitter"><span class="icon-twitter"></span></a></li><li><a target="_blank" href="https://www.xing.com/spi/shares/new?url=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/" class="xing"><span class="icon-xing"></span></a></li><li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ionos.de/digitalguide/server/knowhow/raspberry-pi-zero-spannende-projekte-im-ueberblick/" class="linkedin"><span class="icon-linkedin"></span></a></li></ul></div></article></div><div class="col-sm-4"><article class="info-post"><div class="img-holder"><a title="Arduino-Projekte: Ideen &amp; Beispiele für Arduino Uno &amp; Nano" href="https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="fileadmin/_processed_/d/6/csm_arduino-projekte-t_e1505111d1.jpg" media="(max-width: 767px)"><source srcset="fileadmin/_processed_/d/6/csm_arduino-projekte-t_5ceaf6c417.jpg" media="(max-width: 1023px)"><source srcset="fileadmin/DigitalGuide/Teaser/arduino-projekte-t.jpg"><!--[if IE 9]></video><![endif]--><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/arduino-projekte-t.jpg" alt="Arduino-Projekte: Ideen &amp; Beispiele für Arduino Uno &amp; Nano" title="Arduino-Projekte: Ideen &amp; Beispiele für Arduino Uno &amp; Nano"></picture></a></div><h2 class="blue"><a title="Arduino-Projekte: Die besten Ideen und Bauanleitungen für den Mikrocontroller" href="https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/">Arduino-Projekte: Die besten Ideen und Bauanleitungen für den Mikrocontroller</a></h2><ul class="list-inline meta"><li><time datetime="2018-03-06"><span class="icon-clock-o"></span> 06.03.2018</time></li><li><a href="https://www.ionos.de/digitalguide/server/knowhow/">KnowHow</a></li></ul><p>
+        Der kompakte Mikrocontroller Arduino ist ein essenzielles 
+Bauteil für Elektronik-Bastler und hat die globale Maker-Bewegung 
+entscheidend geprägt. Wir zeigen Ihnen die besten Projektideen für 
+Einsteiger, lehrreiche Tutorials für Fortgeschrittene und atemberaubende
+ Profi-Projekte für Arduino Uno und Arduino Nano. Seit über einem 
+Jahrzehnt lassen sich Technikbegeisterte weltweit von Arduino...
+    </p><div class="social-block"><ul class="list-inline social-networks"><li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/" class="facebook"><span class="icon-facebook"></span></a></li><li><a target="_blank" href="https://twitter.com/intent/tweet?source=https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/&amp;text=https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/%20%23DigitalGuide" class="twitter"><span class="icon-twitter"></span></a></li><li><a target="_blank" href="https://www.xing.com/spi/shares/new?url=https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/" class="xing"><span class="icon-xing"></span></a></li><li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ionos.de/digitalguide/server/knowhow/arduino-projekte-ideen-beispiele-fuer-arduino-uno-nano/" class="linkedin"><span class="icon-linkedin"></span></a></li></ul></div></article></div></div></section><div class="category-description"></div></div>
+					
+
+
+				<!--TYPO3SEARCH_end-->
+				
+						<div class="col-sm-4" id="sidebar">
+
+							
+									
+									
+<div id="c188837" class="frame frame-default frame-type-html frame-layout-0"><div class="sidebar-sticky-box"><h3>Passende Produkte</h3><div class="row"><div class="col-xs-12 sidebar-sticky-box-inhalt"><div class="col-xs-4"><img alt="IONOS Cloud Server" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/vi-cloud-server.svg"></div><div class="sidebar-sticky-box-text">Cloud Server</div></div></div><button class="btn btn-primary btn-block button-dg" type="button" target="_blank" onclick="websiteSBSitecat();window.open('https://www.ionos.de/cloud/cloud-server?ac=OM.PU.PUo50K361638T7073a')" role="button">Zu den Tarifen <span class="icon-triangle-right"></span></button></div><script type="text/javascript">
+function websiteSBSitecat(){
+    if (typeof window.s === "object" && typeof window.s.apl === 'function' && typeof window.s.t === 'function') {
+       s.events2=s.apl(s.events2, "event114", ",", 1);
+       s.t(s);
+   }
+}
+</script></div>
+
+
+								
+
+							
+<div id="c177656" class="frame frame-default frame-type-html frame-layout-0"><div class="reseller-box"><h3>Webhosting für Agenturen</h3><p class="">Schnell, sicher und State-of-the-Art – nutzen Sie unsere starke Plattform für Ihre Kunden</p><button class="btn btn-primary btn-block button-dg" type="button" target="_blank" onclick="globalSBSitecat();window.open('https://www.ionos.de/partner/webhosting-fuer-agenturen?ac=OM.PU.PUo50K361684T7073a#packages')" role="button">
+        Zu den Tarifen <span class="icon-triangle-right"></span></button></div><script type="text/javascript">
+function globalSBSitecat(){
+    if (typeof window.s === "object" && typeof window.s.apl === 'function' && typeof window.s.t === 'function') {
+       s.events2=s.apl(s.events2, "event113", ",", 1);
+       s.t(s);
+   }
+}
+</script></div>
+
+
+
+							<div class="gcsOptin gcsOptin__container" data-gcs-optin-opts="{&quot;text&quot;:{&quot;headline&quot;:&quot;Newsletter&quot;,&quot;subheadline&quot;:&quot;anmelden und gratis Online-Marketing Whitepaper sichern.&quot;},&quot;id&quot;:&quot;7ccf889c34fccd13c4832d521089fa029f34e139a885c62a0bde339604ee7a6a&quot;,&quot;host&quot;:&quot;digitalguide.ionos.de&quot;,&quot;https&quot;:true,&quot;skipKnownUser&quot;:true,&quot;callback&quot;:&quot;&quot;}" style=""><div style="width: 100%; display: none;"><div style=" margin: 0 auto; width: 100px; height: 100px; background: 100% url('data:image/gif;base64,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');"></div></div><div style="display: none;"></div><div style=""></div><div style=""><form class="news-form news-form-alt" action="" method="post">
+            <fieldset>
+                <input type="hidden" name="_token" value="JNUFlRr5cWwxxPHylYsP5VUmVYg4fBVUUyQGLmek">
+                <div class="hide form-group">
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_8_5e73413cab68e" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_8_5e73413cab68e" class="checkbox-input" name="topic[8]">
+        <span class="label-text">Websites</span>
+    </label>
+    </div>
+
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_9_5e73413caba97" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_9_5e73413caba97" class="checkbox-input" name="topic[9]">
+        <span class="label-text">Hosting</span>
+    </label>
+    </div>
+
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_10_5e73413cabecc" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_10_5e73413cabecc" class="checkbox-input" name="topic[10]" checked="checked">
+        <span class="label-text">Server</span>
+    </label>
+    </div>
+
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_11_5e73413cac2cb" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_11_5e73413cac2cb" class="checkbox-input" name="topic[11]">
+        <span class="label-text">Domains</span>
+    </label>
+    </div>
+
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_12_5e73413cac768" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_12_5e73413cac768" class="checkbox-input" name="topic[12]">
+        <span class="label-text">Online Marketing</span>
+    </label>
+    </div>
+
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_13_5e73413cacd28" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_13_5e73413cacd28" class="checkbox-input" name="topic[13]">
+        <span class="label-text">E-Mail</span>
+    </label>
+    </div>
+
+                                            <div class=" ">
+    <label for="gcsNewsletterWidget_14_5e73413cad1be" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_14_5e73413cad1be" class="checkbox-input" name="topic[14]">
+        <span class="label-text">KMU</span>
+    </label>
+    </div>
+
+                                    </div>
+
+                <h2 class="h1 white text-uppercase" data-js-trans="headline">Newsletter</h2>
+                <p data-js-trans="subheadline">anmelden und gratis Online-Marketing Whitepaper sichern.</p>
+                <div class="form-hold">
+                                            <div class="form-group ">
+    <input type="text" name="field[5]" class="form-control" placeholder="E-Mail-Adresse">
+    </div>                    
+                    <div class=" form-group  ">
+    <label for="gcsNewsletterWidget_text_5e73413caddc6" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_text_5e73413caddc6" class="checkbox-input" name="optin[text]">
+        <span class="label-text">Ich möchte per E-Mail über Neuigkeiten im Digital Guide informiert werden.</span>
+    </label>
+    </div>
+
+                </div>
+
+                <button class="btn btn-primary btn-block" type="submit" role="button">
+    gleich anmelden <span class="icon-triangle-right"></span>
+</button>
+            </fieldset>
+        </form>
+
+    </div></div>
+						<div class="side-block open-close" id="popular-articles"><h3 class="opener" data-responsive-accordion="1023">
+                Beliebte Artikel
+                <span class="iconCloseOpen "></span></h3><div class="container-info-blog slide js-slide-hidden"><div class="info-blog"><h4 class="h5 blue"><a title="USB-Stick bootfähig machen" href="https://www.ionos.de/digitalguide/server/knowhow/usb-stick-bootfaehig-machen/">USB-Stick bootfähig machen
+                                        <p class="shabstract">Wir erklären, wie man mit einem bootfähigen USB-Stick den Computer wieder flott macht ...</p></a></h4></div><div class="info-blog"><h4 class="h5 blue"><a title="Outlook Smileys" href="https://www.ionos.de/digitalguide/e-mail/e-mail-technik/outlook-smileys/">Outlook Smileys
+                                        <p class="shabstract">Smileys prägen die digitale Kommunikation. Doch wie fügt man in Outlook Smileys ein...</p></a></h4></div><div class="info-blog"><h4 class="h5 blue"><a title="Die eigene E-Mail-Domain" href="https://www.ionos.de/digitalguide/e-mail/e-mail-technik/gute-gruende-fuer-die-eigene-e-mail-domain/">Die eigene E-Mail-Domain
+                                        <p class="shabstract">Erfahren Sie, wie sie sich in wenigen Schritten eine eigene E-Mail-Adresse mit persönlicher Domain sichern...</p></a></h4></div><div class="info-blog"><h4 class="h5 blue"><a title="Excel-Shortcuts" href="https://www.ionos.de/digitalguide/online-marketing/web-analyse/excel-shortcuts/">Excel-Shortcuts
+                                        <p class="shabstract">Wir zeigen Ihnen 30 wichtige Excel-Tastenkürzel ...</p></a></h4></div><div class="info-blog"><h4 class="h5 blue"><a title="Windows Screenshot" href="https://www.ionos.de/digitalguide/server/konfiguration/so-erstellen-sie-screenshots-unter-windows/">Windows Screenshot
+                                        <p class="shabstract">Wie erstellt man eigentlich ein Bildschirmfoto unter Windows...</p></a></h4></div></div></div>
+			</div>
+			
+		</div>
+		</div>
+		<div class="mobile-box"></div>
+		<div class="container info-aside"></div>
+		</div>
+	</main>
+
+<footer id="footer">
+	<div class="container footer-frame">
+		<ul class="list-inline social-networks contact">
+			
+				<li><a href="http://ionos.ly/IONOS_FB_DE" class="facebook" target="_blank"><span class="icon-facebook"></span></a></li>
+			
+			
+				<li><a href="http://ionos.ly/IONOS_TW_DE" class="twitter" target="_blank"><span class="icon-twitter"></span></a></li>
+			
+			
+			
+				<li><a href="https://ionos.ly/IONOS_YT_DE" class="youtube" target="_blank"><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/youtube.png" alt="youtube" width="28" height="28"></a></li>
+			
+			
+				<li><a href="http://ionos.ly/IONOS_IN" class="linkedin" target="_blank"><span class="icon-linkedin"></span></a></li>
+			
+			
+			
+				<li><a href="https://www.ionos.de/digitalguide/rss-feeds/rss-digitalguide/feed.rss" class="rss-feed" style="background:#ffffff" target="_blank"><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/rss-feed.png" alt="rss-feed" width="28" height="28"></a></li>
+			
+		</ul>
+	</div>
+
+	<div class="footer-holder">
+		<div class="container">
+			<ul class="list-inline list-footer"><li class="footer-nav-item"><a href="https://www.ionos.de/unternehmen" class="footer-nav-link" target="_blank">Unternehmen</a></li><li class="footer-nav-item"><a href="https://jobs.ionos.de/" class="footer-nav-link" target="_blank">Jobs</a></li><li class="footer-nav-item"><a href="https://www.ionos.de/newsroom" class="footer-nav-link" target="_blank">Newsroom</a></li><li class="footer-nav-item"><a href="https://www.ionos.de/hilfe" class="footer-nav-link" target="_blank">Hilfe-Center</a></li><li class="footer-nav-item"><a href="https://www.ionos.de/terms-gtc/terms-gtc" class="footer-nav-link" target="_blank">AGB</a></li><li class="footer-nav-item"><a href="https://www.ionos.de/terms-gtc/terms-privacy" class="footer-nav-link" target="_blank">Datenschutz</a></li><li class="footer-nav-item"><a href="https://www.ionos.de/impressum" class="footer-nav-link" target="_blank">Impressum</a></li><li class="footer-nav-item"><span class="copyright">© 2020 <a href="https://www.ionos.de/" title="1&amp;1 IONOS" target="_blank">1&amp;1 IONOS SE</a></span></li></ul>
+		</div>
+	</div>
+	<a href="#wrapper" class="btn btn-top" style="display: none; opacity: 1;"><span class="icon-angle-up"></span></a>
+
+</footer>
+
+</div>
+
+  <script>
+    window.cookieconsent_options = {
+      learnMore: 'Mehr Informationen.',
+      dismiss: 'OK',
+      message: 'Wir verwenden Cookies, um Ihnen ein optimales Nutzererlebnis zu bieten, auf Sie zugeschnittene Werbung zu generieren und Social Media einzubinden. Nutzen Sie unsere Website oder Dienste weiter, stimmen Sie der Verwendung zu.',
+      link: 'https://www.ionos.de/cookies',
+      
+    };
+  </script>
+
+
+<div id="bio_ep">
+<div id="c146243" class="frame frame-default frame-type-html frame-layout-0"><div class="popup-header"><img src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/ionos_logo.svg" alt="IONOS" width="50" height="50"></div><br><h2 class="exit-intent" style="padding-left: 120px;">Auf dem Laufenden bleiben?</h2><div class="exit-sub" style="padding-left: 120px;">Jetzt für unseren Newsletter anmelden und gratis Online-Marketing Whitepaper für lokale Anbieter sichern! </div><!--<div class="exit-sub exit-sub-offer"></div>--><div class="exit-sub sub-sub"></div><div class="gcsOptin gcsOptin__container" data-gcs-optin-opts="{&quot;id&quot;:&quot;447c180c9d9d6e25d3e68059482a18400e739114335e033b625cf38a3e0c9fc3&quot;,&quot;host&quot;:&quot;digitalguide.ionos.de&quot;,&quot;https&quot;:true}" style=""><div style="width: 100%; display: none;"><div style=" margin: 0 auto; width: 100px; height: 100px; background: 100% url('data:image/gif;base64,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');"></div></div><div style="display: none;"></div><div style=""></div><div style=""><form class="email-form" action="#">
+            <fieldset>
+                <div class="form-hold">
+                    <input type="hidden" name="_token" value="OyeShteoYNK3PTiBCKlb5o12EKYjuPxwUxWGtfrq">
+                    <div class="hide form-group">
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_8_5e73413cb121f" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_8_5e73413cb121f" class="checkbox-input" name="topic[8]">
+        <span class="label-text">Websites</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_9_5e73413cb1615" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_9_5e73413cb1615" class="checkbox-input" name="topic[9]">
+        <span class="label-text">Hosting</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_10_5e73413cb19dd" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_10_5e73413cb19dd" class="checkbox-input" name="topic[10]" checked="checked">
+        <span class="label-text">Server</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_11_5e73413cb1d9c" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_11_5e73413cb1d9c" class="checkbox-input" name="topic[11]">
+        <span class="label-text">Domains</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_12_5e73413cb2183" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_12_5e73413cb2183" class="checkbox-input" name="topic[12]">
+        <span class="label-text">Online Marketing</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_13_5e73413cb2549" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_13_5e73413cb2549" class="checkbox-input" name="topic[13]">
+        <span class="label-text">E-Mail</span>
+    </label>
+    </div>
+
+                                                    <div class="checkbox-alt-box  ">
+    <label for="gcsNewsletterWidget_14_5e73413cb2915" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_14_5e73413cb2915" class="checkbox-input" name="topic[14]">
+        <span class="label-text">KMU</span>
+    </label>
+    </div>
+
+                                            </div>
+
+                    <strong class="text-title">
+                        <span class="icon-paper-plane-o ico"></span>
+                        <span data-js-trans="headline">Die besten News per E-Mail</span>
+                        <span class="text-info" data-js-trans="subheadline">Jetzt schneller informiert sein.</span>
+                    </strong>
+                    <div class="row">
+                                                                                <div class=" col-sm-6 ">
+                                <div class="form-group " "="">
+    <input type="text" name="field[5]" class="form-control" placeholder="E-Mail-Adresse">
+    </div>                            </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type="submit" role="button">
+    gleich anmelden <span class="icon-triangle-right"></span>
+</button>                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-alt-box  form-group  ">
+    <label for="gcsNewsletterWidget_text_5e73413cb32a1" class="checkbox-label">
+        <input type="checkbox" id="gcsNewsletterWidget_text_5e73413cb32a1" class="checkbox-input" name="optin[text]">
+        <span class="label-text">Ich möchte per E-Mail über Neuigkeiten im Digital Guide informiert werden.</span>
+    </label>
+    </div>
+
+
+                </div>
+            </fieldset>
+        </form>
+    </div></div><style>
+#bio_ep {
+    background-image: url(./fileadmin/user_upload/Stage_Domain.png);
+}
+</style></div>
+
+</div>
+<script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/merged-6daa974d8b1db3f1e1d30650412d327b-597b601239f7dea6847.gzip" type="text/javascript"></script>
+<script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/merged-221823d5a969d606af2cd2daae95c57a-9a5e3412f79777d8c8e.gzip" type="text/javascript"></script>
+<script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/frontend.js" type="text/javascript"></script>
+
+<script type="text/javascript">_satellite.pageBottom();</script><script type="text/javascript" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/40000.js"> </script><script src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/satellite-5c0fe50864746d4c7100e3b3.js"></script><script async="" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/frontend_002.js"></script><script type="text/javascript" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/bundle.js"> </script>
+<link rel="stylesheet" type="text/css" href="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/bundle.css"><style type="text/css">
+       
+  .cc_banner-wrapper {
+    display:none;
+  }
+  
+</style><div class="tx-cisositecatalyst">
+		
+            <!-- SiteCatalyst code version: H.20.3. Copyright 1997-2009 Omniture, Inc. More info available at http://www.omniture.com -->
+            <script type="text/javascript">var s_account="iaglive,iaggloballive";</script>
+            <script type="text/javascript" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/utm.js"></script>
+            
+                    <script language="JavaScript" type="text/javascript">
+                        function onRequest(data) {
+                            s.server = "";
+s.visitorNamespace = "1und1internetag";
+s.thisHost = window.location.host;
+s.currencyCode = "EUR";
+s.charSet = "UTF-8";
+s.trackDownloadLinks = true;
+s.trackExternalLinks = true;
+s.trackInlineStats = true;
+s.linkDownloadFileTypes = "exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx";
+s.linkInternalFilters = "javascript:,.1und1.de,.1und1.at,.1and1.com,.1and1.ca,.1and1.co.uk,.1and1.es,.1and1.fr,.1and1.pl,.1and1.it,.1und1.info,.1and1.mx,.gmx.de,.web.de,united.domain,cinetic.de,schlund.de,.ionos.ca,.ionos.de,.ionos.at,.ionos.es,.ionos.fr,.ionos.it,.ionos.mx,.ionos.co.uk,.ionos.com,"+s.thisHost;
+s.linkLeaveQueryString = false;
+s.linkTrackVars = "None";
+s.linkTrackEvents = "None";
+s.usePlugins = true;
+s.prop11 = "New contract shop";
+s.eVar13 = "New contract shop";
+s.channel = "digitalguide";
+var cookieName = "ac-euepostclick-de";
+var searchString = document.location.search;
+// removing the '?' at the beginning
+if (searchString.length > 0) {
+  searchString = searchString.substring(1);
+}
+var searchStringParts = searchString.split('&');
+var actionCode = '';
+for (var i=0, j=searchStringParts.length; i<j; i++) {
+  if (searchStringParts[i].search('ac') != -1) {
+    // getting the value by removing the 'ac=' at the beginning
+    actionCode = searchStringParts[i].substring(3);
+  }
+}
+
+// if the actionCode is not in the URL check for the cookie
+if (typeof $.cookie != "undefined" && actionCode == '' && typeof $.cookie(cookieName) != "undefined") {
+  actionCode = $.cookie(cookieName);
+}
+
+if (actionCode != '') {
+  s.campaign = s.eVar23 = actionCode;
+}
+s.prop1 = "server_knowhow_arduino-vs-raspberry-pi";
+s.prop5 = "dg-server";
+s.prop6 = "dg-de";
+s.prop7 = "www.ionos.de";
+s.prop17 = "de";
+s.prop23 = window.navigator.userAgent;
+s.eVar1 = "digitalguide";
+s.eVar2 = "server_knowhow_arduino-vs-raspberry-pi";
+var currentDate = new Date();
+var day = currentDate.getDate();
+var formattedDay = day <= 9 ? "0" + day : day;
+var month = currentDate.getMonth();
+var formattedMonth = month <= 8 ? "0" + (month + 1) : (month + 1);
+var year = currentDate.getFullYear();
+var hours = currentDate.getHours();
+var formattedHours = hours <= 9 ? "0" + (hours) : hours;
+var minutes = currentDate.getMinutes();
+var formattedMinutes = minutes <= 9 ? "0" + (minutes) : minutes;
+
+var timeStamp = formattedDay + "/" + formattedMonth + "/" + year + "-" + formattedHours + ":" + formattedMinutes;
+s.eVar3 = timeStamp;
+s.eVar6 = "dg-server";
+s.eVar7 = "dg-de";
+s.eVar45 = "de";
+                        }
+                        $(window).ready(function() {
+
+                          if (typeof window.PrivacyConsent !== "undefined")
+                          {
+                              // we use the available variable defined by Adpbe DTM script
+                              if (typeof window.privacyConsentInstance === "undefined") {
+                                window.privacyConsentInstance = new PrivacyConsent({ whitelist: true });
+                              }
+                              
+                              window.privacyConsentInstance.invoke(
+                                function() {
+                                    var existingScriptElement = document.getElementsByTagName("script")[0];
+                                    var scriptElement = document.createElement("script");
+                                    scriptElement.type = "text/javascript";
+                                    scriptElement.src = "typo3conf/ext/ciso_sitecatalyst/Resources/Public/JavaScript/s_code.js";
+                                    scriptElement.onload = function() {
+                                        onRequest();
+                                        
+                                        var s_code=s.t();
+                                        if (s_code) document.write(s_code);
+                                    };
+                                    existingScriptElement.parentNode.insertBefore(scriptElement, existingScriptElement);
+                                },
+                                PrivacyConsentEnum.STATISTICS,
+                                this,
+                                true
+                              );
+                              
+                              window.privacyConsentInstance.initialize();
+                          } else {
+                            // send the tracking for the page
+                            onRequest();
+
+                            var s_code=s.t();
+                            if (s_code) document.write(s_code);
+                          }
+                          
+                                                    
+                
+                        });
+                </script>
+            <!-- End SiteCatalyst code version: H.20.3. -->
+            
+	</div>
+	
+<script type="text/javascript">
+   var page = 'Arduino vs. Raspberry Pi';
+   var pageId = '3';
+   var application = 'T3.DG.DE';
+</script>
+<script type="text/javascript" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/browser.js"></script>
+
+<script type="text/javascript" src="Arduino%20vs.%20Raspberry%20Pi%20%20Einplatinencomputer%20im%20Vergleich%20-%20IONOS-Dateien/rum.js"></script>
+
+
+<script type="text/javascript">
+UNOUNO = window.UNOUNO || {};
+UNOUNO.tracking = UNOUNO.tracking || {};
+
+
+UNOUNO.tracking.genericTracking = function(siteCatalystParams, type, name, optFullSet) {
+  /*
+    use this API to track specific events independend from page related tracking
+    uses cases for this can be tracking a survey, a clicked link or search related tracking
+  */
+
+  /*
+    here is one code example of how to track events with SiteCatalyst
+    UNOUNO.tracking.genericTracking makes it possible to use a standardized API for all kinds of such tracking codes
+
+    Example (original code):
+
+    var s=s_gi('iagdev');
+    s.linkTrackVars='events,products';
+    s.linkTrackEvents='event7,event8,event9,event10,event11,event12';
+    s.events='event7,event8,event9,event10,event11,event12';
+    s.products=";;;;event7=25|event8=75|event9=100|event10=0|event11=1";
+    s.tl(this,'o','Linkname');
+
+    Standardized UNOUNO.tracking.genericTracking example:
+
+    UNOUNO.tracking.genericTracking({
+
+      events: 'event7,event8,event9,event10,event11,event12',
+
+      products: ';;;;event7=25|event8=75|event9=100|event10=0|event11=1'
+
+    });
+
+    See wiki for complete API: http://wiki.intranet.1and1.com/bin/view/UE/SitecatalystTracking#Tracking_Events
+
+  */
+
+  var s, key, linkTrackVars, linkTrackEvents;
+
+  if (typeof s_gi !== 'undefined' && typeof s_account !== 'undefined') {
+
+    // s_account is triggered by tag manager script and has values iagdev or iaglive
+
+    s = s_gi(s_account);
+
+    // generate linkTrackVars based on siteCatalystParams
+
+    linkTrackVars = '';
+    /* transactionId  */
+    
+    if ((typeof siteCatalystParams["list2"] != "undefined" && siteCatalystParams["list2"].indexOf("chat-angenommen") == 0  || typeof siteCatalystParams["prop60"] != "undefined" && siteCatalystParams["prop60"].indexOf("ct.btn.MobileZubehoerShop") > -1) && typeof siteCatalystParams["eVar35"] == "undefined"){
+      siteCatalystParams["eVar35"] = UNOUNO.tracking.transactionId;
+    }
+
+    for (key in siteCatalystParams) {
+
+      if (siteCatalystParams.hasOwnProperty(key)) {
+
+        linkTrackVars = linkTrackVars + key + ',';
+
+        if (key === 'events') {
+
+          // if the special param events is used, generate an additionally linkTrackEvents property
+
+          linkTrackEvents = siteCatalystParams[key];
+
+        }
+
+      }
+
+    }
+
+    if (linkTrackVars !== '') {
+
+      // remove trailing comma
+
+      linkTrackVars = linkTrackVars.substr(0, linkTrackVars.length - 1);
+
+      // server time in every request
+      linkTrackVars += ",eVar3";
+      
+      // copy generated linkTrackVars and optional linkTrackEvents to the s object
+      s.linkTrackVars = linkTrackVars;
+
+      if (linkTrackEvents) {
+
+        s.linkTrackEvents = linkTrackEvents;
+
+      }
+
+      // clone all siteCatalystParams to s object
+
+      for (key in siteCatalystParams) {
+
+        if (siteCatalystParams.hasOwnProperty(key)) {
+
+          s[key] = siteCatalystParams[key];
+
+        }
+
+      }
+
+      // finally send SiteCatalyst tracking request with type and name or their defaults
+
+      if(optFullSet == true){
+         s.t(this, type || 'o', name || 'generic-tracking');
+      }
+      else{
+         s.tl(this, type || 'o', name || 'generic-tracking');
+      }
+
+
+
+
+    }
+
+  }
+
+};
+</script>
+
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
+<!-- cached statically on: 19-03-20 05:44 -->
+<!-- expires on: 19-03-20 07:44 -->

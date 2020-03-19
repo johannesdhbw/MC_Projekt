@@ -32,10 +32,25 @@
   --
 \newblock ISBN 978--3--658--07569--9
 
+\bibitem[ION18]{IONOS.2018}
+\textsc{IONOS} (Hrsg.):
+\newblock \emph{Arduino vs. Raspberry PI: Mikrocontroller und
+  Einplatinencomputer im Vergleich}.
+\newblock
+  \url{https://www.ionos.de/digitalguide/server/knowhow/arduino-vs-raspberry-pi/}.
+\newblock \,Version:\,2018
+
 \bibitem[{Jay}]{JayAbrahamPaulJonesRaoulJetley.}
 \textsc{{Jay Abraham, Paul Jones, Raoul Jetley}}:
 \newblock \emph{Formale Verifikationsmethoden f{\"u}r die Entwicklung von
-  High-Integrity-Software f{\"u}r Medizinische Ger{\"a}te}
+  High-Integrity-Software f{\"u}r Medizinische Ger{\"a}te}.
+\newblock \url{http://files.vogel.de/vogelonline/vogelonline/files/3092.pdf}
+
+\bibitem[{Mir}18]{MircoLang.2018}
+\textsc{{Mirco Lang}} ; \textsc{{heise online}} (Hrsg.):
+\newblock \emph{Was ist ein Arduino}.
+\newblock \url{https://www.heise.de/tipps-tricks/Was-ist-Arduino-4035461.html}.
+\newblock \,Version:\,2018
 
 \bibitem[{Pet}09]{PeterLiggesmeyer.2009}
 \textsc{{Peter Liggesmeyer}}:
@@ -47,10 +62,23 @@
   --
 \newblock ISBN 978--3--8274--2056--5
 
-\bibitem[Wik20]{Wikipedia.01.03.2020}
+\bibitem[ser20]{sertronics.19.03.2020}
+\textsc{sertronics} (Hrsg.):
+\newblock \emph{Arduino Uno R3}.
+\newblock
+  \url{https://www.berrybase.de/Pixelpdfdata/Articlepdf/id/1/onumber/A000066}.
+\newblock \,Version:\,19.03.2020
+
+\bibitem[Wik20a]{Wikipedia.01.03.2020}
 \textsc{Wikipedia} (Hrsg.):
 \newblock \emph{Softwaretest}.
 \newblock \url{https://de.wikipedia.org/wiki/Softwaretest#Literatur}.
 \newblock \,Version:\,01.03.2020
+
+\bibitem[Wik20b]{Wikipedia.2020}
+\textsc{Wikipedia} (Hrsg.):
+\newblock \emph{Arduino (Plattform)}.
+\newblock \url{https://de.wikipedia.org/wiki/Arduino_(Plattform)}.
+\newblock \,Version:\,2020
 
 \end{thebibliography}
