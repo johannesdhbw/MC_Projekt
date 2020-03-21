@@ -65,21 +65,21 @@ Um an die richtigen Daten des Sensors zu gelangen, muss der Arduino in unserem P
 \end{center}
 
 
-In der Softwareimplementierung wird der Co\textsubscript{2}-Sensor mithilfe der Bibliothek <Ardafruit\_CCS811.h> wie in Abbildung \ref{fig:Setup} gezeigt wird aufgerufen. Zunächst werden Setups für das I$^2$C-Interface und die Hardware durchgeführt. Danach wird geprüft, ob die Kommunikation mit dem Sensor aufgebaut werden kann. Wenn das der Fall ist, wird solange gewartet, bis der Sensor bereit ist, Daten zu lesen. Falls jedoch ein Problem auftritt, wird eine Fehlermeldung ausgegeben und der Arduino geht in eine sogenannte Endlosschleife, bis das Programm neu geladen wird oder der Arduino ausgeschalten wird.
+In der Softwareimplementierung wird der Co\textsubscript{2}-Sensor mithilfe der Bibliothek <Ardafruit\_CCS811.h>, wie in Abbildung \ref{fig:Setup} gezeigt wird, aufgerufen. Zunächst werden Setups für das I$^2$C-Interface und die Hardware durchgeführt. Danach wird geprüft, ob die Kommunikation mit dem Sensor aufgebaut werden kann. Wenn das der Fall ist, wird solange gewartet, bis der Sensor bereit ist, Daten zu lesen. Falls jedoch ein Problem auftritt, wird eine Fehlermeldung ausgegeben und der Arduino geht in eine sogenannte Endlosschleife, bis das Programm neu geladen oder der Arduino ausgeschalten wird.
 
 \begin{figure}[!hbt]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Images/ccs811Setup}
-	\caption{Codeauschnitt für das Setup aus dem Softwareprogramm}
+	\caption{Codeausschnitt für das Setup aus dem Quellcode}
 	\label{fig:Setup}
 \end{figure}
 
-Die Abfrage nach den CO\textsubscript{2}-Werten erfolgt über eine weitere Prüfung auf Fehler und einer anschließenden Messung. Danach werden die Daten auf einem Array gespeichert.
+Die Abfrage der CO\textsubscript{2}-Werten erfolgt über eine weitere Prüfung auf Fehler und einer darauffolgenden Messung. Das in Array dient hierbei zur Zwischenspeicherung der Daten. Anschließend werden die gespeicherten Informationen an die Mikro-SD-Karte weitergegeben. Näheres dazu in Kapitel \ref{microSD}.
 
 \begin{figure}[!hbt]
 	\centering
 	\includegraphics[width=0.5\linewidth]{Images/ccs811Loop}
-	\caption{Codeausschnitt für die Messung aus dem Softwareprogramm}
+	\caption{Codeausschnitt für die Messung aus dem Quellcode}
 	\label{fig:Loop}
 \end{figure}
 

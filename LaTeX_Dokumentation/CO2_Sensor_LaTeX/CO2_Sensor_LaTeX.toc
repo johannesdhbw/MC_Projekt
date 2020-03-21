@@ -1,24 +1,25 @@
 \babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}% 
 \contentsline {chapter}{\numberline {2}Anforderungen}{3}{chapter.2}% 
-\contentsline {chapter}{\numberline {3}Kosten und Arbeitsplan}{5}{chapter.3}% 
-\contentsline {chapter}{\numberline {4}Entwurf}{7}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Schaltungslayout}{7}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Geh\IeC {\"a}use}{8}{section.4.2}% 
-\contentsline {chapter}{\numberline {5}Softwareimplementation}{9}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{10}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Arduino}{10}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}CCS811}{11}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Mikro-SD}{13}{section.5.4}% 
-\contentsline {chapter}{\numberline {6}Hardware}{15}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Testing}{17}{chapter.7}% 
-\contentsline {chapter}{\numberline {8}Handbuch}{19}{chapter.8}% 
-\contentsline {chapter}{\numberline {9}Installationsanleitung}{21}{chapter.9}% 
-\contentsline {chapter}{\numberline {10}Fazit}{23}{chapter.10}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{25}{chapter*.24}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}{chapter*.25}% 
-\contentsline {chapter}{Sachwortverzeichnis}{28}{chapter*.25}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{29}{chapter*.26}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{31}{chapter*.27}% 
-\contentsline {chapter}{\numberline {A}Anhang}{33}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{33}{section.A.1}% 
+\contentsline {chapter}{\numberline {3}Kostenplan}{5}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Arbeitsplan}{7}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Entwurf}{9}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Schaltungslayout}{9}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Geh\IeC {\"a}use}{10}{section.5.2}% 
+\contentsline {chapter}{\numberline {6}Softwareimplementation}{11}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Arduino vs. Raspberry PI}{12}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Arduino}{12}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}CCS811}{13}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}Mikro-SD}{16}{section.6.4}% 
+\contentsline {chapter}{\numberline {7}Hardware}{17}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Testing}{19}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}Handbuch}{21}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Installationsanleitung}{23}{chapter.10}% 
+\contentsline {chapter}{\numberline {11}Fazit}{25}{chapter.11}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{27}{chapter*.24}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{29}{chapter*.25}% 
+\contentsline {chapter}{Sachwortverzeichnis}{30}{chapter*.25}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{31}{chapter*.26}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{33}{chapter*.27}% 
+\contentsline {chapter}{\numberline {A}Anhang}{35}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{35}{section.A.1}% 
