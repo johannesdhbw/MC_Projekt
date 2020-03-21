@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  21 MAR 2020 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  21 MAR 2020 18:42
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -2066,7 +2066,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 307.
 Here is how much of TeX's memory you used:
  50131 strings out of 492895
  1136194 string characters out of 3123735
- 1409790 words of memory out of 3000000
+ 1408845 words of memory out of 3000000
  53154 multiletter control sequences out of 15000+200000
  553719 words of font info for 67 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
@@ -2094,9 +2094,9 @@ sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728
 lic/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (45 pages, 2319792 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (45 pages, 2324469 bytes).
 PDF statistics:
- 1224 PDF objects out of 1440 (max. 8388607)
+ 1236 PDF objects out of 1440 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)
  276 words of extra memory for PDF output out of 10000 (max. 10000000)
 
