@@ -1,9 +1,9 @@
-#include <Adafruit_CCS811.h>
-
 #include <Adafruit_GFX.h>
 #include <Adafruit_SPITFT.h>
 #include <Adafruit_SPITFT_Macros.h>
 #include <gfxfont.h>
+
+#include <Adafruit_CCS811.h>
 
 // libraries
 #include <SPI.h>
