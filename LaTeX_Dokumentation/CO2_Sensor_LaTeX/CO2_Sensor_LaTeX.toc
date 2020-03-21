@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {3.2}Kostenplan}{8}{section.3.2}% 
 \contentsline {chapter}{\numberline {4}Entwurf}{9}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Architektur und Verhalten}{9}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Schaltungslayout}{9}{section.4.2}% 
+\contentsline {section}{\numberline {4.2}Schaltungslayout}{10}{section.4.2}% 
 \contentsline {section}{\numberline {4.3}Geh\IeC {\"a}use}{11}{section.4.3}% 
 \contentsline {chapter}{\numberline {5}Softwareimplementation}{13}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{14}{section.5.1}% 

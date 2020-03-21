@@ -25,8 +25,8 @@
 
 \bibitem[Gen16]{GenerationROBOTS.26.09.2016}
 \textsc{{Generation ROBOTS}} (Hrsg.):
-\newblock \emph{W{\"a}hlen Sie das passende Arduino Board aus - Leitfaden: Qual
-  der Wahl beim Arduino Board}.
+\newblock \emph{W{\"a}hlen Sie das passende Arduino Board aus - Leitfaden: Die
+  Qual der Wahl beim Arduino Board}.
 \newblock
   \url{https://www.generationrobots.com/blog/de/auswahl-arduino-board/}.
 \newblock \,Version:\,26.09.2016
@@ -53,6 +53,14 @@
 \newblock \emph{Formale Verifikationsmethoden f{\"u}r die Entwicklung von
   High-Integrity-Software f{\"u}r Medizinische Ger{\"a}te}.
 \newblock \url{http://files.vogel.de/vogelonline/vogelonline/files/3092.pdf}
+
+\bibitem[{Jos}00]{JosephSchmuller.2000}
+\textsc{{Joseph Schmuller}}:
+\newblock \emph{Jetzt lerne ich UML: Der einfache Einstieg in die visuelle
+  Objektmodellierung}.
+\newblock 2.
+\newblock Markt+Technik, 2000. --
+\newblock ISBN 3--8272--6591--6
 
 \bibitem[{Mir}18]{MircoLang.2018}
 \textsc{{Mirco Lang}} ; \textsc{{heise online}} (Hrsg.):
