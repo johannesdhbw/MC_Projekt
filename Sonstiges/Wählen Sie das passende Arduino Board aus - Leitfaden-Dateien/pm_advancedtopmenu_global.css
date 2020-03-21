@@ -1,0 +1,26 @@
+#adtm_menu_inner {background-color:#ffffff;}
+#adtm_menu_inner {padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;border-color:#cccccc;border-width:0px 0px 0px 0px;}
+#adtm_menu .li-niveau1 a.a-niveau1 {height:33px;line-height:32px;}
+#adtm_menu .li-niveau1 {line-height:32px;}
+#adtm_menu .li-niveau1 a.a-niveau1 .advtm_menu_span  {height:33px;line-height:32px;}
+#adtm_menu ul#menu li div.adtm_sub {top:33px;}
+.li-niveau1 {padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;}
+.li-niveau1 .advtm_menu_span, .li-niveau1 a .advtm_menu_span {color:#666666;}
+.li-niveau1 a:hover .advtm_menu_span, .li-niveau1 a.advtm_menu_actif .advtm_menu_span, .li-niveau1:hover > a.a-niveau1 .advtm_menu_span {color:#333333;}
+.li-niveau1 a .advtm_menu_span, .li-niveau1 .advtm_menu_span {background-color:#ffffff;}
+.li-niveau1 a:hover .advtm_menu_span, .li-niveau1 a.advtm_menu_actif .advtm_menu_span, .li-niveau1 .advtm_menu_span:hover, .li-niveau1:hover > a.a-niveau1 .advtm_menu_span {background-color:#e5e5e5;}
+.li-niveau1 a.a-niveau1 {border-color:#cccccc;border-width:0px 0px 0px 0px;}
+.li-niveau1 .adtm_sub {border-color:#e5e5e5;border-width:0px 4px 4px 4px;}
+.li-niveau1 .adtm_sub  {background-color:#f5f5f5;}
+.adtm_column_wrap h5, .adtm_column_wrap h5 a {color:#333333;}
+.adtm_column_wrap h5:hover, .adtm_column_wrap h5 a:hover {color:#666666;}
+.adtm_column_wrap a {color:#999999;}
+.adtm_column_wrap a:hover {color:#666666;}
+#adtm_menu .adtm_column_wrap {padding:2px 2px 2px 2px;}
+#adtm_menu .adtm_column {padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;}
+#adtm_menu .adtm_column ul.adtm_elements li a {padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;}
+#adtm_menu .li-niveau1 a.a-niveau1 .advtm_menu_span {font-size:13px;}
+#adtm_menu .li-niveau1 a.a-niveau1 .advtm_menu_span {font-family:Arial, Helvetica, sans-serif;}
+#adtm_menu .adtm_column h5, #adtm_menu .adtm_column h5 a {font-size:13px;}
+#adtm_menu .adtm_column h5, #adtm_menu .adtm_column h5 a {font-family:Arial, Helvetica, sans-serif;}
+#adtm_menu .adtm_column ul.adtm_elements li, #adtm_menu .adtm_column ul.adtm_elements li a {font-size:12px;}

@@ -23,6 +23,14 @@
 \newblock
   \url{https://s3.amazonaws.com/academia.edu.documents/36881777/ICIQ2007-ADataQualityMeasurementInfromationModelBasedOnISOIEC15939.pdf?response-content-disposition=inline%3B%20filename%3DA_Data_Quality_Measurement_Information_M.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200310%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T081440Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=68ac8145994178d50baf90ab0a7557af4a341fa239938ed408aba2cd8a3c8e95}
 
+\bibitem[Gen16]{GenerationROBOTS.26.09.2016}
+\textsc{{Generation ROBOTS}} (Hrsg.):
+\newblock \emph{W{\"a}hlen Sie das passende Arduino Board aus - Leitfaden: Qual
+  der Wahl beim Arduino Board}.
+\newblock
+  \url{https://www.generationrobots.com/blog/de/auswahl-arduino-board/}.
+\newblock \,Version:\,26.09.2016
+
 \bibitem[{Hel}]{HelgaMeyer.}
 \textsc{{Helga Meyer}}, Heinz-Josef~R.:
 \newblock \emph{Projektmanagement: Von der Definition {\"u}ber die
@@ -64,7 +72,7 @@
 
 \bibitem[ser20]{sertronics.19.03.2020}
 \textsc{sertronics} (Hrsg.):
-\newblock \emph{Arduino Uno R3}.
+\newblock \emph{Arduino Uno R3: Datenblatt}.
 \newblock
   \url{https://www.berrybase.de/Pixelpdfdata/Articlepdf/id/1/onumber/A000066}.
 \newblock \,Version:\,19.03.2020

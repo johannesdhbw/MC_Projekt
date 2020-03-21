@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="de-DE" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="de-DE" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html prefix="og: http://ogp.me/ns#" class="slb" lang="de-DE"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0">
+
+<link rel="icon" href="https://www.generationrobots.com/blog/wp-content/themes/twentytwelve-child/img/favicons.png" type="images/x-icon">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.generationrobots.com/blog/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://www.generationrobots.com/blog/wp-content/themes/twentytwelve-child/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="stylesheet" crossorigin="anonymous" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/main.css"><style type="text/css">
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        src:   url(/blog/wp-content/themes/twentytwelve-child/font/Poppins-Regular.woff2) format('woff2');
+    }/*fixe for firefox the file come from this link https://fonts.gstatic.com/l/font?kit=PZNksGNdOIy3nit4f1-gp8wRb2gIYRtwiRjdYZalE0-LQLkU3Gmerv2ZOxfLjwalIVOuTq4PlbB4oTLIAhPcuATUYqmjuArLcPsISxiVVe_uWtMtsjPm7g8yFm_iE9VWxGOOn-tvj_pnVAvE00z3uIsLvJJionjxlrET4MdBJyKhL5ixapIqCF7zZwuHVhwrVDedZquCWMC9jpMwLBhR91h8ilTof3nI4Hpb5r124v3FVDBrovrStnfn3pmkrGl3C-Xycoqn1V_TFSUPIUS-34FyFAwiG6-ny2F-p3mKr_2YvL-SFay5DsdEUEAF3LxSfVzSm493FN65kCjhSkmfO-XawZrDse9urTa_aEf8Hr9pHb17eOKuOk1nSN31gt1dq5C51sR4d1AC2UJd18Zb71Usxol-6f-Gi1okrczUshj3rGVtsTkPsbDajuO5ueQw&skey=87759fb096548f6d&v=v1*/
+
+    /* latin-ext */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v1/UGh2YG8gx86rRGiAZYIbVyEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v1/yQWaOD4iNU5NTY0apN-qj_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v1/9VWMTeb5jtXkNoTv949NpSEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v1/zO07Oxe3SOlw0l2YX2sdIfk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v1/aDjpMND83pDErGXlVEr-SSEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlC2Q8seG17bfDXYR_jUsrzg.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlNV_2ngZ8dMf8fLgjYEouxg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    /* latin-ext */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGFKFh1TDTPrUZWzVp6FtpG8.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCOFnW3Jk0f09zW_Yln67Ac.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+</style>
+<link rel="stylesheet" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/bootstrap.css">
+<link rel="stylesheet" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/font-awesome.css">
+<link href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/global.css" rel="stylesheet" type="text/css" media="all">
+
+<!--à remplacer par statique-->
+<link href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/pm_advancedtopmenu_base.css" rel="stylesheet" type="text/css" media="all">
+<link href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/pm_advancedtopmenu_global.css" rel="stylesheet" type="text/css" media="all">
+<link href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/pm_advancedtopmenu_advanced.css" rel="stylesheet" type="text/css" media="all">
+<link href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/pm_advancedtopmenu.css" rel="stylesheet" type="text/css" media="all">
+
+<link href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/print.css" rel="stylesheet" type="text/css" media="print">
+
+<!-- This site is optimized with the Yoast SEO plugin v8.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Wählen Sie das passende Arduino Board aus - Leitfaden</title>
+<meta name="description" content="Das Arduino Board ist die Basis der Programmierung mit einem Mikrocontroller. Dieser Leitfaden hilft Ihnen bei der Auswahl des passenden Arduino Board">
+<link rel="canonical" href="https://www.generationrobots.com/blog/de/auswahl-arduino-board/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wählen Sie das passende Arduino Board aus - Leitfaden">
+<meta property="og:description" content="Das Arduino Board ist die Basis der Programmierung mit einem Mikrocontroller. Dieser Leitfaden hilft Ihnen bei der Auswahl des passenden Arduino Board">
+<meta property="og:url" content="https://www.generationrobots.com/blog/de/auswahl-arduino-board/">
+<meta property="og:site_name" content="Generation Robots - Blog">
+<meta property="article:tag" content="Einkaufsleitfaden">
+<meta property="article:section" content="Tutorials">
+<meta property="article:published_time" content="2016-09-26T14:09:31+02:00">
+<meta property="article:modified_time" content="2019-11-28T10:44:09+01:00">
+<meta property="og:updated_time" content="2019-11-28T10:44:09+01:00">
+<meta property="og:image" content="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/guide-bien-choisir-sa-carte-arduino1.jpg">
+<meta property="og:image:secure_url" content="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/guide-bien-choisir-sa-carte-arduino1.jpg">
+<meta property="og:image:width" content="687">
+<meta property="og:image:height" content="272">
+<meta property="og:image:alt" content="Choisir sa carte Arduino - guide Génération Robots">
+<script type="text/javascript" async="" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/recaptcha__de.js"></script><script type="text/javascript" async="" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/ga.js"></script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.generationrobots.com\/blog\/de\/","sameAs":[],"@id":"https:\/\/www.generationrobots.com\/blog\/de\/#organization","name":"G\u00e9n\u00e9ration Robots","logo":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2017\/03\/logo-generation-robots-medium.jpg"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Generation Robots - Blog » Feed" href="https://www.generationrobots.com/blog/de/feed/">
+<link rel="alternate" type="application/rss+xml" title="Generation Robots - Blog » Comments Feed" href="https://www.generationrobots.com/blog/de/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.generationrobots.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/style_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentytwelve-fonts-css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentytwelve-style-css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='https://www.generationrobots.com/blog/wp-content/themes/twentytwelve-child/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="PI_stt_front-css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/stt.css" type="text/css" media="all">
+<link rel="stylesheet" id="slb_core-css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/app.css" type="text/css" media="all">
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/jquery.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/jquery-migrate.js"></script>
+<link rel="https://api.w.org/" href="https://www.generationrobots.com/blog/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.generationrobots.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.generationrobots.com/blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.3.2">
+<link rel="shortlink" href="https://www.generationrobots.com/blog/?p=2692">
+<link rel="alternate" type="application/json+oembed" href="https://www.generationrobots.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.generationrobots.com%2Fblog%2Fde%2Fauswahl-arduino-board%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.generationrobots.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.generationrobots.com%2Fblog%2Fde%2Fauswahl-arduino-board%2F&amp;format=xml">
+<link rel="alternate" href="https://www.generationrobots.com/blog/en/need-help-choosing-the-right-arduino/" hreflang="en">
+<link rel="alternate" href="https://www.generationrobots.com/blog/de/auswahl-arduino-board/" hreflang="de">
+<link rel="alternate" href="https://www.generationrobots.com/blog/fr/bien-choisir-sa-carte-arduino-ce-nest-pas-si-difficile/" hreflang="fr">
+		<style type="text/css">
+		#wp_native_dashboard_language {padding: 2px;border-width: 1px;border-style: solid;height: 2em;vertical-align:top;margin-top: 2px;font-size:16px;width:100%; }
+		#wp_native_dashboard_language option { padding-left: 4px; }
+		</style>
+			<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #0a0a0a;
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link rel="icon" href="https://www.generationrobots.com/blog/wp-content/uploads/2019/01/cropped-logo-generation-robots-2019-favicon-site-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.generationrobots.com/blog/wp-content/uploads/2019/01/cropped-logo-generation-robots-2019-favicon-site-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.generationrobots.com/blog/wp-content/uploads/2019/01/cropped-logo-generation-robots-2019-favicon-site-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.generationrobots.com/blog/wp-content/uploads/2019/01/cropped-logo-generation-robots-2019-favicon-site-270x270.png">
+<script async="" type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/count.js"></script><link rel="stylesheet" type="text/css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/style_004.css"><link rel="stylesheet" type="text/css" href="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/style_003.css"></head>
+
+<body class="post-template-default single single-post postid-2692 single-format-standard custom-background full-width custom-background-white custom-font-enabled" id="cms">
+<div id="menuOverlay" class="hidden-md hidden-lg"></div>
+<div id="top">
+    <div class="container">
+        <div class="right social-links">
+            <a class="social fb" title="Facebook" target="_blank" href="http://www.facebook.com/generation.robots">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a class="social tw" title="Twitter" target="_blank" href="https://twitter.com/GenRob_Deutsch">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a class="social insta" title="Instagram" target="_blank" rel="publisher" href="https://www.instagram.com/generationrobots/https://www.instagram.com/generationrobots/">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a class="social yt" title="Youtube" target="_blank" href="https://www.youtube.com/user/GenerationRobots33">
+                <i class="fa fa-youtube"></i>
+            </a>
+            <a class="social li" title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/generation-robots">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </div>
+        <ul class="left">
+            <li>
+                <a href="https://www.generationrobots.com/de/">
+                    <img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/icon-cart.png" width="22" height="20">
+                    <span>Besuchen Sie unseren Online Shop</span>
+                </a>
+            </li>
+            <li class="custom-select" id="languages-switcher">
+                <div href="#" class="tongle">Deutsch</div>
+
+                <ul id="select-language" class="list-lang">
+                    	<li class="lang-item lang-item-4 lang-item-en lang-item-first"><a hreflang="en-US" href="https://www.generationrobots.com/blog/en/need-help-choosing-the-right-arduino/" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English" width="16" height="11"><span style="margin-left:0.3em;">English</span></a></li>
+	<li class="lang-item lang-item-2 lang-item-fr"><a hreflang="fr-FR" href="https://www.generationrobots.com/blog/fr/bien-choisir-sa-carte-arduino-ce-nest-pas-si-difficile/" lang="fr-FR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII=" title="Français" alt="Français" width="16" height="11"><span style="margin-left:0.3em;">Français</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="header">
+    <div class="container">
+        <div id="header_left">
+                            <div class="h1">
+                            <a href="https://www.generationrobots.com/blog/?taxonomy=language&amp;term=de" id="header_logo" title="Startseite"> <img class="logo" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/logo-blog-2019.jpg" alt="Génération Robots" width="319" height="79"> </a>
+                            </div>
+            
+            <div id="adtm_menu">
+                <div id="adtm_menu_inner">
+                    <ul id="menu">
+                        <div class="menu-navigation-de-container"><ul id="menu-navigation-de" class="nav-menu"><li id="menu-item-132" class="actu menu-item menu-item-type-taxonomy menu-item-object-category menu-item-132"><a href="https://www.generationrobots.com/blog/de/category/robotik-aktuell/">Aktuelles</a></li>
+<li id="menu-item-136" class="learn menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-136"><a href="https://www.generationrobots.com/blog/de/category/robotik-tutorial/">Tutorials</a></li>
+<li id="menu-item-2424" class="education menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2424"><a href="https://www.generationrobots.com/blog/de/category/bildung/">Bildung</a></li>
+</ul></div>                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+		<div id="header_right">
+			<form role="search" method="get" class="searchform" action="https://www.generationrobots.com/blog/de/">
+				<button type="submit">
+					<i class="fa fa-search"></i>
+				</button>
+				<input type="text" class="champ" name="s" placeholder="Suchen">
+			</form>
+		</div>
+        <button type="button" id="responsiveMenuOpener" class="hidden-md hidden-lg">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container clearfix" id="breadcrumb">
+    <div class="col-xs-12">
+    <a title="Accueil" rel="nofollow" href="https://www.generationrobots.com/blog/de">Accueil</a><span class="navigation-pipe">&gt;</span><a href="https://www.generationrobots.com/blog/de/category/robotik-tutorial/">Tutorials</a><span class="navigation-pipe">&gt;</span>Die Qual der Wahl beim Arduino Board    </div>
+</div>
+<div class="container clearfix" id="page">
+    <div class="col-md-12 alpha omega clearfix" id="columns">
+        <div class="row">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+            <article id="post-2692" class="post-2692 post type-post status-publish format-standard has-post-thumbnail hentry category-robotik-tutorial tag-einkaufsleitfaden">
+            <div>
+                <header class="entry-header">
+                    <div class="entry-image-container">
+                        <a href="https://www.generationrobots.com/blog/de/auswahl-arduino-board/">
+                            <img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/guide-bien-choisir-sa-carte-arduino1-687x272.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Choisir sa carte Arduino - guide Génération Robots" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/guide-bien-choisir-sa-carte-arduino1.jpg 687w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/guide-bien-choisir-sa-carte-arduino1-300x119.jpg 300w" sizes="(max-width: 687px) 100vw, 687px" width="687" height="272">                        </a>
+                    </div>
+                </header><!-- .entry-header -->
+                <h1 class="entry-title">
+                    Die Qual der Wahl beim Arduino Board                </h1>
+                <div class="entry-right">
+                    Dieser Beitrag wurde unter <a href="https://www.generationrobots.com/blog/de/category/robotik-tutorial/" rel="category tag">Tutorials</a> abgelegt und mit <a href="https://www.generationrobots.com/blog/de/tag/einkaufsleitfaden/" rel="tag">Einkaufsleitfaden</a> verschlagwortet am <time class="entry-date" datetime="2016-09-26T14:09:31+02:00">26 Sep 2016</time><span class="by-author"> von <span class="author vcard"><a class="url fn n" href="https://www.generationrobots.com/blog/de/author/vanessa/" title="Alle Beiträge von Vanessa Mazzari anzeigen" rel="author">Vanessa Mazzari</a></span></span>.                 </div>
+                <div class="entry-content">
+                    <p style="text-align: justify;"><strong>Das Arduino Board ist die Basis der Programmierung mit einem Mikrocontroller</strong>
+ (einem Mini-Computer in Form einer Leiterplatte). Es gibt zahlreiche 
+Versionen dieses Arduino Boards, und die Identifizierung jenes Boards, 
+das sich für Ihr Projekt am besten eignet, ist nicht ganz einfach.</p>
+<p style="text-align: justify;"><strong>Deshalb haben wir den 
+nachstehenden Leitfaden zusammengestellt, um Ihnen bei der Wahl des 
+passenden Arduino Boards zu helfen. Los geht’s!</strong></p>
+<h2>Arduino Uno Rev 3 (… der Superstar!) – ANFÄNGER</h2>
+<p style="text-align: center;"><a href="http://www.generationrobots.com/blog/wp-content/uploads/2016/09/arduino-uno-rev3-generation-robots.jpg" data-slb-active="1" data-slb-asset="317574723" data-slb-internal="0" data-slb-group="2692"><img class="alignnone wp-image-2657 size-full" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/arduino-uno-rev3-generation-robots.jpg" alt="Arduino Uno Rev 3 Board" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/arduino-uno-rev3-generation-robots.jpg 500w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/arduino-uno-rev3-generation-robots-300x209.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="349"></a></p>
+<p style="text-align: center;"><strong><a class="catalogue" title="Arduino Uno Rev 3 Board" href="http://www.generationrobots.com/de/401867-arduino-uno-r3.html">Arduino Uno Rev3 board</a></strong>: Das bekannteste und wohl auch meistgenutzte Arduino Board!</p>
+<p style="text-align: justify;">Für dieses Arduino Board stehen im Internet<strong> sehr viele Ressourcen, Tutorials und Projektbeispiele zur Verfügung</strong>.
+ Deshalb eignet es sich ideal für Einsteiger. Eine kleine Einschränkung 
+ist jedoch die geringe Zahl an Schnittstellen (6 analog, 14 digital 1/0,
+ davon 6 PWM). Am besten ist das Board also für kleine Projekte.</p>
+<p><strong><span style="color: #00ccff;">Es gibt verschiedene Versionen dieses Arduino Boards:</span></strong></p>
+<ul>
+<li>Das <strong><a class="catalogue" title="Arduino Uno SMD Board" href="http://www.generationrobots.com/de/401272-arduino-uno-smd-board.html">Arduino SMD</a></strong> (Komponenten an der Oberfläche montiert)</li>
+<li>Das <strong><a class="catalogue" title="Arduino Ethernet Board mit PoE-Modul" href="http://www.generationrobots.com/de/401356-arduino-ethernet-board-mit-poe-modul.html">Arduino Ethernet Board</a></strong>,
+ (ein Arduino Uno mit Ethernet-Schnittstelle) für die Kommunikation über
+ ein verdrahtetes Netz. Ausgestattet mit einer Ethernet + 
+POE-Erweiterung, kann dieses Board auch über die&nbsp;Ethernetverbindung
+ mit Strom versorgt werden.</li>
+</ul>
+<p style="text-align: justify;"><strong><span style="color: #00ccff;">Diese
+ Platine ist die Richtige für Sie, wenn Sie Projekte mit mobilen, 
+autonomen oder vernetzten Robotern planen oder vorhaben, Haustechnik für
+ einen Raum zu bauen.</span></strong></p>
+<h2>Arduino Leonardo (auf dem Weg zu komplexeren Projekten…) – ANFÄNGER/FORTGESCHRITTENE</h2>
+<p style="text-align: center;"><a href="http://www.generationrobots.com/blog/wp-content/uploads/2016/09/arduino-leonardo-generation-robots.jpg" data-slb-active="1" data-slb-asset="314226141" data-slb-internal="0" data-slb-group="2692"><img class="alignnone size-full wp-image-2659" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/arduino-leonardo-generation-robots.jpg" alt="Arduino Leonardo Génération Robots" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/arduino-leonardo-generation-robots.jpg 500w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/arduino-leonardo-generation-robots-300x224.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="374"></a></p>
+<p style="text-align: center;"><strong><a class="catalogue" title="Arduino Leonardo Board" href="http://www.generationrobots.com/de/401353-arduino-leonardo-board.html">Arduino Leonardo Board</a></strong>:&nbsp;eine neue Art von Prozessor sowie eine verbesserte Ergonomie!</p>
+<p style="text-align: justify;">Das Leonardo Board wurde nach dem Arduino Uno eingeführt und besitzt <strong>eine neue Art von Prozessor sowie eine verbesserte Ergonomie</strong>.<br>
+Es weist dieselbe Anzahl von Ports auf wie das Arduino Uno (12 analog, 20 digital, davon 7 PWM).</p>
+<p style="text-align: justify;"><strong>Dieses Board ist ideal für 
+größere Haustechnik-Projekte, darunter die Programmierung der 
+Beleuchtung für ein ganzes Haus oder das Öffnen/Schließen von 
+Fensterläden je nach Wetterlage. </strong></p>
+<p style="text-align: justify;">Natürlich kann es auch bei <strong><a class="catalogue" title="Projekts mit dem Arduino Leonardo Board" href="https://www.hackster.io/arduino/products/arduino-leonardo">Projekten mittlerer Schwierigkeitsstufe</a>&nbsp;eingesetzt werden.</strong></p>
+<h2>Arduino Mega (the Challenger!) –&nbsp;FORTGESCHRITTENE/PROFIS</h2>
+<p style="text-align: justify;">Das Arduino Mega ist das meistverkaufte 
+Board nach dem Arduino Uno. Ausgestattet mit dem gleichen 
+Funktionsumfang, besteht der einzige Unterschied in der Anzahl der 
+verfügbaren Ports (16 analog, 54 digital, davon 14 PWM, gegenüber 6 
+analog und 14 digital 1/0 mit 6 PWM). Jetzt steht Ihren <strong>komplexeren Montagen mit zahlreichen Sensoren und Aktoren</strong> nichts mehr im Wege!</p>
+<p style="text-align: center;"><a href="http://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-mega-generation-robots.jpg" data-slb-active="1" data-slb-asset="881613072" data-slb-internal="0" data-slb-group="2692"><img class="alignnone wp-image-2663 size-full" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/carte-arduino-mega-generation-robots.jpg" alt="Arduino  Board Mega" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-mega-generation-robots.jpg 500w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-mega-generation-robots-300x146.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="244"></a></p>
+<p style="text-align: justify;"><strong><a class="catalogue" title="Arduino Mega 2560 Rev3 Board" href="http://www.generationrobots.com/de/401945-arduino-mega-2560-r3-board.html"> Arduino Mega Board</a></strong>: für Ihre komplexeren Montagen mit zahlreichen Sensoren und Aktoren!</p>
+<p><strong><span style="color: #00ccff;">Auch von dieser Platine gibt es&nbsp;mehrere Versionen:</span></strong></p>
+<ul>
+<li>Das <strong><a class="catalogue" title="Arduino Mega 2560 Rev3 Board" href="http://www.generationrobots.com/de/401945-arduino-mega-2560-r3-board.html">Arduino Mega “Klassik”</a></strong></li>
+<li>Das <strong><a class="catalogue" title="Arduino Mega 2560 ADK Rev3 Board" href="http://www.generationrobots.com/de/401355-arduino-mega-adk-rev3.html">Arduino Mega ADK</a> (Android development kit)</strong>,
+ mit denselben Eigenschaften wie das einfache Arduino Mega, jedoch mit 
+einem USB-Port (und das ändert alles!). So können Sie das Board 
+beispielsweise an Ihr Android-Telefon anschließen, und Ihr Board kann 
+auf die Sensoren Ihres Telefons zugreifen!</li>
+</ul>
+<p style="text-align: justify;">Diese Platine<strong> bietet viele neue Perspektiven</strong>,
+ Anfängern wird jedoch davon abgeraten, denn der Einsatz in Verbindung 
+mit einem Smartphone erfordert eine ganze Menge Vorkenntnisse in der 
+Java-Programmierung. Jedenfalls genug, um Ihre eigenen Anwendungen zu 
+entwickeln!</p>
+<h2>Arduino Due (künstliche Intelligenz und Algorithmen …) – PROFIS</h2>
+<p style="text-align: justify;">Diese Platine besitzt dieselbe Anzahl an
+ Schnittstellen wie das Arduino Mega, erfreut sich jedoch einer 
+wesentlich höheren Leistung. Eingesetzt wird sie bei Projekten, bei 
+denen&nbsp;<strong>künstliche Intelligenz</strong> für mobile Roboter entwickelt wird.</p>
+<p style="text-align: justify;">Wenn Sie <strong>schwierige Algorithmen</strong> zu verwalten haben oder Ihre <strong>Roboter mit mehr Reaktivität</strong> ausstatten wollen, dann ist das Arduino Due Board das Richtige für Sie!</p>
+<p style="text-align: justify;"><strong>Achtung, diese Version läuft mit 3.3 V (statt 5 V).</strong></p>
+<p style="text-align: justify;">Auch diese Platine eignet sich nicht für Anfänger.</p>
+<p><a href="http://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-due-generation-robots.jpg" data-slb-active="1" data-slb-asset="205445589" data-slb-internal="0" data-slb-group="2692"><img class="aligncenter wp-image-2668 size-full" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/carte-arduino-due-generation-robots.jpg" alt="Arduino Due Board - Génération Robots" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-due-generation-robots.jpg 500w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-due-generation-robots-300x155.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="258"></a></p>
+<p style="text-align: center;"><strong><a class="catalogue" title="Arduino Due Board - Génération Robots" href="http://www.generationrobots.com/de/401275-arduino-due-board.html">Arduino Due board</a></strong>:&nbsp;künstliche Intelligenz und schwierige Algorithmen..</p>
+<h2>Arduino Nano (für Ihre Miniaturprojekte) – FORTGESCHRITTENE/PROFIS</h2>
+<p style="text-align: justify;">Eine <strong>minimalistische, erweiterte Version des Arduino Uno</strong>
+ – das Board besitzt trotz seiner geringen Größe mehr Ports (8 analog, 
+14 digital mit 6 PWM, im Vergleich zu 6 analogen und 14 digitalen 1/0 
+Ports, davon 6 PWM).</p>
+<p style="text-align: center;"><a href="http://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-nano-generation-robots-1.jpg" data-slb-active="1" data-slb-asset="595900823" data-slb-internal="0" data-slb-group="2692"><img class="alignnone wp-image-2679 size-full" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/carte-arduino-nano-generation-robots-1.jpg" alt="Arduino Nano Board" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-nano-generation-robots-1.jpg 500w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-nano-generation-robots-1-300x123.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="205"></a></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong><a class="catalogue" title="Arduino Nano board" href="http://www.generationrobots.com/de/401278-arduino-nano-30-board.html">Arduino Nano</a></strong>:&nbsp;eine sichere Wahl für Miniaturprojekte!</p>
+<p style="text-align: justify;">Dieses Arduino Board ist wirklich optimal für Projekte, wo es auf die Größe ankommt, beispielsweise bei einem<strong> Quadrocopter</strong>, einer <strong>Lichtpistole</strong> oder <strong>intelligenter Kleidung</strong>. Achtung, die verschiedenen Pins müssen verlötet werden.</p>
+<h2>Arduino Yun (wenn es nur eines sein soll …) –&nbsp;FORTGESCRHRITTENE</h2>
+<p style="text-align: justify;">Unserer Meinung nach das interessanteste
+ Board. Dieses Arduino Board besitzt denselben Prozessor wie das Arduino
+ Leonardo (Atmel ATMEGA 32U4), weist jedoch einen entscheidenden 
+Unterschied auf: ein Modul, das ein WiFi-Netzwerk generiert!</p>
+<p style="text-align: justify;">Sie können sich über einen Computer oder ein <strong>Smartphone</strong> einwählen und die Daten aus der Platine herausholen oder das Board über einen Internetbrowser steuern. Zusätzlich zum<strong> WiFi-Modul</strong> wird dieses Board mit <strong>integriertem Linux</strong> geliefert. So können Sie alle Linux-Steuerungen nutzen und es als WiFi/Ethernet-Schnittstelle verwenden.</p>
+<p><a href="http://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-yun-generation-robots.jpg" data-slb-active="1" data-slb-asset="1818891206" data-slb-internal="0" data-slb-group="2692"><img class="aligncenter wp-image-2673 size-full" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/carte-arduino-yun-generation-robots.jpg" alt="Arduino Yun Board - Génération Robots" srcset="https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-yun-generation-robots.jpg 500w, https://www.generationrobots.com/blog/wp-content/uploads/2016/09/carte-arduino-yun-generation-robots-300x218.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="364"></a></p>
+<p style="text-align: center;"><strong><a class="catalogue" title="Arduino Yun Board" href="http://www.generationrobots.com/de/401573-arduino-yun.html">Arduino Yun board</a></strong>&nbsp;:&nbsp;WiFi und integriertes Linux… unser Favorit!</p>
+<p style="text-align: justify;">Dieses Arduino Board ist <strong>komplexer als die anderen und ermöglicht die Umsetzung interessanter Projekte</strong>,
+ zum Beispiel eines mobilen Roboters, der über einen Browser gesteuert 
+werden kann. Nicht empfohlen wird die Platine für den Einstieg in die 
+Programmierung von Mikrocontrollern.</p>
+<p style="text-align: justify;">Sehr effizient ist sie hingegen bei Projekten, bei denen Fernsteuerungen eingesetzt werden.</p>
+                                    </div><!-- .entry-content -->
+
+                <footer class="entry-meta">
+                                                        </footer><!-- .entry-meta -->
+            </div>
+    
+	</article><!-- #post -->
+                                    <nav id="nav-below" class="navigation" role="navigation">
+                        <div class="nav-previous col-xs-12">
+                            <a href="https://www.generationrobots.com/blog/de">Zurück zur Startseite</a>
+                        </div>
+                    </nav>
+                
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+    <button id="return-top" style="opacity: 0;">
+        <i class="fa fa-angle-up"></i>
+    </button>
+
+
+	        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer">
+    
+        <div class="container clearfix">
+            <a target="_blank" href="https://www.facebook.com/generation.robots/">
+                <div class="col-lg-3 col-md-6 col-xs-6 div_icons_social_footer">
+                    <i class="fa fa-facebook fa-2x icons_social_footer"></i> 
+                    <div class="container_count_social_media">
+                        <div>1692</div>
+                        <span>Followers</span>
+                    </div>
+                </div>
+            </a>
+
+            <a target="_blank" href="https://twitter.com/GenRob_Deutsch">            
+                <div class="col-lg-3 col-md-6 col-xs-6 div_icons_social_footer">
+                    <i class="fa fa-twitter fa-2x icons_social_footer"></i>
+                    <div class="container_count_social_media">
+                        <div>4422</div>
+                        <span>Followers</span>
+                    </div>
+                </div>
+            </a>
+
+            <a target="_blank" href="https://www.instagram.com/generationrobots/">
+                <div class="col-lg-3 col-md-6 col-xs-6 div_icons_social_footer">
+                    <i class="fa fa-instagram fa-2x icons_social_footer"></i>
+                    <div class="container_count_social_media">
+                        <div>651</div>
+                        <span>Followers</span>
+                    </div>
+                </div>
+            </a>
+
+            <a target="_blank" href="https://www.linkedin.com/company/generation-robots/">
+                <div class="col-lg-3 col-md-6 col-xs-6 div_icons_social_footer">
+                    <i class="fa fa-linkedin fa-2x icons_social_footer"></i>
+                    <div class="container_count_social_media">
+                        <div> 1226</div>
+                        <span>Followers</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="col-lg-6 col-md-6 col-xs-12 div_boutique">
+                <i class="fa fa-shopping-cart fa-5x"></i>
+                <div>
+                    <a href="https://www.generationrobots.com/de/" target="_blank">Zum Onlineshop</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-xs-12 div_bureau_etudes">
+                <img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/bras_white.png">
+                <div>
+                    <a href="https://grlab-robotics.com/?lang=de" target="_blank">Mehr über das Ingenieurbüro erfahren</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12 div_a_propos">
+                <div class="header"><i class="fa fa-bars"></i> <span class="bold">über</span></div>
+                <div>Génération Robots ist der europäische Marktführer 
+auf dem Markt für Bildungsrobotik und bietet Ihnen in diesem Blog sein 
+Fachwissen an. Diese Website richtet sich an alle, die nach neuen 
+Technologien und Robotik-Themen Ausschau halten oder Tutorials und Tests
+ zu unseren neuen Produkten suchen.</div>
+                <div><i class="fa fa-map-pin"></i> Mérignac</div>
+
+                <form role="search" method="get" class="searchform" action="https://www.generationrobots.com/blog/de/">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="champ" name="s" placeholder="Suchen">
+                </form>
+
+            </div>
+            <div class="col-md-4 col-xs-12 div_newsletter">
+                <div class="newsletter_block_wrapper">
+                    <div class="newsletter_block_content">
+                        <h4>Newsletter</h4>
+
+                        <div id="news_block" class="block_content">
+                            <p>Bleiben Sie in Kontakt mit der Robotik und seiner Evolution. Abonnieren Sie unseren Newsletter!</p>
+
+                            <form id="form_newsletter" action="https://www.generationrobots.com/de/#news_block" method="post">
+                                <input id="ok_submit_newsletter" type="submit" value="Ok" class="button" name="submitNewsletter">
+                                <input class="champ" type="text" name="email" size="18" placeholder="Ihre E-mail...">
+								<input type="hidden" name="submitNewsletter" value="ok">
+                                <input type="hidden" name="action" value="0">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 div_last_tweets">
+                <div class="header"><i class="fa fa-twitter"></i> <span class="bold">Neueste Tweets</span></div>
+                <div class="latest-tweets"><ul><li><p class="tweet-text">Nutzen Sie die nächsten Tage, um mit Ihrer Familie die Welt der Robotik zu entdecken! <img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/1f468.png" style="width:1em;" class="emoji emoji-1f468">‍<img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/1f469.png" style="width:1em;" class="emoji emoji-1f469">‍<img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/1f467.png" style="width:1em;" class="emoji emoji-1f467">‍<img src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/1f466.png" style="width:1em;" class="emoji emoji-1f466">
+
+Legen Sie mit einem… <a href="https://twitter.com/i/web/status/1241270686779355136" target="_blank" rel="nofollow">twitter.com/i/web/status/12412…</a></p><p class="tweet-details"><a href="http://twitter.com/GenRob_Deutsch/status/1241270686779355136" target="_blank"><time datetime="2020-03-21 07:49:28+0100">Vor ungefähr 3 Stunden</time></a></p></li><li><p class="tweet-text">Angebot vom 11.-25.03.2020: 10% Rabatt auf den humanoiden Roboter Alpha Mini! Alpha Mini kann kommunizieren, sich b… <a href="https://twitter.com/i/web/status/1237694788897554432" target="_blank" rel="nofollow">twitter.com/i/web/status/12376…</a></p><p class="tweet-details"><a href="http://twitter.com/GenRob_Deutsch/status/1237694788897554432" target="_blank"><time datetime="2020-03-11 11:00:07+0100">11 Mar 2020 11:00</time></a></p></li></ul></div>                
+            </div>
+
+            <div id="sub-footer" class="col-xs-12">
+                <div class="copyright">
+                    <p>© 2008 - 2019 Generation Robots. All rights reserved.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+	<!-- The Modal -->
+	<div id="modal_newsletter" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close" id="close_modal">×</span>
+				<h2>Bestätigung des Abonnements für den Newsletter</h2>
+			</div>
+			<div class="modal-body">
+				<div id="erreur_newsletter">Bitte kreuzen Sie alle untenstehenden Kästchen an, um sich für den Newsletter anzumelden. </div>
+				<div><input type="checkbox" id="valid_age"> <label for="valid_age">Ich bestätige, dass ich älter als 16 bin</label></div><br>
+				<div><input type="checkbox" id="valid_consent"> <label for="valid_consent">Ich bestätige, dass ich die AGB gelesen habe <a target="_blank" class="catalogue" href="https://www.generationrobots.com/de/content/120-"> Allgemeine Nutzungsbedingungen</a></label></div>
+				<br>
+
+				<div class="g-recaptcha" data-sitekey="6LcOPUsUAAAAAPfInyH7yjFg3G7Rp52dpJHLui4J" style="display:block;position:initial;margin-bottom:15px"><div style="width: 304px; height: 78px;"><div><iframe src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/anchor.html" role="presentation" name="a-ngd4miwkh42u" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div> <br>
+
+				<div id="div_submit_newsletter"><button id="submit_newsletter">Senden</button></div>
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/core.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/widget.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/position.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/menu.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/wp-polyfill.js"></script>
+<script type="text/javascript">
+( 'fetch' in window ) || document.write( '<script src="https://www.generationrobots.com/blog/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://www.generationrobots.com/blog/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://www.generationrobots.com/blog/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://www.generationrobots.com/blog/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/dom-ready.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/a11y.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/autocomplete.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"gnrationrobots"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/comment_count.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/navigation.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/wp-embed.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/lib_002.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/lib.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/client.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/client_002.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/tag_002.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/tag.js"></script>
+<script type="text/javascript" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/handler.js"></script>
+<script type="text/javascript">(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=de; expires=" + expirationDate.toUTCString() + "; path=/blog/";
+			}());</script><script type="text/javascript" id="slb_footer">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB && SLB.has_child('View.init') ) { SLB.View.init({"ui_autofit":true,"ui_animate":true,"slideshow_autostart":true,"slideshow_duration":"6","group_loop":true,"ui_overlay_opacity":"0.8","ui_title_default":false,"theme_default":"slb_default","ui_labels":{"loading":"Loading","close":"Close","nav_next":"Next","nav_prev":"Previous","slideshow_start":"Start slideshow","slideshow_stop":"Stop slideshow","group_status":"Item %current% of %total%"}}); }
+if ( !!window.SLB && SLB.has_child('View.assets') ) { {$.extend(SLB.View.assets, {"317574723":{"id":null,"type":"image","source":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2016\/09\/arduino-uno-rev3-generation-robots.jpg","internal":true},"314226141":{"id":null,"type":"image","source":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2016\/09\/arduino-leonardo-generation-robots.jpg","internal":true},"881613072":{"id":null,"type":"image","source":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2016\/09\/carte-arduino-mega-generation-robots.jpg","internal":true},"205445589":{"id":null,"type":"image","source":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2016\/09\/carte-arduino-due-generation-robots.jpg","internal":true},"595900823":{"id":null,"type":"image","source":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2016\/09\/carte-arduino-nano-generation-robots-1.jpg","internal":true},"1818891206":{"id":null,"type":"image","source":"http:\/\/www.generationrobots.com\/blog\/wp-content\/uploads\/2016\/09\/carte-arduino-yun-generation-robots.jpg","internal":true}});} }
+/* THM */
+if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_baseline',{"name":"Grundlinie","parent":"","styles":[{"handle":"base","uri":"https:\/\/www.generationrobots.com\/blog\/wp-content\/plugins\/simple-lightbox\/themes\/baseline\/css\/style.css","deps":[]}],"layout_raw":"<div class=\"slb_container\"><div class=\"slb_content\">{{item.content}}<div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><div class=\"slb_controls\"><span class=\"slb_close\">{{ui.close}}<\/span><span class=\"slb_slideshow\">{{ui.slideshow_control}}<\/span><\/div><div class=\"slb_loading\">{{ui.loading}}<\/div><\/div><div class=\"slb_details\"><div class=\"inner\"><div class=\"slb_data\"><div class=\"slb_data_content\"><span class=\"slb_data_title\">{{item.title}}<\/span><span class=\"slb_group_status\">{{ui.group_status}}<\/span><div class=\"slb_data_desc\">{{item.description}}<\/div><\/div><\/div><div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><\/div><\/div><\/div>"}); }if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_default',{"name":"Standard (hell)","parent":"slb_baseline","styles":[{"handle":"base","uri":"https:\/\/www.generationrobots.com\/blog\/wp-content\/plugins\/simple-lightbox\/themes\/default\/css\/style.css","deps":[]}]}); }})})(jQuery);}/* ]]> */</script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+    <script src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/footer.js" type="text/javascript"></script>
+    <script type="text/javascript" defer="defer">/* <![CDATA[ */
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-6593568-1']);
+        _gaq.push(['_setSiteSpeedSampleRate', 5]);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+        /* ]]> */</script>
+    <!--[if lt IE 8]>
+    <script src="https://www.generationrobots.com/blog/wp-content/themes/twentytwelve-child/js/pm_advancedtopmenuiefix.js"
+            type="text/javascript" defer="defer"></script><![endif]-->
+    <script src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/pm_advancedtopmenu.js" type="text/javascript" defer="defer"></script>
+    <script src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/jquery_002.js" type="text/javascript" defer="defer"></script>
+
+	<script src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/api.js"></script>
+
+	<script type="text/javascript">
+			document.getElementById('ok_submit_newsletter').addEventListener('click', function(event){
+				document.getElementById('modal_newsletter').style.display = 'block';
+				event.preventDefault();
+		    	});
+    	
+    			document.getElementById('submit_newsletter').addEventListener('click',function(){
+    				if (document.getElementById('valid_age').checked == false || document.getElementById('valid_consent').checked == false || !grecaptcha.getResponse()){
+            				document.getElementById('erreur_newsletter').style.display = 'block';
+        			} else{
+        				document.getElementById('form_newsletter').submit();
+        			}
+    			});
+    	
+    			document.getElementById('close_modal').addEventListener('click', function(){
+    				document.getElementById('modal_newsletter').style.display = 'none';
+    			});
+	</script>
+</footer>
+
+
+
+
+
+<div id="a11y-speak-polite" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-assertive" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;" class="g-recaptcha-bubble-arrow"></div><div style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;" class="g-recaptcha-bubble-arrow"></div><div style="z-index: 2000000000; position: relative;"><iframe title="reCAPTCHA-Aufgabe" src="W%C3%A4hlen%20Sie%20das%20passende%20Arduino%20Board%20aus%20-%20Leitfaden-Dateien/bframe.html" style="width: 100%; height: 100%;" name="c-ngd4miwkh42u" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" frameborder="0"></iframe></div></div></body></html>
+<!-- Dynamic page generated in 0.356 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2020-03-21 12:27:57 -->
+<!-- super cache -->

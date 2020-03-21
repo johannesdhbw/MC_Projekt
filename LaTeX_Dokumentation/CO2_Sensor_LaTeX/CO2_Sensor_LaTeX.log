@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  19 MAR 2020 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  21 MAR 2020 13:19
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1753,12 +1753,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--229
 
  []
 
-(chapter/Arduino.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 3--231
+(chapter/Arduino.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-(chapter/CCS811.tex
+[10]
+<Images/Arduino_Uno.jpg, id=200, 1927.2pt x 1401.235pt>
+File: Images/Arduino_Uno.jpg Graphic file (type jpg)
+<use Images/Arduino_Uno.jpg>
+Package pdftex.def Info: Images/Arduino_Uno.jpg  used on input line 10.
+(pdftex.def)             Requested size: 290.2211pt x 211.01004pt.
+) (chapter/CCS811.tex
 Package acronym Info: Label `acro:MOX' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:AD' newly defined as it shall be overridden
@@ -1768,43 +1774,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[10]
-<Images/CO2SensorCCS811.jpg, id=201, 170.6375pt x 172.645pt>
+<Images/CO2SensorCCS811.jpg, id=206, 170.6375pt x 172.645pt>
 File: Images/CO2SensorCCS811.jpg Graphic file (type jpg)
 <use Images/CO2SensorCCS811.jpg>
 Package pdftex.def Info: Images/CO2SensorCCS811.jpg  used on input line 7.
 (pdftex.def)             Requested size: 145.11055pt x 146.82796pt.
-<Images/ccs811Blockdiagramm.jpg, id=204, 707.64375pt x 387.69844pt>
+[11 <./Images/Arduino_Uno.jpg>]
+<Images/ccs811Blockdiagramm.jpg, id=224, 707.64375pt x 387.69844pt>
 File: Images/ccs811Blockdiagramm.jpg Graphic file (type jpg)
 <use Images/ccs811Blockdiagramm.jpg>
-Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 16.
+Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 17.
 
 (pdftex.def)             Requested size: 435.32426pt x 238.50706pt.
-
-Overfull \hbox (27.70195pt too wide) in paragraph at lines 67--68
+ [12 <./Images/CO2SensorCCS811.jpg> <./Images/ccs811Blockdiagramm.jpg>]
+Overfull \hbox (27.70195pt too wide) in paragraph at lines 68--69
 []\T1/cmr/m/n/12 In der Soft-wa-re-im-ple-men-tie-rung wird der Co$[]$-Sensor m
 it-hil-fe der Bi-blio-thek <Ar-dafruit_CCS811.h>
  []
 
-[11 <./Images/CO2SensorCCS811.jpg>]
-<Images/ccs811Setup.jpg, id=223, 389.95688pt x 89.58469pt>
+<Images/ccs811Setup.jpg, id=234, 389.95688pt x 89.58469pt>
 File: Images/ccs811Setup.jpg Graphic file (type jpg)
 <use Images/ccs811Setup.jpg>
-Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 71.
+Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 72.
 (pdftex.def)             Requested size: 435.32426pt x 100.01155pt.
-<Images/ccs811Loop.jpg, id=224, 230.36063pt x 120.45pt>
+<Images/ccs811Loop.jpg, id=235, 230.36063pt x 120.45pt>
 File: Images/ccs811Loop.jpg Graphic file (type jpg)
 <use Images/ccs811Loop.jpg>
-Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 80.
+Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 81.
 (pdftex.def)             Requested size: 241.84845pt x 126.456pt.
-) (chapter/mikroSD.tex) [12 <./Images/ccs811Blockdiagramm.jpg>] [13 <./Images/c
-cs811Setup.jpg> <./Images/ccs811Loop.jpg>]
-[14
-
-
-]
+) (chapter/mikroSD.tex) [13 <./Images/ccs811Setup.jpg>] [14 <./Images/ccs811Loo
+p.jpg>]
 chapter 6.
-(chapter/Hardware.tex) [15] [16
+(chapter/Hardware.tex) [15
+
+
+] [16
 
 
 ]
@@ -1912,61 +1916,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--25
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 []\T1/cmr/m/sc/12 Helga Mey-er\T1/cmr/m/n/12 , Heinz-Josef R.:  \T1/cmr/m/it/12
  Pro-jekt-ma-na-ge-ment: Von der De-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmr/m/it/12 ni-ti-on über die Pro-jekt-pla-nung zum er-folg-rei-chen Ab-sch
 luss\T1/cmr/m/n/12 .  Bre-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmr/m/n/12 : Sprin-ger Gabler []$\T1/cmtt/m/n/12 https : / / books . google
  . de / books ? id = 1ho3CwAAQBAJ &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmtt/m/n/12 printsec = frontcover & dq = projektmanagement + von + der + de
 finition +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmtt/m/n/12 %C3 % BCber + die + projektplanung + zum + erfolgreichen + absc
 hluss & hl = de &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmtt/m/n/12 sa = X & ved = 0ahUKEwi66ufKpY3oAhUF06YKHSFvB7wQ6AEIMjAB # v = 
 onepage & q =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmtt/m/n/12 projektmanagement % 20von % 20der % 20definition % 20 % C3 % BC
 ber % 20die %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/cmtt/m/n/12 20projektplanung % 20zum % 20erfolgreichen % 20abschluss & f = 
 false$[]\T1/cmr/m/n/12 . --  ISBN
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 36--42
+Underfull \hbox (badness 1052) in paragraph at lines 44--50
 []\T1/cmr/m/sc/12 IONOS \T1/cmr/m/n/12 (Hrsg.):  \T1/cmr/m/it/12 Ar-dui-no vs. 
 Raspber-ry PI: Mi-kro-con-trol-ler und Ein-pla-ti-nen-
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 []\T1/cmr/m/sc/12 Wikipedia \T1/cmr/m/n/12 (Hrsg.):  \T1/cmr/m/it/12 Soft-wa-re
 -test\T1/cmr/m/n/12 .  []$\T1/cmtt/m/n/12 https : / / de . wikipedia . org / wi
 ki /
@@ -2015,10 +2019,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 301.
  ) 
 Here is how much of TeX's memory you used:
- 50073 strings out of 492895
- 1134710 string characters out of 3123735
- 1408179 words of memory out of 3000000
- 53122 multiletter control sequences out of 15000+200000
+ 50082 strings out of 492895
+ 1134926 string characters out of 3123735
+ 1408279 words of memory out of 3000000
+ 53128 multiletter control sequences out of 15000+200000
  553719 words of font info for 67 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
  79i,13n,136p,9170b,1091s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2045,9 +2049,9 @@ sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728
 lic/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (41 pages, 1347209 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (41 pages, 2167844 bytes).
 PDF statistics:
- 1138 PDF objects out of 1200 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1168 PDF objects out of 1200 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
