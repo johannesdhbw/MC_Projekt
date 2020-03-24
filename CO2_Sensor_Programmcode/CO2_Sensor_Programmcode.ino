@@ -28,8 +28,8 @@ Adafruit_CCS811 CCS;
 #define BLUE      A0
 
 // define buttons
-#define UP_BUTTON      12
-#define ENTER_BUTTON   13
+#define UP_BUTTON      8
+#define ENTER_BUTTON   9
 
 // define sampling rates for measurements
 #define MODE_1    1 //seconds
