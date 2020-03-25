@@ -1,18 +1,12 @@
+// libraries
+#include <SPI.h>
+#include <Wire.h>
+#include <LiquidCrystal.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SPITFT.h>
 #include <Adafruit_SPITFT_Macros.h>
 #include <gfxfont.h>
-
 #include <Adafruit_CCS811.h>
-
-// libraries
-#include <SPI.h>
-#include <Wire.h>
-//#include <Adafruit_GFX.h>
-//#include "Adafruit_CCS811.h"
-#include <LiquidCrystal.h>
-#include <EEPROM.h> //unnötig
-//#include <CO2Sensor.h>
 
 // ******************************************************
 
@@ -28,6 +22,7 @@ Adafruit_CCS811 CCS;
 #define BLUE      A0
 
 // define buttons
+#define SLEEP_BUTTON   2
 #define UP_BUTTON      8
 #define ENTER_BUTTON   9
 
@@ -39,19 +34,12 @@ Adafruit_CCS811 CCS;
 // define length of array
 #define LENGTH_ARRAY 10
 
-// define EEPROM range
-#define EEPROM_MIN_ADDR  0
-#define EEPROM_MAX_ADDR  255
-
 // values
 int v_up_button = 0;
 int v_enter_button = 0;
 
 // array for measurements
 int measurement[LENGTH_ARRAY] = { 0 };
-
-// counts runs
-//int i = 0;  // better if i is just local
 
 // time measurement
 unsigned long time1 = 0;
@@ -63,20 +51,14 @@ void writeLeds(int, int, int);
 void ask(int);
 int measurement_Mode();
 void measure(int);
-boolean writeEEPROM(int startAddr, const int* array, int numBytes);
-boolean eepromAddrOk(int addr);
-boolean readEEPROM(int startAddr, int array[], int numBytes);
 boolean read_or_write();
+void sameLeds(int, int, int, int);
 
 // ******************************************************
 
 void setup() {  
   // 16 character in 2 rows
   lcd.begin(16, 2);
-
-  // labeling       Wird nicht gebraucht
-  //lcd.setCursor(0, 0);
-  //lcd.print("CO2-value:");
 
   // setup of led ouput
   pinMode(GREEN,OUTPUT);
@@ -104,25 +86,29 @@ void setup() {
 
 void loop(){
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-// Test ob EEPROM Funktionen funktionieren
-/*int start = 5;
-int anzahl = 2;
- readEEPROM(start, measurement,anzahl);*/
-/////////////////////////////////////////////////////////////////////////////////////////////
-
+  // set leds off
+  sameLeds(GREEN, YELLOW, RED, 0);
+  analogWrite(BLUE,0);
+  
   // labeling
   lcd.setCursor(0, 0);
  
   boolean read_last_measurement = read_or_write();
   
-  lcd.clear();
-  lcd.print("delay");
-  delay(500);
-  
   if(read_last_measurement == true){
-  // read
-  // ...
+    
+    sameLeds(GREEN,YELLOW,RED,150);
+    
+    boolean restart = false;
+
+    delay(200);
+    
+    while(restart == false){
+      if(digitalRead(ENTER_BUTTON) == HIGH){
+        restart = true;
+      } 
+    }
+    lcd.clear();
   }
   else{
     // new measurement
@@ -130,8 +116,6 @@ int anzahl = 2;
     
     measure(mode);
   }
-
-  delay(500);
 }
 
 // ******************************************************
@@ -168,7 +152,8 @@ boolean read_or_write(){
       v_enter_button = 0;
       lcd.clear();
       lcd.print("Read...");
-      delay(500);
+      lcd.setCursor(0,1);
+      lcd.print("Press enter");
       return true;
     }else
     // new measure
@@ -176,8 +161,6 @@ boolean read_or_write(){
       v_up_button = 0;
       v_enter_button = 0;
       lcd.clear();
-      lcd.print("Measure...");
-      delay(500);
       return false;
     }
   }
@@ -262,13 +245,9 @@ void measure(int my_delay){
         ask(measurement[i]);
 
         // output
-        lcd.setCursor(0,1);
+        lcd.setCursor(0,1); 
         lcd.print("CO2: ");
         lcd.print(measurement[i]);
-        //Serial.print("CO2: ");
-        //Serial.println(measurement[i]);
-        //Serial.print("Time: ");
-        //Serial.println(time_diff);
         Serial.print(time_diff);
         Serial.print(",");
         Serial.print(measurement[i]);
@@ -290,11 +269,6 @@ void measure(int my_delay){
       i += 1;
     }
    }
-   do{
-     Serial.println("finished");
-   }while(0);
-  
-   delay(500);
 }
 
 // analog writing of leds
@@ -304,6 +278,12 @@ void writeLeds(int on, int firstOff, int secondOff){
     analogWrite(secondOff, 0);
 }
 
+void sameLeds(int first, int second, int third, int value){
+  analogWrite(first, value);
+  analogWrite(second, value);
+  analogWrite(third, value);
+}
+
 // compare co2-level with limits
 void ask(int value){
    if(value < 800){
@@ -311,61 +291,9 @@ void ask(int value){
     analogWrite(BLUE, 0);
   }else if(value > 799 && value < 1400){
     writeLeds(YELLOW,GREEN,RED);
+    analogWrite(BLUE, 0);
   }else{
     writeLeds(RED,YELLOW,GREEN);
     analogWrite(BLUE, 150);
   }
 }
-
-
-/*
-// Check wether addr is ok
-boolean eepromAddrOk(int addr) {
-  return ((addr >= EEPROM_MIN_ADDR)); //&& ((addr <= EEPROM_MAX_ADDR));
-}
-
-// Write in EEPROM
-boolean write_EEPROM(int startAddr, const int* array, int numBytes) {
-  // counter
-  lcd.setCursor(0,0);
-  int i;
-  
-  // both first byte and last byte addresses must fall within
-  // the allowed range  
-  if (!eepromAddrOk(startAddr) || !eepromAddrOk(startAddr + numBytes)) {
-    lcd.write("COULD N0T Write");
-    delay(500);
-    lcd.clear();
-    return false;
-  }
-  
-  for (i = 0; i < numBytes; i++) {
-    EEPROM.write(startAddr + i, array[i]);
-  }
-  lcd.print("Write EEPROM");
-  delay(500);
-  lcd.clear();
-  return true;
-}
-
-// Read from EEPROM
-boolean readEEPROM(int startAddr, int array[], int numBytes) {
-  int i=0;
-  
-  // both first byte and last byte addresses must fall within
-  // the allowed range  
-  if (!eepromAddrOk(startAddr) || !eepromAddrOk(startAddr + numBytes)) {
-    return false;
-  }
-  
-  for (i = 0; i < numBytes; i++) {
-    //array[i] = EEPROM.read(startAddr + i);
-    int wert = EEPROM.read(startAddr + i);
-    lcd.clear();
-    lcd.write(wert);
-    delay(1000);
-  }
-  return true;
-}
-
-*/
