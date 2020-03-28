@@ -1,7 +1,8 @@
+
 // libraries
 #include <SPI.h>
 #include <Wire.h>
-#include <LiquidCrystal.h>
+#include <LiquidCrystal_I2C.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SPITFT.h>
 #include <Adafruit_SPITFT_Macros.h>
@@ -10,8 +11,8 @@
 
 // ******************************************************
 
-// definition of lcd-pins
-LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+// set the LCD address to 0x27 for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x27,20,4);  
 // definition of adafruit
 Adafruit_CCS811 CCS;
  
@@ -25,6 +26,13 @@ Adafruit_CCS811 CCS;
 #define SLEEP_BUTTON   2
 #define UP_BUTTON      8
 #define ENTER_BUTTON   9
+
+// Variable die den Status des Taster ausliest, wird der sog. "Vektor" 0 zugewiesen                               
+// Taster Anschluss an Pin 2 entspricht dem Vektor 0   (hier der Fall)
+// Taster Anschluss an Pin 3 entspricht dem Vektor 1
+volatile int sleep_status = 0;  
+
+int sleeping = 0;
 
 // define sampling rates for measurements
 #define MODE_1    1 //seconds
@@ -53,10 +61,15 @@ int measurement_Mode();
 void measure(int);
 boolean read_or_write();
 void sameLeds(int, int, int, int);
+void sleepmode();
 
 // ******************************************************
 
-void setup() {  
+void setup(){  
+  // initialize the lcd
+  lcd.init();                      
+  // Print a message to the LCD.
+  lcd.backlight();
   // 16 character in 2 rows
   lcd.begin(16, 2);
 
@@ -80,6 +93,9 @@ void setup() {
 
   // wait for the sensor to be ready
   while(!CCS.available());
+  
+  // Hier findet die Einbindung unseres Interrupt-Befehls statt
+  attachInterrupt(0, sleepmode, CHANGE);   
 }
 
 // ******************************************************
@@ -296,4 +312,28 @@ void ask(int value){
     writeLeds(RED,YELLOW,GREEN);
     analogWrite(BLUE, 150);
   }
+}
+
+// Sobald die Unterbrechung "TasterUnterbricht" (der Wert am Pin ändert sich [CHANGE])...
+void sleepmode() {
+  
+  sleep_status = digitalRead(SLEEP_BUTTON);
+  delay(500);
+  if(sleep_status =! 0){
+    sleeping += 1;
+    if(sleeping == 2){
+      sleeping = 0;
+    }
+    if(sleeping == 0){
+      sleep_status = 150;
+      analogWrite(YELLOW, sleep_status);
+    }else{
+      sleep_status = 0;
+      analogWrite(YELLOW, sleep_status);
+    }
+    
+  }
+
+  
+  delay(500);
 }
