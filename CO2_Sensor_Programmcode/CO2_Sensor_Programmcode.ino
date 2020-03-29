@@ -7,6 +7,7 @@
 #include <Adafruit_SPITFT_Macros.h>
 #include <gfxfont.h>
 #include <Adafruit_CCS811.h>
+#include <SD.h>
 
 // ******************************************************
 
@@ -14,7 +15,7 @@
 LiquidCrystal_I2C lcd(0x27,20,4);  
 // definition of adafruit commands
 Adafruit_CCS811 CCS;
- 
+
 // define analog pins
 #define RED       A3
 #define YELLOW    A2
@@ -47,6 +48,9 @@ int v_enter_button = 0;
 // array for measurements
 int measurement[LENGTH_ARRAY] = { 0 };
 
+// variable textfile
+File textfile;
+
 // variables for time measurement
 unsigned long time1 = 0;
 unsigned long time2 = 0;
@@ -69,8 +73,9 @@ boolean read_or_write();
 // first three ints for leds, last int for value (on/off)
 void sameLeds(int, int, int, int);
 // interrupt function to set arduino to sleep and wake up again
-//void sleepmode();
 void sleepmodeInterrupt();
+// function to safe measurement on sd-card
+void writeToSD(int[]);
 
 // ******************************************************
 
@@ -102,6 +107,12 @@ void setup(){
 
   // wait for the sensor to be ready
   while(!CCS.available());
+
+  // sd-card controll
+  if (!SD.begin(5)) {                                     
+    Serial.println("Initialisierung fehlgeschlagen!");    
+    return;
+  }
   
   // Hier findet die Einbindung unseres Interrupt-Befehls statt
   attachInterrupt(0, sleepmodeInterrupt, CHANGE);   
@@ -258,7 +269,7 @@ void measure(int my_delay){
   lcd.clear();
   lcd.print("Mode: ");
   lcd.print(my_delay);
-
+    
   int i = 0;
 
   while(measurement[LENGTH_ARRAY - 1] != 0){
@@ -282,11 +293,11 @@ void measure(int my_delay){
         time1 = millis();
 
         // measure co2 value
-        measurement[i] = CCS.geteCO2();
+        measurement[i] = CCS.geteCO2();            
         
         // ask led
         ask(measurement[i]);
-
+        
         // output
         lcd.setCursor(0,1); 
         lcd.print("CO2: ");
@@ -312,6 +323,8 @@ void measure(int my_delay){
       i += 1;
     }
    }
+     
+   writeToSD(measurement);
 }
 
 // analog writing of leds
@@ -355,4 +368,42 @@ void sleepmodeInterrupt() {
     }
   }
   delay(500);
+}
+
+
+void writeToSD(int arrayMeasurement[]){
+  Serial.println("Initialisiere SD-Karte");   
+  if (!SD.begin(5)) {                                     // Wenn die SD-Karte nicht (!SD.begin) gefunden werden kann, ...
+    Serial.println("Initialisierung fehlgeschlagen!");    // ... soll eine Fehlermeldung ausgegeben werden. ....
+    return;
+  }
+  Serial.println("Initialisierung abgeschlossen");        // ... Ansonsten soll die Meldung "Initialisierung abgeschlossen." ausgegeben werden.
+
+  textfile = SD.open("Include.txt", FILE_WRITE);
+
+  // if sd-card could be found
+  if(textfile){
+    // write numbering of measurements to sd-card
+    textfile.print(0);
+    int i = 1;
+    while(1 < LENGTH_ARRAY){
+      textfile.print(",");
+      textfile.print(i);
+      i +=1;
+    }
+    textfile.println();
+    // write measurements to sd-card
+    textfile.print(measurement[0]);
+    i = 1;
+    while(i < LENGTH_ARRAY){
+      textfile.print(",");
+      textfile.print(measurement[i]);
+      i += 1;
+    }
+    // close textfile
+    textfile.close();
+  }else{
+    // error-warning
+    Serial.println("Textdatei konnte nicht ausgelesen werden");
+  }
 }
