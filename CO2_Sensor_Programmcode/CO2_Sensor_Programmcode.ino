@@ -1,4 +1,3 @@
-
 // libraries
 #include <SPI.h>
 #include <Wire.h>
@@ -11,64 +10,74 @@
 
 // ******************************************************
 
-// set the LCD address to 0x27 for a 16 chars and 2 line display
+// set the lcd address to 0x27 for a 16 chars and 2 line display
 LiquidCrystal_I2C lcd(0x27,20,4);  
-// definition of adafruit
+// definition of adafruit commands
 Adafruit_CCS811 CCS;
  
-// define analog pin
+// define analog pins
 #define RED       A3
 #define YELLOW    A2
 #define GREEN     A1
 #define BLUE      A0
 
 // define buttons
-#define SLEEP_BUTTON   2
 #define UP_BUTTON      8
 #define ENTER_BUTTON   9
+// SLEEP_BUTTON has to be on pin 2 or 3 caused the interrupt function
+#define SLEEP_BUTTON   2
 
-// Variable die den Status des Taster ausliest, wird der sog. "Vektor" 0 zugewiesen                               
-// Taster Anschluss an Pin 2 entspricht dem Vektor 0   (hier der Fall)
-// Taster Anschluss an Pin 3 entspricht dem Vektor 1
+// variable to read the status of SLEEP_BUTTON
 volatile int sleep_status = 0;  
-
+// variable to know the sleeping status
 int sleeping = 0;
 
-// define sampling rates for measurements
-#define MODE_1    1 //seconds
-#define MODE_2    60  // seconds
-#define MODE_3    1440  //seconds
+// define sampling rates for measurements in seconds
+#define MODE_1    1
+#define MODE_2    60
+#define MODE_3    1440
+
+// variables to know status of up and enter buttons
+int v_up_button = 0;
+int v_enter_button = 0;
 
 // define length of array
 #define LENGTH_ARRAY 10
 
-// values
-int v_up_button = 0;
-int v_enter_button = 0;
-
 // array for measurements
 int measurement[LENGTH_ARRAY] = { 0 };
 
-// time measurement
+// variables for time measurement
 unsigned long time1 = 0;
 unsigned long time2 = 0;
 unsigned long time_diff = 0;
 
 // own functions
+// function for green, yellow and red led to
+// minimalize lines of code (order defines wich led is on)
 void writeLeds(int, int, int);
+// fucntion to interprete the measurement (good, middle, bad)
 void ask(int);
+// function to change the measurement mode
 int measurement_Mode();
+// function to measure the co2-level
 void measure(int);
+// user have to tell if he removes the sd-card
 boolean read_or_write();
+// function to get three leds on the same level
+// this function is used for the reading mode
+// first three ints for leds, last int for value (on/off)
 void sameLeds(int, int, int, int);
-void sleepmode();
+// interrupt function to set arduino to sleep and wake up again
+//void sleepmode();
+void sleepmodeInterrupt();
 
 // ******************************************************
 
 void setup(){  
   // initialize the lcd
   lcd.init();                      
-  // Print a message to the LCD.
+  // lcd backlight turns on
   lcd.backlight();
   // 16 character in 2 rows
   lcd.begin(16, 2);
@@ -95,7 +104,7 @@ void setup(){
   while(!CCS.available());
   
   // Hier findet die Einbindung unseres Interrupt-Befehls statt
-  attachInterrupt(0, sleepmode, CHANGE);   
+  attachInterrupt(0, sleepmodeInterrupt, CHANGE);   
 }
 
 // ******************************************************
@@ -108,7 +117,25 @@ void loop(){
   
   // labeling
   lcd.setCursor(0, 0);
- 
+
+  while(sleeping == 1){
+    lcd.clear();
+    // lcd backlight turns off
+    lcd.noBacklight();
+    delay(200);
+    // ENTER_BUTTON to exit the sleep-mode
+    if(digitalRead(ENTER_BUTTON) == HIGH){
+      // delay of 5 milisec with second condition of ENTER_BUTTON
+      // to debounce the button
+      delay(5);
+      if(digitalRead(ENTER_BUTTON) == HIGH){
+        sleeping = 0;
+        // lcd backlight turns on
+        lcd.backlight();
+      }
+    }
+  }
+
   boolean read_last_measurement = read_or_write();
   
   if(read_last_measurement == true){
@@ -315,25 +342,17 @@ void ask(int value){
 }
 
 // Sobald die Unterbrechung "TasterUnterbricht" (der Wert am Pin ändert sich [CHANGE])...
-void sleepmode() {
-  
+void sleepmodeInterrupt() {
   sleep_status = digitalRead(SLEEP_BUTTON);
-  delay(500);
-  if(sleep_status =! 0){
-    sleeping += 1;
-    if(sleeping == 2){
-      sleeping = 0;
+  // reads if SLEEP_BUTTON got pressed
+  //sleep_status = digitalRead(SLEEP_BUTTON);
+  if(digitalRead(SLEEP_BUTTON) == HIGH){
+    // delay and second read with if condition to debounce SLEEP_BUTTON
+    delay(5);
+    //sleep_status = digitalRead(SLEEP_BUTTON);
+    if(digitalRead(SLEEP_BUTTON) == HIGH){
+      sleeping = 1;
     }
-    if(sleeping == 0){
-      sleep_status = 150;
-      analogWrite(YELLOW, sleep_status);
-    }else{
-      sleep_status = 0;
-      analogWrite(YELLOW, sleep_status);
-    }
-    
   }
-
-  
   delay(500);
 }
