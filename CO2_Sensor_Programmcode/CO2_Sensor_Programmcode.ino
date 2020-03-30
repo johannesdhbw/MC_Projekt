@@ -102,7 +102,11 @@ void setup(){
   // sd-card controll
   if (!SD.begin(5)) {     
     // error-warning                                
-    Serial.println("Initialisation failed!");    
+    Serial.println("Initialisation failed!");
+    lcd.print("Initialisation");
+    lcd.setCursor(0, 1);
+    lcd.print("of SD failed");
+    delay(8000);
     return;
   }
   
@@ -189,12 +193,12 @@ boolean read_or_write(){
       lcd.setCursor(0,0);
       lcd.print("Read last");
       lcd.setCursor(0,1);
-      lcd.print("Measure");
+      lcd.print("Measurement");
     }else{
       lcd.setCursor(0,0);
       lcd.print("Start new");
       lcd.setCursor(0,1);
-      lcd.print("Measure");
+      lcd.print("Measurement");
     }
     
     if (v_up_button == 2){
@@ -238,15 +242,21 @@ int measurement_mode(){
       lcd.clear();
       lcd.setCursor(0,0);
       if(v_up_button == 0){
-        lcd.print("Real Time Measure");
+        lcd.print("Real Time");
+        lcd.setCursor(0,1);
+        lcd.print("Measurement");
         }
       else if(v_up_button == 1){
         lcd.clear();
-        lcd.print("One Hour Measure");
+        lcd.print("One Hour");
+        lcd.setCursor(0,1);
+        lcd.print("Measurement");
         }
       else if(v_up_button == 2){
         lcd.clear();
-        lcd.print("One Day Measure");
+        lcd.print("One Day");
+        lcd.setCursor(0,1);
+        lcd.print("Measurement");
       }
       
       if (v_up_button == 3){
@@ -278,14 +288,19 @@ void measure(int my_delay){
   // if sd-card couldn't be found
   if (!SD.begin(5)) {            
     // error-warning
-    Serial.println("Initialisation failed!");    
+    Serial.println("Initialisation failed!");
+    lcd.clear();
+    lcd.print("Initialisation");
+    lcd.setCursor(0, 1);
+    lcd.print("of SD failed"); 
+    delay(8000);
     return;
   }
   Serial.println("Initialisation finished");        
 
   // create .txt-file named test
   // if .txt-file with the same name exists, the following data will be attached
-  textfile = SD.open("CO2-Measurement.txt", FILE_WRITE);
+  textfile = SD.open("Measure.txt", FILE_WRITE);
   
   // variable for measurements
   int var_measure;
@@ -346,6 +361,11 @@ void measure(int my_delay){
   }else{
     // error-warning
     Serial.println("Textfile couldn't be read out");
+    lcd.clear();
+    lcd.print("Textfile could");
+    lcd.setCursor(0, 1);
+    lcd.print("not be found");
+    delay(8000);
   }
 }
 
