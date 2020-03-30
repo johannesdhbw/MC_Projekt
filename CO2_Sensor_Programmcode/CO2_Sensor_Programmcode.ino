@@ -42,19 +42,11 @@ int sleeping = 0;
 int v_up_button = 0;
 int v_enter_button = 0;
 
-// define length of array
-#define LENGTH_ARRAY 10
-
-// array for measurements
-int measurement[LENGTH_ARRAY] = { 0 };
+// define number of measurements
+#define NUMB_MEASURE 100
 
 // variable textfile
 File textfile;
-
-// variables for time measurement
-unsigned long time1 = 0;
-unsigned long time2 = 0;
-unsigned long time_diff = 0;
 
 // own functions
 // function for green, yellow and red led to
@@ -74,8 +66,6 @@ boolean read_or_write();
 void sameLeds(int, int, int, int);
 // interrupt function to set arduino to sleep and wake up again
 void sleepmodeInterrupt();
-// function to safe measurement on sd-card
-void writeToSD(int[]);
 
 // ******************************************************
 
@@ -269,62 +259,76 @@ void measure(int my_delay){
   lcd.clear();
   lcd.print("Mode: ");
   lcd.print(my_delay);
-    
-  int i = 0;
-
-  while(measurement[LENGTH_ARRAY - 1] != 0){
-    measurement[i] = { 0 };
-    i += 1;
-  }
-
-  i = 0;
-  time_diff = time1 = time2 = 0;
   
-  while(measurement[LENGTH_ARRAY - 1] == 0){
+  Serial.println("Initialisiere SD-Karte");   
+  if (!SD.begin(5)) {                                     // Wenn die SD-Karte nicht (!SD.begin) gefunden werden kann, ...
+    Serial.println("Initialisierung fehlgeschlagen!");    // ... soll eine Fehlermeldung ausgegeben werden. ....
+    return;
+  }
+  Serial.println("Initialisierung abgeschlossen");        // ... Ansonsten soll die Meldung "Initialisierung abgeschlossen." ausgegeben werden.
 
-    // starts for t=0 and counts
-    time_diff = time_diff + time2 - time1;
+  // create .txt file named test
+  textfile = SD.open("test.txt", FILE_WRITE);
+  
+  // variable for measurements
+  int var_measure;
+  
+  // if sd-card could be found
+  if(textfile){
+
+    textfile.println();
+
+    // set local counter i = 0
+    int i = 0;
     
-    if(CCS.available()){
-      
-      if(!CCS.readData()){
-
-        // start time measure
-        time1 = millis();
-
-        // measure co2 value
-        measurement[i] = CCS.geteCO2();            
+    while(i < NUMB_MEASURE){
+        if(CCS.available()){
+          if(!CCS.readData()){
         
-        // ask led
-        ask(measurement[i]);
-        
-        // output
-        lcd.setCursor(0,1); 
-        lcd.print("CO2: ");
-        lcd.print(measurement[i]);
-        Serial.print(time_diff);
-        Serial.print(",");
-        Serial.print(measurement[i]);
-        Serial.print(";");
-        
-        delay(my_delay);
+          // measure co2 value
+          var_measure = CCS.geteCO2();            
+          
+          // ask led
+          ask(var_measure);
+          
+          // output
+          lcd.setCursor(0,1); 
+          lcd.print("CO2: ");
+          lcd.print(var_measure);
+          Serial.print(var_measure);
+          Serial.print(";");
 
-        // end time measure
-        time2 = millis();
-      }
-      else{
-        Serial.println("ERROR!");
-        lcd.clear();
-        lcd.print("ERROR!");
-        while(1);
-      }
+          // safes measure in textfile
+          textfile.print(var_measure);
+          if(i < NUMB_MEASURE-1){
+            textfile.print(",");
+          }
+          Serial.println("Schreibe in Textdatei...");
 
-      // counter++
-      i += 1;
+          // delay to differentiate modus of measurement
+          delay(my_delay);
+          
+          // counter++
+          i += 1;
+        } else{
+           // error-warning
+           Serial.println("ERROR!");
+           lcd.clear();
+           lcd.print("ERROR!");
+           while(1);
+        }
+      } 
     }
-   }
-     
-   writeToSD(measurement);
+    
+    // close textfile
+    textfile.close();
+    lcd.clear();
+    lcd.print("finished");
+    delay(1000);
+  }else{
+    // error-warning
+    Serial.println("Textdatei konnte nicht ausgelesen werden");
+  }
 }
 
 // analog writing of leds
@@ -368,42 +372,4 @@ void sleepmodeInterrupt() {
     }
   }
   delay(500);
-}
-
-
-void writeToSD(int arrayMeasurement[]){
-  Serial.println("Initialisiere SD-Karte");   
-  if (!SD.begin(5)) {                                     // Wenn die SD-Karte nicht (!SD.begin) gefunden werden kann, ...
-    Serial.println("Initialisierung fehlgeschlagen!");    // ... soll eine Fehlermeldung ausgegeben werden. ....
-    return;
-  }
-  Serial.println("Initialisierung abgeschlossen");        // ... Ansonsten soll die Meldung "Initialisierung abgeschlossen." ausgegeben werden.
-
-  textfile = SD.open("Include.txt", FILE_WRITE);
-
-  // if sd-card could be found
-  if(textfile){
-    // write numbering of measurements to sd-card
-    textfile.print(0);
-    int i = 1;
-    while(1 < LENGTH_ARRAY){
-      textfile.print(",");
-      textfile.print(i);
-      i +=1;
-    }
-    textfile.println();
-    // write measurements to sd-card
-    textfile.print(measurement[0]);
-    i = 1;
-    while(i < LENGTH_ARRAY){
-      textfile.print(",");
-      textfile.print(measurement[i]);
-      i += 1;
-    }
-    // close textfile
-    textfile.close();
-  }else{
-    // error-warning
-    Serial.println("Textdatei konnte nicht ausgelesen werden");
-  }
 }
