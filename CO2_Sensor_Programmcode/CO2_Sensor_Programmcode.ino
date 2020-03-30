@@ -58,7 +58,7 @@ void ask(int);
 int measurement_Mode();
 // function to measure the co2-level
 void measure(int);
-// user have to tell if he removes the sd-card
+// user have to tell if he removes the sd-card or wants to start new measurement
 boolean read_or_write();
 // function to get three leds on the same level
 // this function is used for the reading mode
@@ -91,6 +91,7 @@ void setup(){
   
   // sensor controll
   if(!CCS.begin()){
+    // error-warning with endless loop
     Serial.println("Failed to start sensor! Please check your wiring.");
     while(1);
   }
@@ -99,12 +100,13 @@ void setup(){
   while(!CCS.available());
 
   // sd-card controll
-  if (!SD.begin(5)) {                                     
-    Serial.println("Initialisierung fehlgeschlagen!");    
+  if (!SD.begin(5)) {     
+    // error-warning                                
+    Serial.println("Initialisation failed!");    
     return;
   }
   
-  // Hier findet die Einbindung unseres Interrupt-Befehls statt
+  // integration of interrupt command
   attachInterrupt(0, sleepmodeInterrupt, CHANGE);   
 }
 
@@ -119,12 +121,13 @@ void loop(){
   // labeling
   lcd.setCursor(0, 0);
 
+  // while sleep-mode is activated
   while(sleeping == 1){
     lcd.clear();
     // lcd backlight turns off
     lcd.noBacklight();
     delay(200);
-    // ENTER_BUTTON to exit the sleep-mode
+    // reading ENTER_BUTTON to exit the sleep-mode
     if(digitalRead(ENTER_BUTTON) == HIGH){
       // delay of 5 milisec with second condition of ENTER_BUTTON
       // to debounce the button
@@ -137,16 +140,21 @@ void loop(){
     }
   }
 
+  // first menue read last or start new measurement
   boolean read_last_measurement = read_or_write();
-  
+
+  // if user wants to read last measurement
   if(read_last_measurement == true){
-    
+
+    // optical ouput that user knows that he can remove sd-card
     sameLeds(GREEN,YELLOW,RED,150);
-    
+
+    // boolean variable exit reading
     boolean restart = false;
 
     delay(200);
-    
+
+    // wait until ENTER_BUTTON is pushed
     while(restart == false){
       if(digitalRead(ENTER_BUTTON) == HIGH){
         restart = true;
@@ -154,21 +162,24 @@ void loop(){
     }
     lcd.clear();
   }
+  // if user wants to start a new measurement
   else{
-    // new measurement
+    // user have to select one of three measurement mode
     int mode = measurement_mode();
-    
+
+    // start new measurement and safe values on sd-card
     measure(mode);
   }
 }
 
 // ******************************************************
 
+// removing the sd-card or start new measurement
 boolean read_or_write(){
 
-  // show menue
   lcd.clear();
 
+  // live ouput of selection
   while(v_up_button == 0 || v_enter_button == 0){
     
     v_up_button += digitalRead(UP_BUTTON);
@@ -213,11 +224,12 @@ boolean read_or_write(){
 
 // choose measurement Mode
 int measurement_mode(){
+  
   // variable to save the modus
   int modus = 0; 
-
   lcd.clear();
 
+  // live output of selection
   while(modus == 0){
       v_up_button += digitalRead(UP_BUTTON);
 
@@ -226,21 +238,21 @@ int measurement_mode(){
       lcd.clear();
       lcd.setCursor(0,0);
       if(v_up_button == 0){
-        lcd.print("Echtzeitmodus");
+        lcd.print("Real Time Measure");
         }
       else if(v_up_button == 1){
         lcd.clear();
-        lcd.print("Stundenauslegung");
+        lcd.print("One Hour Measure");
         }
       else if(v_up_button == 2){
         lcd.clear();
-        lcd.print("Tagesauslegung");
+        lcd.print("One Day Measure");
       }
       
       if (v_up_button == 3){
         v_up_button = 0;
       }
-      
+
       if(v_up_button == 0 && digitalRead(ENTER_BUTTON) == HIGH){
         modus = MODE_1;
       }else if(v_up_button == 1 && digitalRead(ENTER_BUTTON) == HIGH){
@@ -254,21 +266,26 @@ int measurement_mode(){
   return modus;
 }
 
+// co2-measurement
 void measure(int my_delay){
-  
+
+  // ouput of selected mode
   lcd.clear();
   lcd.print("Mode: ");
   lcd.print(my_delay);
-  
-  Serial.println("Initialisiere SD-Karte");   
-  if (!SD.begin(5)) {                                     // Wenn die SD-Karte nicht (!SD.begin) gefunden werden kann, ...
-    Serial.println("Initialisierung fehlgeschlagen!");    // ... soll eine Fehlermeldung ausgegeben werden. ....
+
+  Serial.println("Initialisation of SD-Card");   
+  // if sd-card couldn't be found
+  if (!SD.begin(5)) {            
+    // error-warning
+    Serial.println("Initialisation failed!");    
     return;
   }
-  Serial.println("Initialisierung abgeschlossen");        // ... Ansonsten soll die Meldung "Initialisierung abgeschlossen." ausgegeben werden.
+  Serial.println("Initialisation finished");        
 
-  // create .txt file named test
-  textfile = SD.open("test.txt", FILE_WRITE);
+  // create .txt-file named test
+  // if .txt-file with the same name exists, the following data will be attached
+  textfile = SD.open("CO2-Measurement.txt", FILE_WRITE);
   
   // variable for measurements
   int var_measure;
@@ -282,6 +299,7 @@ void measure(int my_delay){
     int i = 0;
     
     while(i < NUMB_MEASURE){
+        // if co2-sensor is available
         if(CCS.available()){
           if(!CCS.readData()){
         
@@ -291,7 +309,7 @@ void measure(int my_delay){
           // ask led
           ask(var_measure);
           
-          // output
+          // lcd and serial output
           lcd.setCursor(0,1); 
           lcd.print("CO2: ");
           lcd.print(var_measure);
@@ -303,7 +321,7 @@ void measure(int my_delay){
           if(i < NUMB_MEASURE-1){
             textfile.print(",");
           }
-          Serial.println("Schreibe in Textdatei...");
+          Serial.println("Write in textfile...");
 
           // delay to differentiate modus of measurement
           delay(my_delay);
@@ -323,21 +341,22 @@ void measure(int my_delay){
     // close textfile
     textfile.close();
     lcd.clear();
-    lcd.print("finished");
+    lcd.print("Finished");
     delay(1000);
   }else{
     // error-warning
-    Serial.println("Textdatei konnte nicht ausgelesen werden");
+    Serial.println("Textfile couldn't be read out");
   }
 }
 
-// analog writing of leds
+// analog writing of leds, one turns on, two turn off
 void writeLeds(int on, int firstOff, int secondOff){
     analogWrite(on, 150);
     analogWrite(firstOff, 0);
     analogWrite(secondOff, 0);
 }
 
+// three leds get the same value
 void sameLeds(int first, int second, int third, int value){
   analogWrite(first, value);
   analogWrite(second, value);
@@ -358,7 +377,8 @@ void ask(int value){
   }
 }
 
-// Sobald die Unterbrechung "TasterUnterbricht" (der Wert am Pin ändert sich [CHANGE])...
+// interrupt-function to read SLEEP_BUTTON at any time
+// interrupt-function is activated when value of sleep-status change
 void sleepmodeInterrupt() {
   sleep_status = digitalRead(SLEEP_BUTTON);
   // reads if SLEEP_BUTTON got pressed
