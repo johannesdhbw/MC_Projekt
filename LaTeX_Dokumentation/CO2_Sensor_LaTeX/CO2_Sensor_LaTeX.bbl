@@ -23,6 +23,13 @@
 \newblock
   \url{https://s3.amazonaws.com/academia.edu.documents/36881777/ICIQ2007-ADataQualityMeasurementInfromationModelBasedOnISOIEC15939.pdf?response-content-disposition=inline%3B%20filename%3DA_Data_Quality_Measurement_Information_M.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200310%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T081440Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=68ac8145994178d50baf90ab0a7557af4a341fa239938ed408aba2cd8a3c8e95}
 
+\bibitem[eba]{ebaySearch.}
+\textsc{ebaySearch} (Hrsg.):
+\newblock \emph{Micro SD Card Micro SDHC Mini TF Card Adapter Reader: Module
+  for Arduino}.
+\newblock
+  \url{http://datalogger.pbworks.com/w/file/fetch/89507207/Datalogger%20-%20SD%20Memory%20Reader%20Datasheet.pdf}
+
 \bibitem[Gen16]{GenerationROBOTS.26.09.2016}
 \textsc{{Generation ROBOTS}} (Hrsg.):
 \newblock \emph{W{\"a}hlen Sie das passende Arduino Board aus - Leitfaden: Die
