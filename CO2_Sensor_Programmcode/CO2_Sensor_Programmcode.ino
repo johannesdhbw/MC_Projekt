@@ -33,17 +33,17 @@ volatile int sleep_status = 0;
 // variable to know the sleeping status
 int sleeping = 0;
 
-// define sampling rates for measurements in seconds
+// define number of measurements
+#define NUMB_MEASURE 100
+
+// define sampling rates for measurements in milliseconds (depends on NUMB_MEASURE)
 #define MODE_1    1
-#define MODE_2    60
-#define MODE_3    1440
+#define MODE_2    36000
+#define MODE_3    86400000
 
 // variables to know status of up and enter buttons
 int v_up_button = 0;
 int v_enter_button = 0;
-
-// define number of measurements
-#define NUMB_MEASURE 100
 
 // variable textfile
 File textfile;
@@ -282,7 +282,13 @@ void measure(int my_delay){
   // ouput of selected mode
   lcd.clear();
   lcd.print("Mode: ");
-  lcd.print(my_delay);
+  if(my_delay == MODE_1){
+    lcd.print("1");
+  }else if(my_delay == MODE_2){
+    lcd.print("2");
+  }else{
+    lcd.print("3");
+  }
 
   Serial.println("Initialisation of SD-Card");   
   // if sd-card couldn't be found
