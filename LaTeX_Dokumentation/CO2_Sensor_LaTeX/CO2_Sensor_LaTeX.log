@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  31 MAR 2020 13:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  31 MAR 2020 18:16
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1778,11 +1778,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  []
 
-<Images/Statemachine.jpg, id=175, 488.57532pt x 450.9347pt>
+<Images/Statemachine.jpg, id=175, 490.08093pt x 559.33969pt>
 File: Images/Statemachine.jpg Graphic file (type jpg)
 <use Images/Statemachine.jpg>
 Package pdftex.def Info: Images/Statemachine.jpg  used on input line 16.
-(pdftex.def)             Requested size: 435.32426pt x 401.79163pt.
+(pdftex.def)             Requested size: 435.32426pt x 496.85486pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
@@ -1802,8 +1802,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--9
 [9
 
 
-] [10 <./Images/Statemachine.jpg>]
-<Images/Layout_Steckplatine.jpg, id=197, 1040.688pt x 692.989pt>
+]
+Underfull \vbox (badness 3977) has occurred while \output is active []
+
+ [10 <./Images/Statemachine.jpg>]
+<Images/Layout_Steckplatine.jpg, id=195, 1040.688pt x 692.989pt>
 File: Images/Layout_Steckplatine.jpg Graphic file (type jpg)
 <use Images/Layout_Steckplatine.jpg>
 Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 12.
@@ -2146,7 +2149,7 @@ sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728
 lic/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (47 pages, 3440534 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (47 pages, 3496914 bytes).
 PDF statistics:
  1271 PDF objects out of 1440 (max. 8388607)
  118 named destinations out of 1000 (max. 500000)
