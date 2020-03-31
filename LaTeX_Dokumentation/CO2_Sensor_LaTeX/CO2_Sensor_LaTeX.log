@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  31 MAR 2020 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  31 MAR 2020 19:31
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1768,57 +1768,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
 ) [8]
 chapter 4.
-(chapter/Entwurf.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 3--224
+(chapter/Entwurf.tex) (chapter/ArchitekturundVerhalten.tex
+<Images/Topleveldiagramm.jpg, id=173, 498.36188pt x 387.69844pt>
+File: Images/Topleveldiagramm.jpg Graphic file (type jpg)
+<use Images/Topleveldiagramm.jpg>
+Package pdftex.def Info: Images/Topleveldiagramm.jpg  used on input line 7.
+(pdftex.def)             Requested size: 338.58635pt x 263.40663pt.
+ [9
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
 
-(chapter/ArchitekturundVerhalten.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--13
-
- []
-
-<Images/Statemachine.jpg, id=175, 490.08093pt x 559.33969pt>
+<Images/Statemachine.jpg, id=180, 490.08093pt x 559.33969pt>
 File: Images/Statemachine.jpg Graphic file (type jpg)
 <use Images/Statemachine.jpg>
-Package pdftex.def Info: Images/Statemachine.jpg  used on input line 16.
+Package pdftex.def Info: Images/Statemachine.jpg  used on input line 18.
 (pdftex.def)             Requested size: 435.32426pt x 496.85486pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-<Images/Komponentendiagramm.jpg, id=177, 770.88pt x 461.47406pt>
+<Images/Komponentendiagramm.jpg, id=182, 755.07094pt x 442.65375pt>
 File: Images/Komponentendiagramm.jpg Graphic file (type jpg)
 <use Images/Komponentendiagramm.jpg>
-Package pdftex.def Info: Images/Komponentendiagramm.jpg  used on input line 25.
+Package pdftex.def Info: Images/Komponentendiagramm.jpg  used on input line 27.
 
-(pdftex.def)             Requested size: 435.32426pt x 260.59953pt.
+(pdftex.def)             Requested size: 435.32426pt x 255.2061pt.
 ) (chapter/Schaltungslayout.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[9
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [10 <./Images/Topleveldiagramm.jpg>]
 Underfull \vbox (badness 3977) has occurred while \output is active []
 
- [10 <./Images/Statemachine.jpg>]
-<Images/Layout_Steckplatine.jpg, id=195, 1040.688pt x 692.989pt>
+ [11 <./Images/Statemachine.jpg>]
+<Images/Layout_Steckplatine.jpg, id=202, 1040.688pt x 692.989pt>
 File: Images/Layout_Steckplatine.jpg Graphic file (type jpg)
 <use Images/Layout_Steckplatine.jpg>
 Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 12.
 
 (pdftex.def)             Requested size: 435.32426pt x 289.87965pt.
-) (chapter/Gehäuse.tex) [11 <./Images/Komponentendiagramm.jpg>] [12 <./Images/
-Layout_Steckplatine.jpg>]
+) (chapter/Gehäuse.tex) [12 <./Images/Komponentendiagramm.jpg>] [13 <./Images/
+Layout_Steckplatine.jpg>] [14
+
+
+]
 chapter 5.
-(chapter/Softwareimplementation.tex) [13
-
-
-] (chapter/ArduinovsRaspberryPI.tex
+(chapter/Softwareimplementation.tex) [15] (chapter/ArduinovsRaspberryPI.tex
 Package acronym Info: Label `acro:HDMI' newly defined as it shall be overridden
 
 although it is yet undefined on input line 5.
@@ -1832,8 +1836,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[14]
-<Images/Arduino_Uno.jpg, id=235, 1927.2pt x 1401.235pt>
+[16]
+<Images/Arduino_Uno.jpg, id=245, 1927.2pt x 1401.235pt>
 File: Images/Arduino_Uno.jpg Graphic file (type jpg)
 <use Images/Arduino_Uno.jpg>
 Package pdftex.def Info: Images/Arduino_Uno.jpg  used on input line 10.
@@ -1848,30 +1852,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<Images/CO2SensorCCS811.jpg, id=241, 170.6375pt x 172.645pt>
+<Images/CO2SensorCCS811.jpg, id=251, 170.6375pt x 172.645pt>
 File: Images/CO2SensorCCS811.jpg Graphic file (type jpg)
 <use Images/CO2SensorCCS811.jpg>
 Package pdftex.def Info: Images/CO2SensorCCS811.jpg  used on input line 7.
 (pdftex.def)             Requested size: 145.11055pt x 146.82796pt.
-[15 <./Images/Arduino_Uno.jpg>]
-<Images/ccs811Blockdiagramm.jpg, id=258, 707.64375pt x 387.69844pt>
+[17 <./Images/Arduino_Uno.jpg>]
+<Images/ccs811Blockdiagramm.jpg, id=269, 707.64375pt x 387.69844pt>
 File: Images/ccs811Blockdiagramm.jpg Graphic file (type jpg)
 <use Images/ccs811Blockdiagramm.jpg>
 Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 17.
 
 (pdftex.def)             Requested size: 435.32426pt x 238.50706pt.
- [16 <./Images/CO2SensorCCS811.jpg> <./Images/ccs811Blockdiagramm.jpg>]
+ [18 <./Images/CO2SensorCCS811.jpg> <./Images/ccs811Blockdiagramm.jpg>]
 Overfull \hbox (30.96503pt too wide) in paragraph at lines 68--69
 []\T1/cmr/m/n/12 In der Soft-wa-re-im-ple-men-tie-rung wird der Co$[]$-Sensor m
 it-hil-fe der Bi-blio-thek <Ar-dafruit_CCS811.h>,
  []
 
-<Images/ccs811Setup.jpg, id=268, 389.95688pt x 89.58469pt>
+<Images/ccs811Setup.jpg, id=279, 389.95688pt x 89.58469pt>
 File: Images/ccs811Setup.jpg Graphic file (type jpg)
 <use Images/ccs811Setup.jpg>
 Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 72.
 (pdftex.def)             Requested size: 435.32426pt x 100.01155pt.
-<Images/ccs811Loop.jpg, id=270, 230.36063pt x 120.45pt>
+<Images/ccs811Loop.jpg, id=281, 230.36063pt x 120.45pt>
 File: Images/ccs811Loop.jpg Graphic file (type jpg)
 <use Images/ccs811Loop.jpg>
 Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 81.
@@ -1881,8 +1885,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[17 <./Images/ccs811Setup.jpg>]
-<Images/Mikro-SD_2.jpeg, id=279, 1208.26407pt x 590.95781pt>
+[19 <./Images/ccs811Setup.jpg>]
+<Images/Mikro-SD_2.jpeg, id=289, 1208.26407pt x 590.95781pt>
 File: Images/Mikro-SD_2.jpeg Graphic file (type jpg)
 <use Images/Mikro-SD_2.jpeg>
 Package pdftex.def Info: Images/Mikro-SD_2.jpeg  used on input line 8.
@@ -1892,23 +1896,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<Images/Mikro-SD_3.jpeg, id=283, 977.90344pt x 648.17157pt>
+<Images/Mikro-SD_3.jpeg, id=293, 977.90344pt x 648.17157pt>
 File: Images/Mikro-SD_3.jpeg Graphic file (type jpg)
 <use Images/Mikro-SD_3.jpeg>
 Package pdftex.def Info: Images/Mikro-SD_3.jpeg  used on input line 18.
 (pdftex.def)             Requested size: 290.2211pt x 192.36612pt.
-[18 <./Images/ccs811Loop.jpg> <./Images/Mikro-SD_2.jpeg>]
-<Images/sdSetup.jpg, id=292, 246.1697pt x 132.495pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+[20 <./Images/ccs811Loop.jpg> <./Images/Mikro-SD_2.jpeg>]
+<Images/sdSetup.jpg, id=302, 246.1697pt x 132.495pt>
 File: Images/sdSetup.jpg Graphic file (type jpg)
 <use Images/sdSetup.jpg>
-Package pdftex.def Info: Images/sdSetup.jpg  used on input line 28.
+Package pdftex.def Info: Images/sdSetup.jpg  used on input line 30.
 (pdftex.def)             Requested size: 290.2211pt x 156.2113pt.
-) [19 <./Images/Mikro-SD_3.jpeg> <./Images/sdSetup.jpg>] [20
-
-
-]
+) [21 <./Images/Mikro-SD_3.jpeg>] [22 <./Images/sdSetup.jpg>]
 chapter 6.
-(chapter/Hardware.tex) [21] [22
+(chapter/Hardware.tex) [23
+
+
+] [24
 
 
 ]
@@ -1928,27 +1937,27 @@ Overfull \hbox (0.79999pt too wide) in paragraph at lines 87--98
  [][] 
  []
 
-) [23] [24]
+) [25] [26]
 chapter 8.
-(chapter/Handbuch.tex) [25
+(chapter/Handbuch.tex) [27
 
 
-] [26
+] [28
 
 
 ]
 chapter 9.
-(chapter/Installationsanleitung.tex) [27] [28]
+(chapter/Installationsanleitung.tex) [29] [30]
 chapter 10.
-(Standard/Fazit.tex) [29
+(Standard/Fazit.tex) [31
 
 
-] [30
+] [32
 
 
 ]
 chapter without number
-(CO2_Sensor_LaTeX.bbl [31] [32
+(CO2_Sensor_LaTeX.bbl [33] [34
 
 
 ]
@@ -2063,7 +2072,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--49
 false$[]\T1/cmr/m/n/12 . --  ISBN
  []
 
-[33]
+[35]
 Underfull \hbox (badness 1052) in paragraph at lines 51--57
 []\T1/cmr/m/sc/12 IONOS \T1/cmr/m/n/12 (Hrsg.):  \T1/cmr/m/it/12 Ar-dui-no vs. 
 Raspber-ry PI: Mi-kro-con-trol-ler und Ein-pla-ti-nen-
@@ -2078,20 +2087,9 @@ ki /
 
 )
 No file CO2_Sensor_LaTeX.ind.
-(Standard/Abkuerzungen.tex) [34] (CO2_Sensor_LaTeX.lof)
+(Standard/Abkuerzungen.tex) [36] (CO2_Sensor_LaTeX.lof)
 \tf@lof=\write7
 \openout7 = `CO2_Sensor_LaTeX.lof'.
-
- [35
-
-
-] [36
-
-
-]
-(CO2_Sensor_LaTeX.lot)
-\tf@lot=\write8
-\openout8 = `CO2_Sensor_LaTeX.lot'.
 
  [37
 
@@ -2100,8 +2098,19 @@ No file CO2_Sensor_LaTeX.ind.
 
 
 ]
+(CO2_Sensor_LaTeX.lot)
+\tf@lot=\write8
+\openout8 = `CO2_Sensor_LaTeX.lot'.
+
+ [39
+
+
+] [40
+
+
+]
 chapter A.
-[39
+[41
 
 
 ]
@@ -2119,10 +2128,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
  ) 
 Here is how much of TeX's memory you used:
- 50235 strings out of 492895
- 1138448 string characters out of 3123735
- 1409753 words of memory out of 3000000
- 53240 multiletter control sequences out of 15000+200000
+ 50244 strings out of 492895
+ 1138640 string characters out of 3123735
+ 1409855 words of memory out of 3000000
+ 53245 multiletter control sequences out of 15000+200000
  553719 words of font info for 67 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
  79i,13n,136p,9170b,1091s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2149,9 +2158,9 @@ sers\49157\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728
 lic/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (47 pages, 3496914 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (49 pages, 3546763 bytes).
 PDF statistics:
- 1271 PDF objects out of 1440 (max. 8388607)
- 118 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1285 PDF objects out of 1440 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 296 words of extra memory for PDF output out of 10000 (max. 10000000)
 

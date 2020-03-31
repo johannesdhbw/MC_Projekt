@@ -21,7 +21,9 @@ Der Mikro-SD-Karten-Adapter ist über die, in Abbildung \ref{fig:SD-Modul_RUCK} 
 	\label{fig:SD-Modul_RUCK}
 \end{figure}
 
-Für die Integration der SD-Karte, muss zunächst die Bibliothek <SD.h> eingebunden werden. Anschließend wird eine globale Variable als File deklariert. In unserem Programmablauf wird die anschließende Initialisierung der SD-Karte zweimal durchgeführt. Das erste mal im Setup, vor dem Programmablauf. Die Begründung liegt darin, dass dem Benutzer bei fehlender SD-Karte schon vor der Auswahl des Messmodus eine Fehlermeldung angezeigt werden kann. 
+Für die Integration der SD-Karte, muss zunächst die Bibliothek <SD.h> eingebunden werden. Anschließend wird eine globale Variable als File deklariert. In unserem Programmablauf wird die anschließende Initialisierung der SD-Karte zweimal durchgeführt. Das erste mal im Setup, vor dem Programmablauf. Die Begründung liegt darin, dass dem Benutzer bei fehlender SD-Karte schon vor der Auswahl des Messmodus eine Fehlermeldung angezeigt werden kann. Das zweite Mal wird die SD-Karte vor dem Start der Messung durchgeführt. Das hat den Hintergrund, dass die SD-Karte kurz davor entfernt werden könnte. Auch hier wird bei fehlender Karte der Benutzer durch eine Ausgabe informiert. Zudem wird das Programm anschließend neu gestartet. \\
+Vor dem Start der Messung wird außerdem eine .txt-Datei auf der SD-Karte erstellt. Im Fall, dass eine gleichnamige Textdatei bereits existiert, wird diese zum schreiben geöffnet. An dieser Stelle wird im Programmcode auch definiert, dass der Arduino die SD-Karte beschreiben und nicht auslesen soll. \\
+Während der Messung bleibt die SD-Karte geöffnet und der Arduino im Schreibe-Modus, sodass kein lokaler Speicher für die Übertragung der Daten benötigt wird. Somit können so viele Messungen durchgeführt werden, wie Speicherkapazität auf der SD-Karte vorhanden ist. Nach Beenden der Messung wird die Textdatei abgespeichert und geschlossen. \\
 
 \begin{figure}[!hbt]
 	\centering
