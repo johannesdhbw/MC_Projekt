@@ -323,7 +323,7 @@ void measure(int my_delay){
     int i = 0;
     
     while(i < NUMB_MEASURE){
-        // if co2-sensor is available
+        // checks if co2-sensor is available
         if(CCS.available()){
           if(!CCS.readData()){
         

@@ -15,6 +15,12 @@
   \url{https://cdn.sparkfun.com/assets/learn_tutorials/1/4/3/CCS811_Datasheet-DS000459.pdf}.
 \newblock \,Version:\,2016
 
+\bibitem[.CiNS]{.CiKSOLUTIONS}
+\emph{Kohlenstoffdioxid in R{\"a}umen messen und {\"u}berwachen: CO2 -
+  Definition und Bedeutung}.
+\newblock \url{https://www.cik-solutions.com/anwendungen/co2-im-innenraum/}.
+\newblock \,Version:\,CiK SOLUTIONS
+
 \bibitem[Dep]{DepartmentofResearch&DevelopmentDepartmentofInformationTechnologiesandSystems.}
 \textsc{{Department of Research {\&} Development, Department of Information
   Technologies and Systems}} (Hrsg.):
@@ -91,6 +97,22 @@
 \newblock
   \url{https://www.berrybase.de/Pixelpdfdata/Articlepdf/id/1/onumber/A000066}.
 \newblock \,Version:\,19.03.2020
+
+\bibitem[Umw17]{Umweltbundesamt.2017}
+\textsc{Umweltbundesamt} (Hrsg.):
+\newblock \emph{Gesundheitliche Bewertung von Kohlendioxid in der
+  Innenraumluft: Mitteilungen der Ad-hoc-Arbeitsgruppe Innenraumrichtwerte der
+  Innenraumluft-hygiene-Kommission des Umweltbundes-amtes und der Obersten
+  Landesgesundheits-beh{\"o}rden}.
+\newblock
+  \url{https://www.umweltbundesamt.de/sites/default/files/medien/pdfs/kohlendioxid_2008.pdf}.
+\newblock \,Version:\,2017
+
+\bibitem[Wik]{Wikipedia.}
+\textsc{Wikipedia} (Hrsg.):
+\newblock \emph{Kohlenstoffdioxid in der Erdatmosph{\"a}re}.
+\newblock
+  \url{https://de.wikipedia.org/wiki/Kohlenstoffdioxid_in_der_Erdatmosph%C3%A4re}
 
 \bibitem[Wik20a]{Wikipedia.01.03.2020}
 \textsc{Wikipedia} (Hrsg.):
