@@ -1,24 +1,24 @@
 \babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Entwurf des Use-Case-Diagramms mithilfe von Enterprise Architect\relax }}{5}{figure.caption.7}% 
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Entwurf des Use-Case-Diagramms mithilfe von Enterprise Architect\relax }}{5}{figure.caption.8}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Ablauf des Projektes von Januar bis April\relax }}{7}{figure.caption.8}% 
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Ablauf des Projektes von Januar bis April\relax }}{7}{figure.caption.9}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Entwurf der Toplevel-Architektur mithilfe von Enterprise Architect\relax }}{10}{figure.caption.10}% 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Entwurf des Zustandsdiagramms mithilfe von Enterprise Architect\relax }}{11}{figure.caption.11}% 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Entwurf des Komponentendiagramms mithilfe von Enterprise Architect\relax }}{12}{figure.caption.12}% 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Entwurf des Schaltungslayouts mithilfe von Fritzing\relax }}{13}{figure.caption.13}% 
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Entwurf des Zustandsdiagramms mithilfe von Enterprise Architect\relax }}{10}{figure.caption.11}% 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Entwurf der Top-Level-Architektur\relax }}{11}{figure.caption.12}% 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Entwurf des Komponentendiagramms mithilfe von Enterprise Architect\relax }}{12}{figure.caption.13}% 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Entwurf des Schaltungslayouts mithilfe von Fritzing\relax }}{13}{figure.caption.14}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Arduino Uno\relax }}{17}{figure.caption.15}% 
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Verwendeter CCS811-\ac {MOX}-Gassensor\relax }}{18}{figure.caption.18}% 
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces CCS811 Blockdiagramm\relax }}{18}{figure.caption.19}% 
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Inhalt der 8-Byte-\IeC {\"U}bertragung des CCS811-\ac {MOX}-Sensors\relax }}{19}{figure.caption.20}% 
-\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Codeausschnitt zur Sensor-Kontrolle im aus dem Quellcode\relax }}{19}{figure.caption.21}% 
-\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Codeausschnitt f\IeC {\"u}r die Messung aus dem Quellcode\relax }}{20}{figure.caption.22}% 
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, Bild von der Vorderseite aufgenommen\relax }}{20}{figure.caption.23}% 
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, Bild von der R\IeC {\"u}ckseite aufgenommen\relax }}{21}{figure.caption.24}% 
-\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Codeausschnitt zur Initialisierung der SD-Karte im Setup aus dem Quellcode\relax }}{22}{figure.caption.25}% 
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Arduino Uno\relax }}{17}{figure.caption.16}% 
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Verwendeter CCS811-\ac {MOX}-Gassensor\relax }}{18}{figure.caption.19}% 
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces CCS811 Blockdiagramm\relax }}{18}{figure.caption.20}% 
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Inhalt der 8-Byte-\IeC {\"U}bertragung des CCS811-\ac {MOX}-Sensors\relax }}{19}{figure.caption.21}% 
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Codeausschnitt zur Sensor-Kontrolle im aus dem Quellcode\relax }}{19}{figure.caption.22}% 
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Codeausschnitt f\IeC {\"u}r die Messung aus dem Quellcode\relax }}{20}{figure.caption.23}% 
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, Bild von der Vorderseite aufgenommen\relax }}{20}{figure.caption.24}% 
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, Bild von der R\IeC {\"u}ckseite aufgenommen\relax }}{21}{figure.caption.25}% 
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Codeausschnitt zur Initialisierung der SD-Karte im Setup aus dem Quellcode\relax }}{22}{figure.caption.26}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

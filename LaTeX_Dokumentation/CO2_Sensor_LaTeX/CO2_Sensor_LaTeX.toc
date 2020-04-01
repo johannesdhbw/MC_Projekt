@@ -6,8 +6,11 @@
 \contentsline {section}{\numberline {3.2}Kostenplan}{8}{section.3.2}% 
 \contentsline {chapter}{\numberline {4}Entwurf}{9}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Architektur und Verhalten}{9}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Schaltungslayout}{11}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Geh\IeC {\"a}use}{12}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.1.1}Zustandsdiagramm}{9}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Top-Level-Architektur}{11}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Komponentendiagramm}{12}{subsection.4.1.3}% 
+\contentsline {section}{\numberline {4.2}Schaltungslayout}{12}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Geh\IeC {\"a}use}{14}{section.4.3}% 
 \contentsline {chapter}{\numberline {5}Softwareimplementation}{15}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{16}{section.5.1}% 
 \contentsline {section}{\numberline {5.2}Arduino}{16}{section.5.2}% 
@@ -16,12 +19,15 @@
 \contentsline {chapter}{\numberline {6}Hardware}{23}{chapter.6}% 
 \contentsline {chapter}{\numberline {7}Testing}{25}{chapter.7}% 
 \contentsline {chapter}{\numberline {8}Handbuch}{27}{chapter.8}% 
-\contentsline {chapter}{\numberline {9}Installationsanleitung}{29}{chapter.9}% 
-\contentsline {chapter}{\numberline {10}Fazit}{31}{chapter.10}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{33}{chapter*.31}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{35}{chapter*.32}% 
-\contentsline {chapter}{Sachwortverzeichnis}{36}{chapter*.32}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{37}{chapter*.33}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{39}{chapter*.34}% 
-\contentsline {chapter}{\numberline {A}Anhang}{41}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{41}{section.A.1}% 
+\contentsline {section}{\numberline {8.1}Erste Schritte}{28}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Durchf\IeC {\"u}hrung einer Messung}{28}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}Auslesen einer Messung}{29}{section.8.3}% 
+\contentsline {chapter}{\numberline {9}Installationsanleitung}{31}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Fazit}{33}{chapter.10}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{35}{chapter*.35}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{37}{chapter*.36}% 
+\contentsline {chapter}{Sachwortverzeichnis}{38}{chapter*.36}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{39}{chapter*.37}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{41}{chapter*.38}% 
+\contentsline {chapter}{\numberline {A}Anhang}{43}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{43}{section.A.1}% 

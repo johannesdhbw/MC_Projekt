@@ -93,6 +93,9 @@ void setup(){
   if(!CCS.begin()){
     // error-warning with endless loop
     Serial.println("Failed to start sensor! Please check your wiring.");
+    lcd.print("Failed to");
+    lcd.setCursor(0, 1);
+    lcd.print("start sensor");
     while(1);
   }
 

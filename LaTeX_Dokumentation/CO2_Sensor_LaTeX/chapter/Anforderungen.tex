@@ -13,6 +13,8 @@ Es wird zwischen sechs verschiedenen Verifikationsmethoden unterschieden:
 	\item Test: Prüft und bewertet Software auf Erfüllung der für ihren Einsatz definierten Anforderungen und misst ihre Qualität \cite{Wikipedia.01.03.2020}
 \end{itemize}
 
+\newpage
+
 Daher wurde am Anfang des Projektes eine Tabelle erstellt, indem alle Anforderungen definiert wurden. Zudem sind diese nummeriert und haben individuelle Verifikationsmethoden zugeordnet bekommen. \\
 
 \begin{table}[!hbt]
@@ -28,15 +30,15 @@ Daher wurde am Anfang des Projektes eine Tabelle erstellt, indem alle Anforderun
 		\hline
 		2 & Mindestmessbereich von 400 ppm bis 5000 ppm & Review \\
 		\hline
-		3 & Visualisierung der Luftgüte mithilfe von LEDs (gut, mittel, schlecht) & Test \\
+		3 & Visualisierung der Luftgüte mithilfe von \ac{LED}s (gut, mittel, schlecht) & Test \\
 		\hline
 		4 & Ausgabe der Luftgüte mithilfe von \ac{LCD}-Display & Test \\
 		\hline
-		5 & Ansteuern eines Fensterscheibenmotors mithilfe einer LED simulieren & Test \\
+		5 & Ansteuern eines Fensterscheibenmotors mithilfe einer \ac{LED} simulieren & Test \\
 		\hline
-		6 & Bei schlechter Luftgüte: Fenster öffnet sich (LED an) & Test \\
+		6 & Bei schlechter Luftgüte: Fenster öffnet sich (\ac{LED} an) & Test \\
 		\hline
-		7 & Bei guter Luftgüte: Fenster schließt sich (LED aus) & Test \\
+		7 & Bei guter Luftgüte: Fenster schließt sich (\ac{LED} aus) & Test \\
 		\hline
 		8 & Speichern im CSV-Format & Test, Analysis\\
 		\hline
@@ -52,9 +54,9 @@ Daher wurde am Anfang des Projektes eine Tabelle erstellt, indem alle Anforderun
 	
 \end{table}
 
-Die Anforderungen sollen jedoch nicht nur mithilfe einer Tabelle und den dazugehörigen Verifikationsmethoden definiert werden. Wie in \ref{fig:UseCase} zu sehen ist, wurde mithilfe von Architect Enterprise ein sogenanntes Use-Case-Diagramm erstellt, welches den Zusammenhang zwischen Anwender und Programmfunktionen aufzeigen soll. \\
+Die Anforderungen sollen jedoch nicht nur mithilfe einer Tabelle und den dazugehörigen Verifikationsmethoden definiert werden. Wie in Abbildung \ref{fig:UseCase} zu sehen ist, wurde mithilfe von Architect Enterprise ein sogenanntes Use-Case-Diagramm erstellt, welches den Zusammenhang zwischen Anwender und Programmfunktionen aufzeigen soll. \\
 Zu sehen ist, dass der Anwender zunächst zwischen zwei Funktionen wählen kann. So soll zum einen eine neue Messung gestartet werden können. Zum anderen soll der Benutzer in der Lage sein, dem Programm mitteilen zu können, dass die letzte Messung derzeit ausgelesen wird. \\
-Im Fall, dass der Anwender eine neue Messung starten möchte, kann dieser, wie in \ref{tab:Anforderungen} definiert wurde, zwischen drei Messprofilen wählen. \\
+Im Fall, dass der Anwender eine neue Messung starten möchte, kann dieser, wie in Tabelle \ref{tab:Anforderungen} definiert wurde, zwischen drei Messprofilen wählen. \\
 Falls der Benutzer dem Programm zu verstehen gegeben hat, die letzte Messung auslesen zu wollen, geht das Programm in einen Wartezustand. Hier wartet es so lange, bis der Anwender bestätigt hat, dass das Auslesen erfolgreich beendet wurde und die SD-Karte wieder ins Modul eingeführt wurde. \\
 
 \begin{figure}[!hbt]
