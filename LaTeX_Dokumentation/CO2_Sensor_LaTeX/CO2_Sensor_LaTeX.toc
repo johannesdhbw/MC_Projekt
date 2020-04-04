@@ -15,19 +15,20 @@
 \contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{16}{section.5.1}% 
 \contentsline {section}{\numberline {5.2}Arduino}{16}{section.5.2}% 
 \contentsline {section}{\numberline {5.3}CCS811}{17}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Mikro-SD}{20}{section.5.4}% 
-\contentsline {chapter}{\numberline {6}Hardware}{23}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Testing}{25}{chapter.7}% 
-\contentsline {chapter}{\numberline {8}Handbuch}{27}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Erste Schritte}{28}{section.8.1}% 
-\contentsline {section}{\numberline {8.2}Durchf\IeC {\"u}hrung einer Messung}{28}{section.8.2}% 
-\contentsline {section}{\numberline {8.3}Auslesen einer Messung}{29}{section.8.3}% 
-\contentsline {chapter}{\numberline {9}Installationsanleitung}{31}{chapter.9}% 
-\contentsline {chapter}{\numberline {10}Fazit}{33}{chapter.10}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{35}{chapter*.37}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{37}{chapter*.38}% 
-\contentsline {chapter}{Sachwortverzeichnis}{39}{chapter*.38}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{41}{chapter*.39}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{43}{chapter*.40}% 
-\contentsline {chapter}{\numberline {A}Anhang}{45}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{45}{section.A.1}% 
+\contentsline {section}{\numberline {5.4}Mikro-SD-Karten-Adapter}{20}{section.5.4}% 
+\contentsline {section}{\numberline {5.5}I$^2$C-Adapter}{21}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}Hardware}{25}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Testing}{27}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Handbuch}{29}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Erste Schritte}{30}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Durchf\IeC {\"u}hrung einer Messung}{30}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}Auslesen einer Messung}{31}{section.8.3}% 
+\contentsline {chapter}{\numberline {9}Installationsanleitung}{33}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Fazit}{35}{chapter.10}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{37}{chapter*.39}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{39}{chapter*.40}% 
+\contentsline {chapter}{Sachwortverzeichnis}{41}{chapter*.40}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{43}{chapter*.41}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{45}{chapter*.42}% 
+\contentsline {chapter}{\numberline {A}Anhang}{47}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{47}{section.A.1}% 

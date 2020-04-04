@@ -16,15 +16,21 @@
 \contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Inhalt der 8-Byte-\IeC {\"U}bertragung des CCS811-\ac {MOX}-Sensors\relax }}{19}{figure.caption.21}% 
 \contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Codeausschnitt zur Sensor-Kontrolle im aus dem Quellcode\relax }}{19}{figure.caption.22}% 
 \contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Codeausschnitt f\IeC {\"u}r die Messung aus dem Quellcode\relax }}{20}{figure.caption.23}% 
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, Bild von der Vorderseite aufgenommen\relax }}{20}{figure.caption.24}% 
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, Bild von der R\IeC {\"u}ckseite aufgenommen\relax }}{21}{figure.caption.25}% 
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen Vorderseite\relax }}{20}{figure.caption.24}% 
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen R\IeC {\"u}ckseite\relax }}{21}{figure.caption.25}% 
 \contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Codeausschnitt zur Initialisierung der SD-Karte im Setup aus dem Quellcode\relax }}{22}{figure.caption.26}% 
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Verwendeter I$^2$C-Adapter\relax }}{22}{figure.caption.27}% 
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Codeausschnitt zur Definition von Adresse und Anzahl der zu verwendenden Zeichen und Reihen\relax }}{23}{figure.caption.28}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 9.1}{\ignorespaces Anschluss des I$^2$C-Adapters an das \ac {LCD}-Display\relax }}{31}{figure.caption.34}% 
+\contentsline {figure}{\numberline {\relax 9.1}{\ignorespaces Anschluss des I$^2$C-Adapters an das \ac {LCD}-Display\relax }}{33}{figure.caption.36}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Draufsicht auf fertig verbaute Hardware\relax }}{I}{figure.caption.43}% 
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Slot f\IeC {\"u}r Spannungsversorgung in fertig verbauter Hardware\relax }}{I}{figure.caption.44}% 
+\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces Herausgelegter Mikro-SD-Karten-Adapter in fertig verbauter Hardware\relax }}{II}{figure.caption.45}% 
+\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces Herausgelegter CO$_2$-Sensor in fertig verbauter Hardware\relax }}{II}{figure.caption.46}% 
