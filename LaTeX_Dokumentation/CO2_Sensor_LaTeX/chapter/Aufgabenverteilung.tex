@@ -1,0 +1,53 @@
+\label{Aufgabenverteilung}
+
+Damit jeder weiß, welchen Teil er zum Projekt beiträgt, wurden nach der Erstellung des Arbeitsplans, die Aufgaben innerhalb der Gruppe verteilt. In Abbildung \ref{fig:Aufgabenverteilung} wird das Projekt auf die Teammitglieder unterteilt, sodass die Auflistung der Aufgaben darunter Platz finden kann. Bei Nicht-Einhaltung von Anforderungen und Zielen, können mithilfe dieser Liste, die Verantwortlichen herausgelesen werden. So ist es möglich, Gründe für das Scheitern leichter nachzuvollziehen, zu beheben und somit bei späteren Projekten vielleicht sogar zu verhindern.
+
+\begin{figure}[!hbt]
+	\begin{tikzpicture}[auto, node distance = 0.4cm, thick,
+	every node/.style = {rectangle, font = \sffamily, white,
+		top color = gray!60!gray, bottom color = gray!15!gray,
+		text width = 5.1cm, align = center, minimum height = 1cm}]
+	\node (Titel)  {Simulation einer automatisierten Fensteransteuerung};
+	\coordinate [below = 0.9cm of Titel] (Mitte1) ;
+	\coordinate [below = 0.9cm of Titel] (Unten1);
+	
+	% Teammitglieder
+	\node (Alex)        [below = of Unten1] {\textcolor{blue!80!white} {Alexander Herrmann}};
+	\node (Hans)   		[left  = of Alex]  {\textcolor{blue!80!white}  {Johannes Ruffer}};
+	\node (Serki)     		[right = of Alex]{\textcolor{blue!80!white}  {Serkant Soylu}};
+	
+	% Aufgaben Alex
+	\node (SWA)     [below  = of Alex]        {Software};
+	\node (SLA)     [below  = of SWA]        {Schaltungslayout};
+	\node (TA)     [below  = of SLA]        {Testing};
+	\node (DA)     [below  = of TA]        {Dokumentation};
+	\node (PA)     [below  = of DA]        {Präsentation};
+	
+	% Aufgaben Hans
+	\node (SWJ)     [below  = of Hans]        {Software};
+	\node (SLJ)     [below  = of SWJ]        {Schaltungslayout};
+	\node (TJ)     [below  = of SLJ]        {Testing};
+	\node (DJ)     [below  = of TJ]        {Dokumentation};
+	\node (PJ)     [below  = of DJ]        {Präsentation};
+	
+	% Aufgaben Serki
+	\node (ZGS)     [below  = of Serki]        {Zeichnung Gehäuse};
+	\node (LS)     [below  = of ZGS]        {Löten};
+	\node (TS)     [below  = of LS]        {Testing};
+	\node (DS)     [below  = of TS]        {Dokumentation};
+	\node (PS)     [below  = of DS]        {Präsentation};
+	
+	% Verbindungen zu Unterpunkten
+	\draw [blue!60!white,thick]
+	(Titel) -- (Mitte1) -- (Unten1) -| (Alex)
+	(Unten1) -| (Hans)
+	(Unten1) -| (Serki)
+	(Alex) -- (SWA) -- (SLA) -- (TA) -- (DA) -- (PA)
+	(Hans) -- (SWJ) -- (SLJ) -- (TJ) -- (DJ) -- (PJ)
+	(Serki) -- (ZGS) -- (LS) -- (TS) -- (DS) -- (PS);
+
+	\end{tikzpicture}
+	\captionabove{Aufgabenverteilung}
+	\label{fig:Aufgabenverteilung}
+	
+\end{figure}
