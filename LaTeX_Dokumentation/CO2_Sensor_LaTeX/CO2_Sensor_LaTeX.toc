@@ -14,10 +14,10 @@
 \contentsline {section}{\numberline {4.3}Geh\IeC {\"a}use}{16}{section.4.3}% 
 \contentsline {chapter}{\numberline {5}Softwareimplementation}{17}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{18}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Arduino}{18}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}CCS811}{19}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Mikro-SD-Karten-Adapter}{22}{section.5.4}% 
-\contentsline {section}{\numberline {5.5}I$^2$C-Adapter}{23}{section.5.5}% 
+\contentsline {section}{\numberline {5.2}Arduino}{19}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}CCS811}{20}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Mikro-SD-Karten-Adapter}{23}{section.5.4}% 
+\contentsline {section}{\numberline {5.5}I$^2$C-Adapter}{25}{section.5.5}% 
 \contentsline {chapter}{\numberline {6}Hardware}{27}{chapter.6}% 
 \contentsline {chapter}{\numberline {7}Testing}{29}{chapter.7}% 
 \contentsline {chapter}{\numberline {8}Handbuch}{31}{chapter.8}% 
