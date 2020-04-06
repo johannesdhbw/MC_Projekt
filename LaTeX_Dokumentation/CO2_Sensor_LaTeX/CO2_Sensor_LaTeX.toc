@@ -11,26 +11,28 @@
 \contentsline {subsection}{\numberline {4.1.2}Top-Level-Architektur}{13}{subsection.4.1.2}% 
 \contentsline {subsection}{\numberline {4.1.3}Komponentendiagramm}{14}{subsection.4.1.3}% 
 \contentsline {section}{\numberline {4.2}Schaltungslayout}{14}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}CAD-Zeichnung}{16}{section.4.3}% 
+\contentsline {section}{\numberline {4.3}Zeichnung des Computer-Aided Designs}{16}{section.4.3}% 
 \contentsline {section}{\numberline {4.4}3D-Druck}{17}{section.4.4}% 
-\contentsline {chapter}{\numberline {5}Softwareimplementierung}{19}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{20}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Arduino}{21}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}CCS811}{22}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Mikro-SD-Karten-Adapter}{25}{section.5.4}% 
-\contentsline {section}{\numberline {5.5}I$^2$C-Adapter}{27}{section.5.5}% 
-\contentsline {chapter}{\numberline {6}Hardwareimplementierung}{29}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Testing}{31}{chapter.7}% 
-\contentsline {chapter}{\numberline {8}Handbuch}{33}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Erste Schritte}{34}{section.8.1}% 
-\contentsline {section}{\numberline {8.2}Durchf\IeC {\"u}hrung einer Messung}{34}{section.8.2}% 
-\contentsline {section}{\numberline {8.3}Auslesen einer Messung}{35}{section.8.3}% 
-\contentsline {chapter}{\numberline {9}Installationsanleitung}{37}{chapter.9}% 
-\contentsline {chapter}{\numberline {10}Fazit}{39}{chapter.10}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{41}{chapter*.48}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.49}% 
-\contentsline {chapter}{Sachwortverzeichnis}{45}{chapter*.49}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{47}{chapter*.50}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.51}% 
+\contentsline {chapter}{\numberline {5}Hardwarekomponenten}{19}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Arduino vs. Raspberry PI}{19}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Arduino}{20}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}CCS811}{21}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Mikro-SD-Karten-Adapter}{23}{section.5.4}% 
+\contentsline {section}{\numberline {5.5}I$^2$C-Adapter}{25}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}Softwareimplementierung}{27}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Hardwareimplementierung}{29}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Testing}{31}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}Handbuch}{33}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Erste Schritte}{34}{section.9.1}% 
+\contentsline {section}{\numberline {9.2}Durchf\IeC {\"u}hrung einer Messung}{34}{section.9.2}% 
+\contentsline {section}{\numberline {9.3}Auslesen einer Messung}{35}{section.9.3}% 
+\contentsline {section}{\numberline {9.4}Sleepmode/Stromsparmodus}{36}{section.9.4}% 
+\contentsline {chapter}{\numberline {10}Installationsanleitung}{37}{chapter.10}% 
+\contentsline {chapter}{\numberline {11}Fazit}{39}{chapter.11}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{41}{chapter*.51}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.52}% 
+\contentsline {chapter}{Sachwortverzeichnis}{45}{chapter*.52}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{47}{chapter*.53}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.54}% 
 \contentsline {chapter}{\numberline {A}Anhang}{51}{appendix.A}% 
 \contentsline {section}{\numberline {A.1}Weitere Abbildungen}{51}{section.A.1}% 

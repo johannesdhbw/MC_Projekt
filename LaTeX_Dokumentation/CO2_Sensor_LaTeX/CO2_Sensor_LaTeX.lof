@@ -10,36 +10,38 @@
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Entwurf der Top-Level-Architektur\relax }}{13}{figure.caption.13}% 
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Entwurf des Komponentendiagramms mithilfe von Enterprise Architect\relax }}{14}{figure.caption.14}% 
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Entwurf des Schaltungslayouts mithilfe von Fritzing\relax }}{15}{figure.caption.15}% 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces CAD-Zeichnung f\IeC {\"u}r den Deckel des Geh\IeC {\"a}uses\relax }}{16}{figure.caption.16}% 
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces CAD-Zeichnung f\IeC {\"u}r die Schale des Geh\IeC {\"a}uses\relax }}{17}{figure.caption.17}% 
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Simulation der STL-Datei\relax }}{18}{figure.caption.18}% 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces \ac {CAD}-Zeichnung f\IeC {\"u}r den Deckel des Geh\IeC {\"a}uses\relax }}{16}{figure.caption.17}% 
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces \ac {CAD}-Zeichnung f\IeC {\"u}r die Schale des Geh\IeC {\"a}uses\relax }}{17}{figure.caption.18}% 
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Simulation der \ac {STL}-Datei\relax }}{18}{figure.caption.19}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Arduino Uno\relax }}{22}{figure.caption.20}% 
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Verwendeter CCS811-\ac {MOX}-Gassensor\relax }}{23}{figure.caption.23}% 
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces CCS811 Blockdiagramm\relax }}{23}{figure.caption.24}% 
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Inhalt der 8-Byte-\IeC {\"U}bertragung des CCS811-\ac {MOX}-Sensors\relax }}{24}{figure.caption.25}% 
-\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Codeausschnitt zur Sensor-Kontrolle im aus dem Quellcode\relax }}{24}{figure.caption.26}% 
-\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Codeausschnitt f\IeC {\"u}r die Messung aus dem Quellcode\relax }}{24}{figure.caption.27}% 
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen Vorderseite\relax }}{25}{figure.caption.28}% 
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen R\IeC {\"u}ckseite\relax }}{26}{figure.caption.29}% 
-\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Codeausschnitt zur Initialisierung der SD-Karte im Setup aus dem Quellcode\relax }}{26}{figure.caption.30}% 
-\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Verwendeter I$^2$C-Adapter\relax }}{27}{figure.caption.31}% 
-\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Codeausschnitt zur Definition von Adresse und Anzahl der zu verwendenden Zeichen und Reihen\relax }}{28}{figure.caption.32}% 
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces 3D-gedruckter Deckel des Geh\IeC {\"a}uses\relax }}{29}{figure.caption.33}% 
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Einbau des Arduinos und des PIN-Breadboards in der 3D-gedruckten Schale des Geh\IeC {\"a}uses\relax }}{30}{figure.caption.34}% 
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Arduino Uno\relax }}{20}{figure.caption.22}% 
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Verwendeter CCS811-\ac {MOX}-Gassensor\relax }}{21}{figure.caption.25}% 
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Komponentendiagramm des CCS811\relax }}{21}{figure.caption.26}% 
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Inhalt der 8-Byte-\IeC {\"U}bertragung des CCS811-\ac {MOX}-Sensors\relax }}{22}{figure.caption.27}% 
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Codeausschnitt zur Sensor-Kontrolle im aus dem Quellcode\relax }}{22}{figure.caption.28}% 
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Codeausschnitt f\IeC {\"u}r die Messung aus dem Quellcode\relax }}{23}{figure.caption.29}% 
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen Vorderseite\relax }}{23}{figure.caption.30}% 
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen R\IeC {\"u}ckseite\relax }}{24}{figure.caption.31}% 
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Codeausschnitt zur Initialisierung der SD-Karte im Setup aus dem Quellcode\relax }}{24}{figure.caption.32}% 
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Verwendeter I$^2$C-Adapter\relax }}{25}{figure.caption.33}% 
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Codeausschnitt zur Definition von Adresse und Anzahl der zu verwendenden Zeichen und Reihen\relax }}{26}{figure.caption.34}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 8.1}{\ignorespaces Hauptmen\IeC {\"u}: <Start new Measurement>\relax }}{35}{figure.caption.42}% 
-\contentsline {figure}{\numberline {\relax 8.2}{\ignorespaces Hauptmen\IeC {\"u}: <Read last Measurement>\relax }}{35}{figure.caption.43}% 
-\contentsline {figure}{\numberline {\relax 8.3}{\ignorespaces Auslesemodus\relax }}{36}{figure.caption.44}% 
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 9.1}{\ignorespaces Anschluss des I$^2$C-Adapters an das \ac {LCD}-Display\relax }}{37}{figure.caption.45}% 
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces 3D-gedruckter Deckel des Geh\IeC {\"a}uses\relax }}{29}{figure.caption.35}% 
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Einbau des Arduinos und des PIN-Breadboards in der 3D-gedruckten Schale des Geh\IeC {\"a}uses\relax }}{30}{figure.caption.36}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 9.1}{\ignorespaces Hauptmen\IeC {\"u}: <Start new Measurement>\relax }}{34}{figure.caption.44}% 
+\contentsline {figure}{\numberline {\relax 9.2}{\ignorespaces Messmen\IeC {\"u}: Auswahl der Messmodi\relax }}{35}{figure.caption.45}% 
+\contentsline {figure}{\numberline {\relax 9.3}{\ignorespaces Hauptmen\IeC {\"u}: <Read last Measurement>\relax }}{35}{figure.caption.46}% 
+\contentsline {figure}{\numberline {\relax 9.4}{\ignorespaces Auslesemodus\relax }}{35}{figure.caption.47}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 10.1}{\ignorespaces Anschluss des I$^2$C-Adapters an das \ac {LCD}-Display\relax }}{37}{figure.caption.48}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Draufsicht auf fertig verbaute Hardware\relax }}{I}{figure.caption.52}% 
-\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Slot f\IeC {\"u}r Spannungsversorgung in fertig verbauter Hardware\relax }}{I}{figure.caption.53}% 
-\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces Herausgelegter Mikro-SD-Karten-Adapter in fertig verbauter Hardware\relax }}{II}{figure.caption.54}% 
-\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces Herausgelegter CO$_2$-Sensor in fertig verbauter Hardware\relax }}{II}{figure.caption.55}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Draufsicht auf fertig verbaute Hardware\relax }}{I}{figure.caption.55}% 
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Slot f\IeC {\"u}r Spannungsversorgung in fertig verbauter Hardware\relax }}{I}{figure.caption.56}% 
+\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces Herausgelegter Mikro-SD-Karten-Adapter in fertig verbauter Hardware\relax }}{II}{figure.caption.57}% 
+\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces Herausgelegter CO$_2$-Sensor in fertig verbauter Hardware\relax }}{II}{figure.caption.58}% 

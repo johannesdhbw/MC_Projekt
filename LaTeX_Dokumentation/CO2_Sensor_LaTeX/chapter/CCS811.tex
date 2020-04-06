@@ -14,23 +14,18 @@ Der CO2-Sensor ist über die Pins SDA und SCL mit dem Arduino verbunden. Pin 7 i
 
 \begin{figure}[!hbt]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Images/ccs811Blockdiagramm}
+	\includegraphics[width=0.8\linewidth]{Images/ccs811Blockdiagramm}
 	\footnotesize{\\ Quelle: \cite[S. 3]{amsAG.2016}}
-	\caption{CCS811 Blockdiagramm}
+	\caption{Komponentendiagramm des CCS811}
 	\label{fig:ccs811Blockdiagramm}
 \end{figure}
 
 Der Abruf von Messdaten auf dem I$^2$C erfolgt über das Master-Slave Prinzip. Dabei nimmt der Arduino die Rolle des Masters, und der CO\textsubscript{2}-Sensor die des Slaves ein. Das bedeutet, der CCS811 darf nur Informationen senden, wenn er vom Arduino die Aufforderung bekommen hat. \\
 Um an die richtigen Daten des Sensors zu gelangen, muss der Arduino in unserem Projekt die ersten beiden Bytes auslesen, da diese die nötigen Informationen über den CO\textsubscript{2}-Gehalt der Luft zu Verfügung stellen. Die restlichen Bytes werden in unserem Projekt nicht ausgelesen, da wir für diese keine Verwendung haben.
-
 \begin{center}
-	
 	\begin{figure}[!hbt]
-		
 		\centering
-		
 		\begin{tikzpicture}[scale=0.9]
-		
 		
 		% Gitter zeichnen (spalte zeile)
 		\draw (1,0)--(17,0); 
@@ -47,7 +42,6 @@ Um an die richtigen Daten des Sensors zu gelangen, muss der Arduino in unserem P
 		\draw (13,3)--(13,5)node [right,near end]{Byte 3} node[right,near start]{TVOC Low Byte};
 		\draw (17,3)--(17,5);
 		
-		
 		\draw (1,0)--(1,2)node [right,near end]{Byte 4} node[right,near start]{STATUS};
 		\draw (5,0)--(5,2)node [right,near end]{Byte 5} node[right,near start]{ERROR\_ID};
 		\draw (9,0)--(9,2)node [right,near end]{Byte 6} node[right,near start]{See RAW\_DATA};
@@ -55,21 +49,16 @@ Um an die richtigen Daten des Sensors zu gelangen, muss der Arduino in unserem P
 		\draw (17,0)--(17,2);
 				
 		\end{tikzpicture}
-		
-		\footnotesize{Quelle: \cite[vgl. S. 14]{amsAG.2016}}
+		\footnotesize{\\Quelle: \cite[vgl. S. 14]{amsAG.2016}}
 		\caption{Inhalt der 8-Byte-Übertragung des CCS811-\ac{MOX}-Sensors}
 		\label{fig:8ByteInfo}
-		
 	\end{figure}
-	
 \end{center}
-
-
 In der Softwareimplementierung wird der Co\textsubscript{2}-Sensor mithilfe der Bibliothek <Ardafruit\_CCS811.h>, wie in Abbildung \ref{fig:Setup} gezeigt wird, aufgerufen. Zunächst werden Setups für das I$^2$C-Interface und die Hardware durchgeführt. Danach wird geprüft, ob die Kommunikation mit dem Sensor aufgebaut werden kann. Wenn das der Fall ist, wird solange gewartet, bis der Sensor bereit ist, Daten zu lesen. Falls jedoch ein Problem auftritt, wird eine Fehlermeldung ausgegeben und der Arduino geht in eine sogenannte Endlosschleife, bis das Programm neu geladen oder der Arduino ausgeschalten wird.
 
 \begin{figure}[!hbt]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Images/ccs811Setup}
+	\includegraphics[width=0.8\linewidth]{Images/ccs811Setup}
 	\caption{Codeausschnitt zur Sensor-Kontrolle im aus dem Quellcode}
 	\label{fig:Setup}
 \end{figure}
