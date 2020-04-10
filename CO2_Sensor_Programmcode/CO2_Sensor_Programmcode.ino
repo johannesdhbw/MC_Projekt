@@ -2,12 +2,14 @@
 #include <SPI.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <Adafruit_CCS811.h>
+#include <SD.h>
+
+// not used(?)
 #include <Adafruit_GFX.h>
 #include <Adafruit_SPITFT.h>
 #include <Adafruit_SPITFT_Macros.h>
 #include <gfxfont.h>
-#include <Adafruit_CCS811.h>
-#include <SD.h>
 
 // ******************************************************
 
