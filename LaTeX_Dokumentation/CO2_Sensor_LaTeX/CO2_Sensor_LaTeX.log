@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  6 APR 2020 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  10 APR 2020 19:08
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -1431,7 +1431,11 @@ File: tikzlibraryshadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 flibraryshadings.code.tex"
 File: pgflibraryshadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )) (CO2_Sensor_LaTeX.aux (pages/titelseite.aux)
-(pages/erklaerung.aux))
+(pages/erklaerung.aux)
+
+LaTeX Warning: Label `Projektbeschreibung' multiply defined.
+
+)
 \openout1 = `CO2_Sensor_LaTeX.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
@@ -1449,14 +1453,12 @@ LaTeX Font Info:    ... okay on input line 181.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 181.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 181.
 
-
-("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+ ("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 181.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 181.
 LaTeX Font Info:    ... okay on input line 181.
-
 ("C:\Users\49157\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -1739,7 +1741,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--61
 
  []
 
-<Images/UseCase.jpg, id=178, 557.08125pt x 371.88937pt>
+<Images/UseCase.jpg, id=184, 557.08125pt x 371.88937pt>
 File: Images/UseCase.jpg Graphic file (type jpg)
 <use Images/UseCase.jpg>
 Package pdftex.def Info: Images/UseCase.jpg  used on input line 64.
@@ -1754,7 +1756,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-<Images/Ablaufplan.jpg, id=198, 930.3558pt x 289.08pt>
+<Images/Ablaufplan.jpg, id=204, 930.3558pt x 289.08pt>
 File: Images/Ablaufplan.jpg Graphic file (type jpg)
 <use Images/Ablaufplan.jpg>
 Package pdftex.def Info: Images/Ablaufplan.jpg  used on input line 8.
@@ -1784,7 +1786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
  []
 
 [11]
-<Images/Statemachine.jpg, id=234, 490.08093pt x 559.33969pt>
+<Images/Statemachine.jpg, id=240, 490.08093pt x 559.33969pt>
 File: Images/Statemachine.jpg Graphic file (type jpg)
 <use Images/Statemachine.jpg>
 Package pdftex.def Info: Images/Statemachine.jpg  used on input line 8.
@@ -1804,14 +1806,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./Images/Statemachine.jpg>]
-<Images/Topleveldiagramm.jpg, id=242, 542.025pt x 218.2554pt>
+<Images/Topleveldiagramm.jpg, id=248, 542.025pt x 218.2554pt>
 File: Images/Topleveldiagramm.jpg Graphic file (type jpg)
 <use Images/Topleveldiagramm.jpg>
 Package pdftex.def Info: Images/Topleveldiagramm.jpg  used on input line 9.
 (pdftex.def)             Requested size: 338.58635pt x 136.34267pt.
  [13 <./Images/Topleveldiagramm.jpg>])
 (chapter/Komponentendiagramm.tex
-<Images/Komponentendiagramm.jpg, id=251, 746.79pt x 441.90094pt>
+<Images/Komponentendiagramm.jpg, id=257, 746.79pt x 441.90094pt>
 File: Images/Komponentendiagramm.jpg Graphic file (type jpg)
 <use Images/Komponentendiagramm.jpg>
 Package pdftex.def Info: Images/Komponentendiagramm.jpg  used on input line 9.
@@ -1822,7 +1824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--9
  []
 
 [14 <./Images/Komponentendiagramm.jpg>]
-<Images/Layout_Steckplatine.jpg, id=265, 740.90134pt x 543.631pt>
+<Images/Layout_Steckplatine.jpg, id=271, 740.90134pt x 543.631pt>
 File: Images/Layout_Steckplatine.jpg Graphic file (type jpg)
 <use Images/Layout_Steckplatine.jpg>
 Package pdftex.def Info: Images/Layout_Steckplatine.jpg  used on input line 12.
@@ -1835,18 +1837,18 @@ although it is yet undefined on input line 4.
 Underfull \vbox (badness 5504) has occurred while \output is active []
 
  [15 <./Images/Layout_Steckplatine.jpg>]
-<Images/CAD-Deckel.jpg, id=277, 745.5855pt x 520.344pt>
+<Images/CAD-Deckel.jpg, id=283, 745.5855pt x 520.344pt>
 File: Images/CAD-Deckel.jpg Graphic file (type jpg)
 <use Images/CAD-Deckel.jpg>
 Package pdftex.def Info: Images/CAD-Deckel.jpg  used on input line 10.
 (pdftex.def)             Requested size: 435.32426pt x 303.81642pt.
-<Images/CAD-Schale.jpg, id=280, 729.32475pt x 479.99326pt>
+<Images/CAD-Schale.jpg, id=286, 729.32475pt x 479.99326pt>
 File: Images/CAD-Schale.jpg Graphic file (type jpg)
 <use Images/CAD-Schale.jpg>
 Package pdftex.def Info: Images/CAD-Schale.jpg  used on input line 18.
 (pdftex.def)             Requested size: 435.32426pt x 286.50406pt.
 ) (chapter/3D-Druck.tex [16 <./Images/CAD-Deckel.jpg>]
-<Images/SimSTL.jpg, id=294, 1019.30812pt x 457.71pt>
+<Images/SimSTL.jpg, id=300, 1019.30812pt x 457.71pt>
 File: Images/SimSTL.jpg Graphic file (type jpg)
 <use Images/SimSTL.jpg>
 Package pdftex.def Info: Images/SimSTL.jpg  used on input line 7.
@@ -1871,7 +1873,7 @@ Underfull \vbox (badness 4792) has occurred while \output is active []
 
 
 ]
-<Images/Arduino_Uno.jpg, id=327, 1927.2pt x 1401.235pt>
+<Images/Arduino_Uno.jpg, id=333, 1927.2pt x 1401.235pt>
 File: Images/Arduino_Uno.jpg Graphic file (type jpg)
 <use Images/Arduino_Uno.jpg>
 Package pdftex.def Info: Images/Arduino_Uno.jpg  used on input line 10.
@@ -1891,12 +1893,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 Underfull \vbox (badness 4303) has occurred while \output is active []
 
  [20 <./Images/Arduino_Uno.jpg>]
-<Images/CO2SensorCCS811.jpg, id=341, 170.6375pt x 172.645pt>
+<Images/CO2SensorCCS811.jpg, id=347, 170.6375pt x 172.645pt>
 File: Images/CO2SensorCCS811.jpg Graphic file (type jpg)
 <use Images/CO2SensorCCS811.jpg>
 Package pdftex.def Info: Images/CO2SensorCCS811.jpg  used on input line 7.
 (pdftex.def)             Requested size: 145.11055pt x 146.82796pt.
-<Images/ccs811Blockdiagramm.jpg, id=344, 707.64375pt x 387.69844pt>
+<Images/ccs811Blockdiagramm.jpg, id=350, 707.64375pt x 387.69844pt>
 File: Images/ccs811Blockdiagramm.jpg Graphic file (type jpg)
 <use Images/ccs811Blockdiagramm.jpg>
 Package pdftex.def Info: Images/ccs811Blockdiagramm.jpg  used on input line 17.
@@ -1908,30 +1910,30 @@ Overfull \hbox (30.96503pt too wide) in paragraph at lines 57--58
 -hil-fe der Bi-blio-thek <Ar-dafruit_CCS811.h>,
  []
 
-<Images/ccs811Setup.jpg, id=361, 389.95688pt x 89.58469pt>
+<Images/ccs811Setup.jpg, id=367, 389.95688pt x 89.58469pt>
 File: Images/ccs811Setup.jpg Graphic file (type jpg)
 <use Images/ccs811Setup.jpg>
 Package pdftex.def Info: Images/ccs811Setup.jpg  used on input line 61.
 (pdftex.def)             Requested size: 386.959pt x 88.89961pt.
 [22 <./Images/ccs811Setup.jpg>]
-<Images/ccs811Loop.jpg, id=370, 222.8325pt x 91.84312pt>
+<Images/ccs811Loop.jpg, id=376, 222.8325pt x 91.84312pt>
 File: Images/ccs811Loop.jpg Graphic file (type jpg)
 <use Images/ccs811Loop.jpg>
 Package pdftex.def Info: Images/ccs811Loop.jpg  used on input line 70.
 (pdftex.def)             Requested size: 241.84845pt x 99.68237pt.
 ) (chapter/mikroSD.tex
-<Images/Mikro-SD_2.jpeg, id=372, 1208.26407pt x 590.95781pt>
+<Images/Mikro-SD_2.jpeg, id=378, 1208.26407pt x 590.95781pt>
 File: Images/Mikro-SD_2.jpeg Graphic file (type jpg)
 <use Images/Mikro-SD_2.jpeg>
 Package pdftex.def Info: Images/Mikro-SD_2.jpeg  used on input line 8.
 (pdftex.def)             Requested size: 241.84845pt x 118.27963pt.
-<Images/Mikro-SD_3.jpeg, id=376, 977.90344pt x 648.17157pt>
+<Images/Mikro-SD_3.jpeg, id=382, 977.90344pt x 648.17157pt>
 File: Images/Mikro-SD_3.jpeg Graphic file (type jpg)
 <use Images/Mikro-SD_3.jpeg>
 Package pdftex.def Info: Images/Mikro-SD_3.jpeg  used on input line 18.
 (pdftex.def)             Requested size: 241.84845pt x 160.3018pt.
  [23 <./Images/ccs811Loop.jpg> <./Images/Mikro-SD_2.jpeg>]
-<Images/sdSetup.jpg, id=386, 246.1697pt x 132.495pt>
+<Images/sdSetup.jpg, id=392, 246.1697pt x 132.495pt>
 File: Images/sdSetup.jpg Graphic file (type jpg)
 <use Images/sdSetup.jpg>
 Package pdftex.def Info: Images/sdSetup.jpg  used on input line 30.
@@ -1955,12 +1957,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
  []
 
 [24 <./Images/Mikro-SD_3.jpeg> <./Images/sdSetup.jpg>]
-<Images/I2CAdapter.jpg, id=394, 2986.15625pt x 1185.42876pt>
+<Images/I2CAdapter.jpg, id=400, 2986.15625pt x 1185.42876pt>
 File: Images/I2CAdapter.jpg Graphic file (type jpg)
 <use Images/I2CAdapter.jpg>
 Package pdftex.def Info: Images/I2CAdapter.jpg  used on input line 8.
 (pdftex.def)             Requested size: 290.2211pt x 115.2035pt.
-<Images/I2CAdressen.jpg, id=399, 347.04657pt x 29.35968pt>
+<Images/I2CAdressen.jpg, id=405, 347.04657pt x 29.35968pt>
 File: Images/I2CAdressen.jpg Graphic file (type jpg)
 <use Images/I2CAdressen.jpg>
 Package pdftex.def Info: Images/I2CAdressen.jpg  used on input line 21.
@@ -1978,12 +1980,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--255
 ] [28]
 chapter 7.
 (chapter/Hardwareimplementierung.tex
-<Images/Deckel.jpg, id=427, 2627.8175pt x 1836.8625pt>
+<Images/Deckel.jpg, id=433, 2627.8175pt x 1836.8625pt>
 File: Images/Deckel.jpg Graphic file (type jpg)
 <use Images/Deckel.jpg>
 Package pdftex.def Info: Images/Deckel.jpg  used on input line 7.
 (pdftex.def)             Requested size: 290.2211pt x 202.86832pt.
-<Images/Einbau_AuB.jpg, id=429, 370.2195pt x 277.5825pt>
+<Images/Einbau_AuB.jpg, id=435, 370.2195pt x 277.5825pt>
 File: Images/Einbau_AuB.jpg Graphic file (type jpg)
 <use Images/Einbau_AuB.jpg>
 Package pdftex.def Info: Images/Einbau_AuB.jpg  used on input line 17.
@@ -2018,37 +2020,37 @@ chapter 9.
 
 ]) (chapter/ErsteSchritte.tex)
 (chapter/MessungDurchfuehren.tex
-<Images/StartNewMeasurement2.jpg, id=467, 3182.89125pt x 1235.61626pt>
+<Images/StartNewMeasurement2.jpg, id=473, 3182.89125pt x 1235.61626pt>
 File: Images/StartNewMeasurement2.jpg Graphic file (type jpg)
 <use Images/StartNewMeasurement2.jpg>
 Package pdftex.def Info: Images/StartNewMeasurement2.jpg  used on input line 10
 .
 (pdftex.def)             Requested size: 145.11055pt x 56.31677pt.
  [34 <./Images/StartNewMeasurement2.jpg>]
-<Images/RealTime2.jpg, id=473, 3045.3775pt x 1188.44pt>
+<Images/RealTime2.jpg, id=479, 3045.3775pt x 1188.44pt>
 File: Images/RealTime2.jpg Graphic file (type jpg)
 <use Images/RealTime2.jpg>
 Package pdftex.def Info: Images/RealTime2.jpg  used on input line 25.
 (pdftex.def)             Requested size: 145.11055pt x 56.61469pt.
-<Images/OneHour2.jpg, id=474, 3249.13875pt x 1212.53pt>
+<Images/OneHour2.jpg, id=480, 3249.13875pt x 1212.53pt>
 File: Images/OneHour2.jpg Graphic file (type jpg)
 <use Images/OneHour2.jpg>
 Package pdftex.def Info: Images/OneHour2.jpg  used on input line 30.
 (pdftex.def)             Requested size: 145.11055pt x 54.13596pt.
-<Images/OneDay2.jpg, id=475, 3327.43124pt x 1284.8pt>
+<Images/OneDay2.jpg, id=481, 3327.43124pt x 1284.8pt>
 File: Images/OneDay2.jpg Graphic file (type jpg)
 <use Images/OneDay2.jpg>
 Package pdftex.def Info: Images/OneDay2.jpg  used on input line 35.
 (pdftex.def)             Requested size: 145.11055pt x 56.0295pt.
 )
 (chapter/MessungAuswerten.tex
-<Images/ReadLastMeasurement2.jpg, id=476, 3424.795pt x 1280.785pt>
+<Images/ReadLastMeasurement2.jpg, id=482, 3424.795pt x 1280.785pt>
 File: Images/ReadLastMeasurement2.jpg Graphic file (type jpg)
 <use Images/ReadLastMeasurement2.jpg>
 Package pdftex.def Info: Images/ReadLastMeasurement2.jpg  used on input line 10
 .
 (pdftex.def)             Requested size: 145.11055pt x 54.25186pt.
-<Images/Read.jpg, id=478, 4625.28pt x 3468.96pt>
+<Images/Read.jpg, id=484, 4625.28pt x 3468.96pt>
 File: Images/Read.jpg Graphic file (type jpg)
 <use Images/Read.jpg>
 Package pdftex.def Info: Images/Read.jpg  used on input line 20.
@@ -2058,29 +2060,46 @@ Package pdftex.def Info: Images/Read.jpg  used on input line 20.
  [36]
 chapter 10.
 (chapter/Installationsanleitung.tex
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+<Images/Diploymentdiagramm.jpg, id=500, 671.50874pt x 280.04625pt>
+File: Images/Diploymentdiagramm.jpg Graphic file (type jpg)
+<use Images/Diploymentdiagramm.jpg>
+Package pdftex.def Info: Images/Diploymentdiagramm.jpg  used on input line 16.
+(pdftex.def)             Requested size: 435.32426pt x 181.5493pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Images/I2C.jpeg, id=496, 3593.425pt x 1742.51pt>
-File: Images/I2C.jpeg Graphic file (type jpg)
-<use Images/I2C.jpeg>
-Package pdftex.def Info: Images/I2C.jpeg  used on input line 17.
-(pdftex.def)             Requested size: 290.2211pt x 140.73308pt.
 [37
 
 
- <./Images/I2C.jpeg>]) [38]
+ <./Images/Diploymentdiagramm.jpg>]
+<Images/I2C.jpeg, id=508, 3593.425pt x 1742.51pt>
+File: Images/I2C.jpeg Graphic file (type jpg)
+<use Images/I2C.jpeg>
+Package pdftex.def Info: Images/I2C.jpeg  used on input line 26.
+(pdftex.def)             Requested size: 290.2211pt x 140.73308pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 86--275
+
+ []
+
+[38 <./Images/I2C.jpeg>] [39] [40
+
+
+]
 chapter 11.
-(Standard/Fazit.tex) [39
+(Standard/Fazit.tex) (chapter/FazitSW.tex) (chapter/FazitHW.tex) [41] [42]
+chapter 12.
+(Standard/Ausblick.tex) [43
 
 
-] [40
+] [44
 
 
 ]
 chapter without number
-(CO2_Sensor_LaTeX.bbl [41] [42
+(CO2_Sensor_LaTeX.bbl [45] [46
 
 
 ]
@@ -2201,7 +2220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--55
 false$[]\T1/cmr/m/n/12 . --  ISBN
  []
 
-[43]
+[47]
 Underfull \hbox (badness 1052) in paragraph at lines 57--63
 []\T1/cmr/m/sc/12 IONOS \T1/cmr/m/n/12 (Hrsg.):  \T1/cmr/m/it/12 Ar-dui-no vs. 
 Raspber-ry PI: Mi-kro-con-trol-ler und Ein-pla-ti-nen-
@@ -2220,7 +2239,7 @@ off-di-oxid in der Erdat-mo-sphä-re\T1/cmr/m/n/12 .  []$\T1/cmtt/m/n/12 https :
  / / de .
  []
 
-[44]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 118--122
 []\T1/cmr/m/sc/12 Wikipedia \T1/cmr/m/n/12 (Hrsg.):  \T1/cmr/m/it/12 Soft-wa-re
 -test\T1/cmr/m/n/12 .  []$\T1/cmtt/m/n/12 https : / / de . wikipedia . org / wi
@@ -2229,48 +2248,48 @@ ki /
 
 )
 No file CO2_Sensor_LaTeX.ind.
-(Standard/Abkuerzungen.tex) [45] [46
+(Standard/Abkuerzungen.tex) [49] [50
 
 
-] (CO2_Sensor_LaTeX.lof [47])
+] (CO2_Sensor_LaTeX.lof [51])
 \tf@lof=\write7
 \openout7 = `CO2_Sensor_LaTeX.lof'.
 
- [48]
+ [52]
 (CO2_Sensor_LaTeX.lot)
 \tf@lot=\write8
 \openout8 = `CO2_Sensor_LaTeX.lot'.
 
- [49
+ [53
 
 
 
 
-] [50
+] [54
 
 
 ]
 chapter A.
-[51
+[55
 
 
 ] (Standard/Anhang.tex
-<Images/GehaeuseDraufsicht.jpg, id=670, 3483.0125pt x 2783.39874pt>
+<Images/GehaeuseDraufsicht.jpg, id=698, 3483.0125pt x 2783.39874pt>
 File: Images/GehaeuseDraufsicht.jpg Graphic file (type jpg)
 <use Images/GehaeuseDraufsicht.jpg>
 Package pdftex.def Info: Images/GehaeuseDraufsicht.jpg  used on input line 5.
 (pdftex.def)             Requested size: 3483.00404pt x 2783.39198pt.
-<Images/GehaeuseStrom.jpg, id=671, 2822.545pt x 3080.50874pt>
+<Images/GehaeuseStrom.jpg, id=699, 2822.545pt x 3080.50874pt>
 File: Images/GehaeuseStrom.jpg Graphic file (type jpg)
 <use Images/GehaeuseStrom.jpg>
 Package pdftex.def Info: Images/GehaeuseStrom.jpg  used on input line 13.
 (pdftex.def)             Requested size: 193.4758pt x 211.14519pt.
-<Images/GehaeuseSD.jpg, id=672, 4074.22125pt x 2378.8875pt>
+<Images/GehaeuseSD.jpg, id=700, 4074.22125pt x 2378.8875pt>
 File: Images/GehaeuseSD.jpg Graphic file (type jpg)
 <use Images/GehaeuseSD.jpg>
 Package pdftex.def Info: Images/GehaeuseSD.jpg  used on input line 21.
 (pdftex.def)             Requested size: 4074.21136pt x 2378.88171pt.
-<Images/GehaeuseCO2.jpg, id=673, 2748.2675pt x 3295.31125pt>
+<Images/GehaeuseCO2.jpg, id=701, 2748.2675pt x 3295.31125pt>
 File: Images/GehaeuseCO2.jpg Graphic file (type jpg)
 <use Images/GehaeuseCO2.jpg>
 Package pdftex.def Info: Images/GehaeuseCO2.jpg  used on input line 29.
@@ -2279,25 +2298,28 @@ Package pdftex.def Info: Images/GehaeuseCO2.jpg  used on input line 29.
 
  <./Images/GehaeuseDraufsicht.jpg> <./Images/GehaeuseStrom.jpg>] [2 <./Images/G
 ehaeuseSD.jpg> <./Images/GehaeuseCO2.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
 
 (CO2_Sensor_LaTeX.aux (pages/titelseite.aux) (pages/erklaerung.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
 Package rerunfilecheck Info: File `CO2_Sensor_LaTeX.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
  ) 
 Here is how much of TeX's memory you used:
- 50694 strings out of 492895
- 1147842 string characters out of 3123735
- 1412504 words of memory out of 3000000
- 53587 multiletter control sequences out of 15000+200000
+ 50726 strings out of 492895
+ 1148675 string characters out of 3123735
+ 1412756 words of memory out of 3000000
+ 53601 multiletter control sequences out of 15000+200000
  556577 words of font info for 76 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
  79i,21n,136p,9170b,1229s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2325,9 +2347,9 @@ n/ec/dpi600\ecsx2074.pk><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (61 pages, 14483438 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (65 pages, 14555043 bytes).
 PDF statistics:
- 1597 PDF objects out of 1728 (max. 8388607)
- 174 named destinations out of 1000 (max. 500000)
- 480 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1639 PDF objects out of 1728 (max. 8388607)
+ 182 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
 

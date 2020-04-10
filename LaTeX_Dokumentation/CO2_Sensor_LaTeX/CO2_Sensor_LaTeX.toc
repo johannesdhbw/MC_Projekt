@@ -28,11 +28,14 @@
 \contentsline {section}{\numberline {9.3}Auslesen einer Messung}{35}{section.9.3}% 
 \contentsline {section}{\numberline {9.4}Sleepmode/Stromsparmodus}{36}{section.9.4}% 
 \contentsline {chapter}{\numberline {10}Installationsanleitung}{37}{chapter.10}% 
-\contentsline {chapter}{\numberline {11}Fazit}{39}{chapter.11}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{41}{chapter*.51}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.52}% 
-\contentsline {chapter}{Sachwortverzeichnis}{45}{chapter*.52}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{47}{chapter*.53}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{49}{chapter*.54}% 
-\contentsline {chapter}{\numberline {A}Anhang}{51}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{51}{section.A.1}% 
+\contentsline {chapter}{\numberline {11}Fazit}{41}{chapter.11}% 
+\contentsline {section}{\numberline {11.1}Software}{41}{section.11.1}% 
+\contentsline {section}{\numberline {11.2}Hardware}{42}{section.11.2}% 
+\contentsline {chapter}{\numberline {12}Ausblick}{43}{chapter.12}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{45}{chapter*.52}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{47}{chapter*.53}% 
+\contentsline {chapter}{Sachwortverzeichnis}{49}{chapter*.53}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{51}{chapter*.54}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{53}{chapter*.55}% 
+\contentsline {chapter}{\numberline {A}Anhang}{55}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{55}{section.A.1}% 
