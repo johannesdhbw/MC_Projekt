@@ -1,64 +1,50 @@
 \label{Testing}
 
+Das Testing war in diesem Projekt hauptsächlich ein Teil der Softwareentwicklung. So konnten mithilfe dieser Methode, die vorher definierten Anforderungen, auf ihre Funktionstüchtigkeit geprüft werden. Im folgenden sind zwei Testprotokolle, welche gegen Ende der Testing-Phase durchgeführt wurden, als Beispiele dargestellt. \\
+
 \begin{table}[!hbt]
-	
 	\centering
-	
-	\begin{tabular}{|p{5cm}|p{5cm}|}
-		
+	\begin{tabular}{|p{8cm}|p{8cm}|}
 		\hline
-		Projekt: CO2-Sensor & Datum: \\
+		Projekt: Entwicklung eines CO$_2$-Messers zur Simulation einer automatisierten Fensteransteuerung & Datum: 05.03.2020 \\
 		\hline
 		ID: CO201 & Version: 1.0 \\
 		\hline
-		\multicolumn{2}{|l|}{Titel: Visualisierung der Luftqualität auf Basis von CO2-Grenzen} \\
+		\multicolumn{2}{|l|}{Titel: Visualisierung der Luftqualität auf Basis von CO$_2$-Grenzen} \\
 		\hline
 		Items: void ask(int) & TestKfg: 01 \\
 		\hline
-		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Zielsetzung: Der Test soll zeigen, dass die Software die gemessenen CO2-Werte richtig interpretieren kann.} \\
+		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Zielsetzung: Der Test soll zeigen, dass die Software die gemessenen CO$_2$-Werte richtig interpretieren kann.} \\
 		\hline
 		\multicolumn{2}{|l|}{Anforderungen: R01} \\
 		\hline
-		\multicolumn{2}{|l|}{Erforderliche Inputs zu Testbeginn: CO2 Werte} \\
+		\multicolumn{2}{|l|}{Erforderliche Inputs zu Testbeginn: CO$_2$-Werte} \\
 		\hline
-			
 	\end{tabular}
-
-\captionabove{Testbeschreibung Test 1}
+\captionabove{Test 1 - Testbeschreibung}
 \label{tab:Test_1}
-
 \end{table}
 
 \begin{table}[!hbt]
-	
 	\centering
-	
-	\begin{tabular}{|p{7.4cm}|p{7.4cm}|}
-	
+	\begin{tabular}{|p{8cm}|p{8cm}|}
 		\hline
-		Tester: & Beobachter: \\
+		Tester: Serkant Soylu & Beobachter: Alexander Herrmann \\
 		\hline
-		\multicolumn{2}{|l|}{Protokolldatei: } \\
+		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Protokoll: \newline Zunächst wurde im Programmcode der Input der CO$_2$-Werte simuliert, indem ein Zähler den CO$_2$-Wert von 0 bis 2000 hochgezählt hat. \newline Es konnte dabei beobachtet werden, dass die grüne \ac{LED} bis zu dem Wert 799 an geblieben ist. Nach Erreichen des Wertes von 800, ist die grüne aus und die gelbe \ac{LED} an gegangen. \newline Die gelbe \ac{LED} ist anschließend bis einschließlich dem Wert von 1399 an geblieben, bis sie letztendlich bei 1400 aus ging. Ab diesem Moment haben nur noch die \ac{LED}s rot und blau geleuchtet.} \\
 		\hline
-		Status: & Problembericht: \\
+		Status: Erfolgreich & Problembericht: Nicht vorhanden \\
 		\hline
-	
 	\end{tabular}
-
-	\captionabove{Testprotokoll Test 1}
+	\captionabove{Test 1 - Testprotokoll}
 	\label{tab:Tester1}
-
 \end{table}
 
-
-\begin{table}[!hbt]
-	
+\begin{table}[!htb]
 	\centering
-	
-	\begin{tabular}{|p{5cm}|p{5cm}|}
-		
+	\begin{tabular}{|p{8cm}|p{8cm}|}
 		\hline
-		Projekt: CO2-Sensor & Datum: \\
+		Projekt: Entwicklung eines CO$_2$-Messers zur Simulation einer automatisierten Fensteransteuerung & Datum: 07.03.2020 \\
 		\hline
 		ID: CO202 & Version: 1.0 \\
 		\hline
@@ -66,37 +52,28 @@
 		\hline
 		Items: void ask(int) & TestKfg: 01 \\
 		\hline
-		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Zielsetzung: Der Test soll zeigen, dass der Anwender zwischen drei verschiedenen Messprofilen wählen kann.} \\
+		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Zielsetzung: Der Test soll zeigen, dass der Anwender zwischen drei verschiedenen Messprofilen wählen kann und diese korrekt durchführt.} \\
 		\hline
 		\multicolumn{2}{|l|}{Anforderungen: R03} \\
 		\hline
 		\multicolumn{2}{|l|}{Erforderliche Inputs zu Testbeginn: Anwender} \\
 		\hline
-		
 	\end{tabular}
-	
-	\captionabove{Testbeschreibung Test 2}
+	\captionabove{Test 2 - Testbeschreibung}
 	\label{tab:Test_2}
-	
 \end{table}
 
-\begin{table}[!hbt]
-	
+\begin{table}[!htb]
 	\centering
-	
 	\begin{tabular}{|p{8cm}|p{8cm}|}
-		
 		\hline
 		Tester: Alexander Herrmann & Beobachter: Johannes Ruffer \\
 		\hline
-		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Protokoll: \newline Zunächst wurde der Arduino an den Laptop angeschlossen und somit das aktuelle Programm gestartet. Nach Auswahl des Schreibemodus, wurde das Messprofilmenü angezeigt. Nach drei UP-Button-Klicks, wurde der Messmodus 1 (Echtzeitmodus) mit dem Enter-Button bestätigt. \newline Die anschließende Messung wurde in Echtzeit auf dem \ac{LCD}-Display ausgegeben. Die abgespeicherten Messungen wurden ebenfalls in Echtzeit gemessen. Anschließend wurde das Programm neu gestartet, um den Modus 2 auszuwählen. Auch dieser wurde erfolgreich mit den richtigen Zeitintervallen durchgeführt. \newline Der dritte Start des Programms diente dazu, die Tagesmessung auszuprobieren. Auch hier hat die Auswahl und Durchführung in Bezug auf die Testanforderungen erfolgreich funktioniert.} \\
+		\multicolumn{2}{|p{\textwidth-2\tabcolsep}|}{Protokoll: \newline Zunächst wurde der Arduino an den Laptop angeschlossen und somit das aktuelle Programm gestartet. Nach Auswahl des Schreibe-Modus, wurde das Messprofil-Menü angezeigt. Nach drei UP-Button-Klicks, wurde der Messmodus 1 (Echtzeitmodus) mit dem Enter-Button bestätigt. \newline Die anschließende Messung wurde in Echtzeit auf dem \ac{LCD}-Display ausgegeben. Die abgespeicherten Messungen wurden ebenfalls in Echtzeit gemessen. Anschließend wurde das Programm neu gestartet, um den Modus 2 auszuwählen. Auch dieser wurde erfolgreich mit den richtigen Zeitintervallen durchgeführt. \newline Der dritte Start des Programms diente dazu, die Tagesmessung zu testen. Auch hier hat die Auswahl und Durchführung in Bezug auf die Testanforderungen erfolgreich funktioniert.} \\
 		\hline
 		Status: Erfolgreich & Problembericht: Nicht vorhanden \\
 		\hline
-		
 	\end{tabular}
-	
-	\captionabove{Testprotokoll Test 2}
+	\captionabove{Test 2 - Testprotokoll}
 	\label{tab:Tester2}
-	
 \end{table}
