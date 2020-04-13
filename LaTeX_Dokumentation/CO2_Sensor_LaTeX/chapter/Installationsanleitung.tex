@@ -11,15 +11,15 @@ Damit die Software erfolgreich vom Computer auf den Arduino geladen werden kann,
 	\item SD.h (Ermöglicht die Kommunikation mit dem Mikro-SD-Karten-Adapter)
 \end{itemize}
 
-\begin{figure}[!hbt]
-	\centering
-	\includegraphics[width=0.9\linewidth]{Images/Diploymentdiagramm}
-	\footnotesize \\Quelle: eigene Aufnahme
-	\caption{Diploymentdiagramm zum Verständnis der Integration von Soft- und Hardware und deren Verbindungen}
-	\label{fig:Diployment}
-\end{figure}
+%\begin{figure}[!hbt]
+%	\centering
+%	\includegraphics[width=0.9\linewidth]{Images/Diploymentdiagramm}
+%	\footnotesize \\Quelle: eigene Aufnahme
+%	\caption{Diploymentdiagramm zum Verständnis der Integration von Soft- und Hardware und deren Verbindungen}
+%	\label{fig:Diployment}
+%\end{figure}
 
-Zunächst muss der I$^2$C-Adapter, wie in Abbildung \ref{fig:I2C} abgebildet ist, an das \ac{LCD}-Display angeschlossen werden. Achten Sie auf die Richtung der beiden Elemente. \\
+Zunächst muss der I$^2$C-Adapter, wie in Abbildung \ref{fig:I2C} abgebildet ist, an das \ac{LCD}-Display angeschlossen werden. Achten Sie auf die Richtung der beiden Elemente. 
 
 \begin{figure}[!hbt]
 	\centering
@@ -84,3 +84,11 @@ Auch die Vorwiderstände, welche Sie in Tabelle \ref{tab:Widerstände} sehen kö
 \end{table}
 
 Bevor der Arduino an das Stromnetz geschlossen werden kann, kontrollieren Sie, ob sich eine Mikro-SD-Karte in dem dafür vorgesehenen Adapter befindet. Verbinden Sie anschließend das Gerät mit einer geeigneten Stromquelle. Das Menü öffnet sich und das Gerät ist installiert. Achten Sie darauf, dass der Arduino während einer Messung nicht von der Stromquelle getrennt wird. \\
+
+\begin{figure}[!hbt]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Images/Diploymentdiagramm_2}
+	\footnotesize \\Quelle: eigene Aufnahme
+	\caption{Zeichnung des Diploymentdiagramm, zum Verständnis der Integration von Soft- und Hardware und deren Verbindungen, mithilfe von Enterprise Architect}
+	\label{fig:Diployment2}
+\end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  13 APR 2020 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.21)  13 APR 2020 18:53
 entering extended mode
 **./CO2_Sensor_LaTeX.tex
 (CO2_Sensor_LaTeX.tex
@@ -2085,31 +2085,27 @@ Package pdftex.def Info: Images/Read.jpg  used on input line 20.
  [38]
 chapter 10.
 (chapter/Installationsanleitung.tex
-<Images/Diploymentdiagramm.jpg, id=529, 671.50874pt x 280.04625pt>
-File: Images/Diploymentdiagramm.jpg Graphic file (type jpg)
-<use Images/Diploymentdiagramm.jpg>
-Package pdftex.def Info: Images/Diploymentdiagramm.jpg  used on input line 16.
-(pdftex.def)             Requested size: 435.32426pt x 181.5493pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-[39
-
-
- <./Images/Diploymentdiagramm.jpg>]
-<Images/I2C.jpeg, id=537, 3593.425pt x 1742.51pt>
+<Images/I2C.jpeg, id=531, 3593.425pt x 1742.51pt>
 File: Images/I2C.jpeg Graphic file (type jpg)
 <use Images/I2C.jpeg>
 Package pdftex.def Info: Images/I2C.jpeg  used on input line 26.
 (pdftex.def)             Requested size: 290.2211pt x 140.73308pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 86--275
+ [39
+
+
+ <./Images/I2C.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[40 <./Images/I2C.jpeg>] [41] [42
+[40]
+<Images/Diploymentdiagramm_2.jpg, id=550, 536.0025pt x 520.19344pt>
+File: Images/Diploymentdiagramm_2.jpg Graphic file (type jpg)
+<use Images/Diploymentdiagramm_2.jpg>
+Package pdftex.def Info: Images/Diploymentdiagramm_2.jpg  used on input line 90
+.
+(pdftex.def)             Requested size: 435.32426pt x 422.48149pt.
+) [41 <./Images/Diploymentdiagramm_2.jpg>] [42
 
 
 ]
@@ -2344,8 +2340,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
  ) 
 Here is how much of TeX's memory you used:
  50782 strings out of 492895
- 1149965 string characters out of 3123735
- 1413313 words of memory out of 3000000
+ 1149976 string characters out of 3123735
+ 1413363 words of memory out of 3000000
  53639 multiletter control sequences out of 15000+200000
  559803 words of font info for 88 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
@@ -2374,7 +2370,7 @@ n/ec/dpi600\ecsx2074.pk><C:/Users/49157/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/49157/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/49157/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on CO2_Sensor_LaTeX.pdf (67 pages, 14651654 bytes).
+Output written on CO2_Sensor_LaTeX.pdf (67 pages, 14657679 bytes).
 PDF statistics:
  1685 PDF objects out of 1728 (max. 8388607)
  191 named destinations out of 1000 (max. 500000)
