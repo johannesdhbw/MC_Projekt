@@ -20,24 +20,24 @@
 \contentsline {section}{\numberline {5.4}Mikro-SD-Karten-Adapter}{23}{section.5.4}% 
 \contentsline {section}{\numberline {5.5}I$^2$C-Adapter}{25}{section.5.5}% 
 \contentsline {chapter}{\numberline {6}Softwareimplementierung}{27}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Hardwareimplementierung}{29}{chapter.7}% 
-\contentsline {chapter}{\numberline {8}Testing}{31}{chapter.8}% 
-\contentsline {chapter}{\numberline {9}Handbuch}{33}{chapter.9}% 
-\contentsline {section}{\numberline {9.1}Erste Schritte}{34}{section.9.1}% 
-\contentsline {section}{\numberline {9.2}Durchf\IeC {\"u}hrung einer Messung}{34}{section.9.2}% 
-\contentsline {section}{\numberline {9.3}Auslesen einer Messung}{35}{section.9.3}% 
-\contentsline {section}{\numberline {9.4}Sleepmode/Stromsparmodus}{36}{section.9.4}% 
-\contentsline {chapter}{\numberline {10}Installationsanleitung}{37}{chapter.10}% 
-\contentsline {chapter}{\numberline {11}Fazit}{41}{chapter.11}% 
-\contentsline {section}{\numberline {11.1}Software}{41}{section.11.1}% 
-\contentsline {section}{\numberline {11.2}Hardware}{42}{section.11.2}% 
-\contentsline {chapter}{\numberline {12}Ausblick}{43}{chapter.12}% 
-\contentsline {section}{\numberline {12.1}Software}{43}{section.12.1}% 
-\contentsline {section}{\numberline {12.2}Hardware}{43}{section.12.2}% 
-\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{45}{chapter*.53}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{47}{chapter*.54}% 
-\contentsline {chapter}{Sachwortverzeichnis}{49}{chapter*.54}% 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{51}{chapter*.55}% 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{53}{chapter*.56}% 
-\contentsline {chapter}{\numberline {A}Anhang}{55}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{55}{section.A.1}% 
+\contentsline {chapter}{\numberline {7}Hardwareimplementierung}{31}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Testing}{33}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}Handbuch}{35}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Erste Schritte}{36}{section.9.1}% 
+\contentsline {section}{\numberline {9.2}Durchf\IeC {\"u}hrung einer Messung}{36}{section.9.2}% 
+\contentsline {section}{\numberline {9.3}Auslesen einer Messung}{37}{section.9.3}% 
+\contentsline {section}{\numberline {9.4}Sleepmode/Stromsparmodus}{38}{section.9.4}% 
+\contentsline {chapter}{\numberline {10}Installationsanleitung}{39}{chapter.10}% 
+\contentsline {chapter}{\numberline {11}Fazit}{43}{chapter.11}% 
+\contentsline {section}{\numberline {11.1}Software}{43}{section.11.1}% 
+\contentsline {section}{\numberline {11.2}Hardware}{44}{section.11.2}% 
+\contentsline {chapter}{\numberline {12}Ausblick}{45}{chapter.12}% 
+\contentsline {section}{\numberline {12.1}Software}{45}{section.12.1}% 
+\contentsline {section}{\numberline {12.2}Hardware}{46}{section.12.2}% 
+\contentsline {chapter}{\nonumberline Verzeichnis verwendeter Abk\IeC {\"u}rzungen und Formelzeichen}{47}{chapter*.56}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{49}{chapter*.57}% 
+\contentsline {chapter}{Sachwortverzeichnis}{51}{chapter*.57}% 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{53}{chapter*.58}% 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{55}{chapter*.59}% 
+\contentsline {chapter}{\numberline {A}Anhang}{57}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Weitere Abbildungen}{57}{section.A.1}% 
