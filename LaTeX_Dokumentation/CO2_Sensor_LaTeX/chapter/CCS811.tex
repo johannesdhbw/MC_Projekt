@@ -54,7 +54,7 @@ Um an die richtigen Daten des Sensors zu gelangen, muss der Arduino in unserem P
 		\label{fig:8ByteInfo}
 	\end{figure}
 \end{center}
-In der Softwareimplementierung wird der Co\textsubscript{2}-Sensor mithilfe der Bibliothek <Ardafruit\_CCS811.h>, wie in Abbildung \ref{fig:Setup} gezeigt wird, aufgerufen. Zunächst werden Setups für das I$^2$C-Interface und die Hardware durchgeführt. Danach wird geprüft, ob die Kommunikation mit dem Sensor aufgebaut werden kann. Wenn das der Fall ist, wird solange gewartet, bis der Sensor bereit ist, Daten zu lesen. Falls jedoch ein Problem auftritt, wird eine Fehlermeldung ausgegeben und der Arduino geht in eine sogenannte Endlosschleife, bis das Programm neu geladen oder der Arduino ausgeschalten wird.
+In der Softwareimplementierung wird der CO\textsubscript{2}-Sensor mithilfe der Bibliothek <Ardafruit\_CCS811.h>, wie in Abbildung \ref{fig:Setup} gezeigt wird, aufgerufen. Zunächst werden Setups für das I$^2$C-Interface und die Hardware durchgeführt. Danach wird geprüft, ob die Kommunikation mit dem Sensor aufgebaut werden kann. Wenn das der Fall ist, wird solange gewartet, bis der Sensor bereit ist, Daten zu lesen. Falls jedoch ein Problem auftritt, wird eine Fehlermeldung ausgegeben und der Arduino geht in eine sogenannte Endlosschleife, bis das Programm neu geladen oder der Arduino ausgeschalten wird.
 
 \begin{figure}[!hbt]
 	\centering
@@ -63,7 +63,7 @@ In der Softwareimplementierung wird der Co\textsubscript{2}-Sensor mithilfe der 
 	\label{fig:Setup}
 \end{figure}
 
-Die Abfrage der CO\textsubscript{2}-Werten erfolgt über eine weitere Prüfung auf Fehler und einer darauffolgenden Messung. Das in Array dient hierbei zur Zwischenspeicherung der Daten. Anschließend werden die gespeicherten Informationen an die Mikro-SD-Karte weitergegeben. Näheres dazu in Kapitel \ref{microSD}.
+Die Abfrage der CO\textsubscript{2}-Werte erfolgt über eine weitere Prüfung auf Fehler und einer darauffolgenden Messung. Das Array dient hierbei zur Zwischenspeicherung der Daten. Anschließend werden die gespeicherten Informationen an die Mikro-SD-Karte weitergegeben. Näheres dazu in Kapitel \ref{microSD}.
 
 \begin{figure}[!hbt]
 	\centering

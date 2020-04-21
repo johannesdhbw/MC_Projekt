@@ -25,14 +25,14 @@
 \contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Verwendeter Mikro-SD-Karten-Adapter, mit Sicht auf dessen R\IeC {\"u}ckseite\relax }}{24}{figure.caption.32}% 
 \contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Codeausschnitt zur Initialisierung der SD-Karte im Setup aus dem Quellcode\relax }}{24}{figure.caption.33}% 
 \contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Verwendeter I$^2$C-Adapter\relax }}{25}{figure.caption.34}% 
-\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Codeausschnitt zur Definition von Adresse und Anzahl der zu verwendenden Zeichen und Reihen\relax }}{26}{figure.caption.35}% 
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Codeausschnitt zur Definition von Adresse und Anzahl der zu verwendenden Zeichen und Reihen\relax }}{25}{figure.caption.35}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Codeausschnitt aus dem Setup zur Deklaration der Interrupt-Funktion\relax }}{27}{figure.caption.36}% 
 \contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Codeausschnitt: ausgelagerte Interrupt-Funktion mit Tastenentprellung, f\IeC {\"u}r das Werten der Variable, zur sp\IeC {\"a}teren Aktivierung des Schlafmodus\relax }}{29}{figure.caption.37}% 
 \contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Codeausschnitt aus dem Loop zur Aktivierung und Deaktivierung des Schlafmodus\relax }}{30}{figure.caption.38}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces 3D-gedruckter Deckel des Geh\IeC {\"a}uses\relax }}{31}{figure.caption.39}% 
-\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Einbau des Arduinos und des PIN-Breadboards in der 3D-gedruckten Schale des Geh\IeC {\"a}uses\relax }}{32}{figure.caption.40}% 
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Einbau des Arduinos und des PIN-Breadboards in der 3D-gedruckten Schale des Geh\IeC {\"a}uses\relax }}{31}{figure.caption.40}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 9.1}{\ignorespaces Hauptmen\IeC {\"u}: <Start new Measurement>\relax }}{36}{figure.caption.48}% 
