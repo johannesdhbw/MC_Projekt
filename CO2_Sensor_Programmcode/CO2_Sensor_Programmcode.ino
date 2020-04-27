@@ -5,12 +5,6 @@
 #include <Adafruit_CCS811.h>
 #include <SD.h>
 
-// not used(?)
-#include <Adafruit_GFX.h>
-#include <Adafruit_SPITFT.h>
-#include <Adafruit_SPITFT_Macros.h>
-#include <gfxfont.h>
-
 // ******************************************************
 
 // set the lcd address to 0x27 for a 16 chars and 2 line display
